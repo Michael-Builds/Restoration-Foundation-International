@@ -1,20 +1,15 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
 import './index.css';
-import ToolBar from './pages/home/components/ToolBar';
+import Home from './pages/home/Home'
 
 const App = () => {
   return (
-    <>
-      <div>
-      </div>
-      <div className="card">
-        <div className="font-quicksand">
-          <ToolBar />
-          {/* <h1 className="text-3xl font-quicksand">Welcome to My Vite React App</h1> */}
-        </div>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
-
 export default App;
