@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FiPhone } from 'react-icons/fi';
 import { MdEmail } from 'react-icons/md';
 
-const ToolBar = () => {
+const TopBar = () => {
     return (
         <div className="top-bar absolute bg-white h-16 w-full top-0 left-0 z-3 border-b border-opacity-30">
             <div className="container mx-auto">
@@ -32,4 +32,4 @@ const ToolBar = () => {
     );
 };
 
-export default ToolBar;
+export default TopBar;

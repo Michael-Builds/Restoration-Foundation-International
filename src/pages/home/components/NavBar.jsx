@@ -93,7 +93,7 @@ const Navigation = () => {
     );
 
     return (
-        <Navbar className=" mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-md shadow-gray-200">
+        <Navbar className="mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-md shadow-gray-200">
             <div className=" -mb-14 container mx-auto flex items-center justify-between text-blue-gray-900">
                 <NavLink to="/" className='-ml-2'>
                     <img

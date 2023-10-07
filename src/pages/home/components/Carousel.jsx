@@ -3,6 +3,15 @@ import { Carousel } from 'react-responsive-carousel';
 import Image1 from '../../../assets/carousel-1.jpg';
 import Image2 from '../../../assets/carousel-2.jpg';
 import Image3 from '../../../assets/carousel-3.jpg';
+import React from "react";
+import {
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
+} from "@material-tailwind/react";
+import { AiOutlineClose } from 'react-icons/ai';
+import { BiLogoYoutube } from 'react-icons/bi';
 
 const carouselItems = [
     {
@@ -23,6 +32,10 @@ const carouselItems = [
 ];
 
 const Slider = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => setOpen(!open);
+
     return (
         <div className="-mt-2 relative w-full min-h-[300px] bg-white mb-12">
             <Carousel
@@ -49,6 +62,7 @@ const Slider = () => {
                                     Donate Now
                                 </a>
                                 <a
+                                    onClick={handleOpen}
                                     className="text-white hover:text-gray-500 border hover:bg-yellow-500 hover:text-white border-yellow-500 p-2 border-2 rounded-sm cursor-pointer"
                                     data-toggle="modal"
                                     data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
@@ -56,11 +70,29 @@ const Slider = () => {
                                 >
                                     Watch Video
                                 </a>
+
                             </div>
                         </div>
                     </div>
                 ))}
             </Carousel>
+            <Dialog open={open} handler={handleOpen}
+                className="relative m-4 w-2/5 min-w-[50%] max-w-[50%] min-h-[60%] max-h-[60%] rounded-lg bg-black font-quicksand text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl"
+            >
+                <DialogHeader className="justify-end text-white cursor-pointer" onClick={handleOpen}>
+                    <AiOutlineClose />
+                </DialogHeader>
+                <DialogBody divider className="justify-center align-center mt-[10%]" >
+                    The key to more success is to have a lot of pillows. Put it this way,
+                    it took me twenty five years to get these plants, twenty five years of
+                    blood sweat and tears, and I&apos;m never giving up, I&apos;m just
+                    getting started. I&apos;m up to something. Fan luv.
+                </DialogBody>
+
+                <DialogFooter>
+                    <BiLogoYoutube onClick={handleOpen} className="text-white h-16 w-16 cursor-pointer -mb-[30%] " />
+                </DialogFooter>
+            </Dialog>
         </div>
     );
 };
