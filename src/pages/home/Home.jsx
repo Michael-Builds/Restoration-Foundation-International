@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navigation from './components/NavBar'
 import Carousel from './components/Carousel'
+import About from './components/About'
 
 const Home = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const Home = () => {
             <TopBar />
             <Navigation />
             <Carousel />
+            <About/>
         </>
     );
 };
