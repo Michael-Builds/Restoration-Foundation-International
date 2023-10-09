@@ -88,78 +88,14 @@ const About = () => {
                                 </Tab>
                             ))}
                         </TabsHeader>
-                        <TabsBody>
+                        <TabsBody >
                             {data.map(({ value, desc }) => (
-                                <TabPanel key={value} value={value}>
+                                <TabPanel key={value} value={value} className='font-quicksand text-1xl'>
                                     {desc}
                                 </TabPanel>
                             ))}
                         </TabsBody>
                     </Tabs>
-
-                    {/* <ul className="flex justify-center gap-16 mb-4">
-                        <li className="nav-item">
-                            <a
-                                className="nav-link active py-2 font-semibold border-b-3 border-solid border-yellow-500 hover:text-yellow-500 pb-6"
-                                data-toggle="pill"
-                                href="#tab-content-1"
-                            >
-                                About
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link py-2 font-semibold border-b-3 border-solid border-yellow-500 hover:text-yellow-500 pb-6"
-                                data-toggle="pill"
-                                href="#tab-content-2"
-                            >
-                                Mission
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link py-2 font-semibold border-b-3 border-solid border-yellow-500 hover:text-yellow-500 pb-6"
-                                data-toggle="pill"
-                                href="#tab-content-3"
-                            >
-                                Vision
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div className="tab-content">
-                        <div id="tab-content-1" className="container tab-pane active">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                In vitae pellentesque turpis. Donec in hendrerit dui, vel blandit massa.
-                                Ut vestibulum suscipit cursus. Cras quis porta nulla, ut placerat risus.
-                                Aliquam nec magna eget velit luctus dictum. Phasellus et felis sed purus
-                                tristique dignissim. Morbi sit amet leo at purus accumsan pellentesque.
-                                Vivamus fermentum nisi vel dapibus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        <div id="tab-content-2" className="container tab-pane fade">
-                            <p>
-                                Sed tincidunt, magna ut vehicula volutpat, turpis diam condimentum justo,
-                                posuere congue turpis massa in mi. Proin ornare at massa at fermentum.
-                                Nunc aliquet sed nisi iaculis ornare. Nam semper tortor eget est egestas,
-                                eu sagittis nunc sodales. Interdum et malesuada fames ac ante ipsum primis
-                                in faucibus. Praesent bibendum sapien sed purus molestie malesuada.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        <div id="tab-content-3" className="container tab-pane fade">
-                            <p>
-                                Aliquam dolor odio, mollis sed feugiat sit amet, feugiat ut sapien.
-                                Nunc eu dignissim lorem. Suspendisse at hendrerit enim. Interdum et
-                                malesuada fames ac ante ipsum primis in faucibus. Sed condimentum
-                                semper turpis vel facilisis. Nunc vel faucibus orci. Mauris ut mauris
-                                rhoncus, efficitur nisi at, venenatis quam. Praesent egestas pretium
-                                enim sit amet finibus. Curabitur at erat molestie, tincidunt lorem eget,
-                                consequat ligula.
-                            </p>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>

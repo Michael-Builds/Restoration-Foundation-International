@@ -58,7 +58,7 @@ const Slider = () => {
                                 {item.description}
                             </p>
                             <div className="carousel-btn text-white hover:text-gray-500">
-                                <a className="text-white mr-6 hover:text-gray-500  hover:bg-yellow-500 hover:text-white border border-yellow-500 p-2 border-2 rounded-sm" href="">
+                                <a className="text-white mr-6 hover:text-gray-500 hover:bg-yellow-500 hover:text-white border border-yellow-500 p-2 border-3 rounded-sm" href="">
                                     Donate Now
                                 </a>
                                 <a
