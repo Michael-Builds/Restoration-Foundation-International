@@ -5,6 +5,7 @@ import Navigation from './components/NavBar'
 import Carousel from './components/Carousel'
 import About from './components/About'
 import Service from './components/Service'
+import Facts from './components/Facts';
 
 const Home = () => {
     const location = useLocation();
@@ -20,6 +21,7 @@ const Home = () => {
             <Carousel />
             <About />
             <Service />
+            <Facts />
         </>
     );
 };
