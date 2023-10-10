@@ -3,12 +3,14 @@ import { FaGlobeAmericas } from 'react-icons/fa';
 import { FaHandsHelping } from 'react-icons/fa';
 import { LuGoal } from 'react-icons/lu';
 import { BiSolidDonateHeart } from 'react-icons/bi';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
 
 export default function About() {
     const [factItems] = useState([
         {
             icon: <FaGlobeAmericas className='h-16 w-16 text-yellow-500' />,
-            target: 150,
+            target: 50,
             text: 'Countries',
         },
         {
@@ -28,44 +30,22 @@ export default function About() {
         },
     ]);
 
+    const [inViewRefs, inViews] = useInView({
+        triggerOnce: true,
+        threshold: 0.5, // Adjust this threshold as needed
+    });
+
+
     useEffect(() => {
-        const counterUp = () => {
-            const counters = document.querySelectorAll('.facts-plus');
-            const speed = 200; // The lower the slower
-
-            counters.forEach((counter) => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-
-                    // Lower is faster
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                updateCount();
+        // Check if any of the counters are in view and start the CountUp animation
+        if (Object.values(inViews).some((view) => view)) {
+            inViewRefs.forEach((ref, index) => {
+                if (inViews[index]) {
+                    ref.querySelector('.count-up').start();
+                }
             });
-        };
-
-        const scrollHandler = () => {
-            if (window.pageYOffset > 100) {
-                counterUp();
-                window.removeEventListener('scroll', scrollHandler);
-            }
-        };
-
-        window.addEventListener('scroll', scrollHandler);
-
-        return () => {
-            window.removeEventListener('scroll', scrollHandler);
-        };
-    }, []);
+        }
+    }, [inViewRefs, inViews]);
 
     return (
         <div className="relative py-24 overflow-hidden bg-gray-900 isolate sm:py-32">
@@ -105,8 +85,14 @@ export default function About() {
                             <div key={index} className="flex items-center mb-4 gap-6">
                                 {item.icon}
                                 <div className="ml-2">
-                                    <dt className="text-5xl font-semibold leading-9 tracking-tight text-white font-quicksand mb-4 facts-plus" data-target={item.target}>
-                                        {item.target}
+                                    <dt className="text-5xl font-semibold leading-9 tracking-tight text-white font-quicksand mb-4" ref={inViewRefs[index]}>
+                                        <CountUp
+                                            start={0}
+                                            end={inViews[index] ? item.target : item.target}
+                                            duration={1.0}
+                                            separator=","
+                                            className="count-up"
+                                        />
                                     </dt>
                                     <dd className="text-base font-semibold font-quicksand ml-2 text-2xl text-white ">
                                         {item.text}
