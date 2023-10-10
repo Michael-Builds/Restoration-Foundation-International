@@ -74,7 +74,7 @@ const About = () => {
                             className="rounded-none border-b border-blue-gray-50 font-quicksand bg-transparent p-0 mb-4"
                             indicatorProps={{
                                 className:
-                                    "bg-transparent border-b-2 border-yellow-400 shadow-none rounded-none font-quicksand",
+                                    "bg-transparent border-b-4 border-yellow-400 shadow-none rounded-none font-quicksand",
                             }}
                         >
                             {data.map(({ label, value }) => (
