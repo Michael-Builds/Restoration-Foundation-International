@@ -39,15 +39,15 @@ const Service = () => {
     return (
         <div className="justify-center align-center mt-6 pb-32">
             <div className="container">
-                <div className="text-center mx-auto">
-                    <p className="font-quicksand font-bold text-2xl text-yellow-500 mb-2 ml-[12%]">
+                <div className="text-center mx-auto mb-4">
+                    <p className="font-quicksand font-bold text-2xl text-yellow-500 mb-2 ml-[8%]">
                         What We Do?
                     </p>
-                    <h2 className=" font-quicksand font-bold text-5xl text-blue-900 mb-4 max-w-[700px] ml-[30%] mt-6">
+                    <h2 className=" font-quicksand font-bold text-5xl text-blue-900 mb-4 max-w-[700px] ml-[25%] mt-6">
                         We believe that we can save more lives with you
                     </h2>
                 </div>
-                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 ml-[10%]">
+                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 ml-[6%]">
                     {services.map((service, index) => (
                         <div className="col-lg-4 col-md-6" key={index}>
                             <div className="service-item flex items-center">
