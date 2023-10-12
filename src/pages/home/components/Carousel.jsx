@@ -5,13 +5,13 @@ import Image2 from '../../../assets/carousel-2.jpg';
 import Image3 from '../../../assets/carousel-3.jpg';
 import React from "react";
 import {
+    Button,
     Dialog,
     DialogHeader,
     DialogBody,
     DialogFooter,
 } from "@material-tailwind/react";
 import { AiOutlineClose } from 'react-icons/ai';
-import { BiLogoYoutube } from 'react-icons/bi';
 
 const carouselItems = [
     {
@@ -77,20 +77,29 @@ const Slider = () => {
                 ))}
             </Carousel>
             <Dialog open={open} handler={handleOpen}
-                className="relative m-4 w-2/5 min-w-[50%] max-w-[50%] min-h-[60%] max-h-[60%] rounded-lg bg-black font-quicksand text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl"
+                className="relative m-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl"
             >
-                <DialogHeader className="justify-end text-white cursor-pointer" onClick={handleOpen}>
+                <DialogHeader onClick={handleOpen} className="justify-end cursor-pointer text-red-500">
                     <AiOutlineClose />
                 </DialogHeader>
-                <DialogBody divider className="justify-center align-center mt-[10%] text-white" >
+                <DialogBody divider className="font-quicksand text-1xl font-medium">
                     The key to more success is to have a lot of pillows. Put it this way,
                     it took me twenty five years to get these plants, twenty five years of
                     blood sweat and tears, and I&apos;m never giving up, I&apos;m just
                     getting started. I&apos;m up to something. Fan luv.
                 </DialogBody>
-
                 <DialogFooter>
-                    <BiLogoYoutube onClick={handleOpen} className="text-white h-16 w-16 cursor-pointer -mb-[30%] " />
+                    <Button
+                        variant="text"
+                        color="red"
+                        onClick={handleOpen}
+                        className="mr-1"
+                    >
+                        <span>Cancel</span>
+                    </Button>
+                    <Button variant="gradient" color="green" onClick={handleOpen}>
+                        <span>Confirm</span>
+                    </Button>
                 </DialogFooter>
             </Dialog>
         </div>
