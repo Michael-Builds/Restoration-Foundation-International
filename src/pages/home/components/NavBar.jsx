@@ -149,7 +149,7 @@ const Navigation = () => {
                 </IconButton>
             </div>
             <MobileNav open={openNav}>
-                <div className="container mx-auto ">
+                <div className="container mx-auto pb-4 ">
                     {navList}
                     <Button variant="gradient" size="sm" className="flex items-center bg-yellow-500">
                         <span className="mr-1">Donate</span>
