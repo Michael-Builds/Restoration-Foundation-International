@@ -4,6 +4,9 @@ import Image1 from '../../../assets/carousel-1.jpg';
 import Image2 from '../../../assets/carousel-2.jpg';
 import Image3 from '../../../assets/carousel-3.jpg';
 import React from "react";
+import { GoArrowRight } from 'react-icons/go';
+import { BiSolidVideos } from 'react-icons/bi';
+
 import {
     Button,
     Dialog,
@@ -57,18 +60,19 @@ const Slider = () => {
                             <p className="text-white text-center font-quicksand text-2xl mb-10">
                                 {item.description}
                             </p>
-                            <div className="carousel-btn text-white hover:text-gray-500">
-                                <a className="text-white mr-6 hover:text-gray-500 hover:bg-yellow-500 hover:text-white border border-yellow-500 p-2 border-3 rounded-sm" href="">
+
+                            <div className=" flex">
+
+                                <button className="justify-center ml-6 flex items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer">
                                     Donate Now
-                                </a>
+                                    <GoArrowRight className="ml-2 mr-2" />
+                                </button>
                                 <a
                                     onClick={handleOpen}
-                                    className="text-white hover:text-gray-500 border hover:bg-yellow-500 hover:text-white border-yellow-500 p-2 border-2 rounded-sm cursor-pointer"
-                                    data-toggle="modal"
-                                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
-                                    data-target="#videoModal"
+                                    className="justify-center ml-6 flex items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer"
                                 >
                                     Watch Video
+                                    <BiSolidVideos className="ml-2 mr-2" />
                                 </a>
 
                             </div>

@@ -62,9 +62,9 @@ const About = () => {
                 {/* Right Column */}
                 <div className="w-full lg:w-1/2 -mt-32">
                     <div className="mb-10 ml-0">
-                        <p
-                            className='text-2xl font-semibold text-yellow-400 font-quicksand'
-                        >Learn About Us</p>
+                        <div className="border-l-4 border-yellow-400  pl-2">
+                            <p className='text-2xl mr-2 font-semibold text-yellow-400 font-quicksand' >Learn About Us</p>
+                        </div>
                         <h2 className="text-5xl text-blue-900 font-quicksand mt-6 font-bold">
                             Worldwide non-profit charity organization
                         </h2>

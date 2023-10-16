@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import TopBar from './components/TopBar';
-import Navigation from './components/NavBar'
+import Navigation from '../components/Navigation'
 import Carousel from './components/Carousel'
 import About from './components/About'
 import Service from './components/Service'
 import Facts from './components/Facts';
+import Causes from './components/Causes';
+import Donate from './components/Donate';
 
 const Home = () => {
     const location = useLocation();
@@ -16,12 +17,13 @@ const Home = () => {
 
     return (
         <>
-            <TopBar />
             <Navigation />
             <Carousel />
             <About />
             <Service />
             <Facts />
+            <Causes />
+            <Donate/>
         </>
     );
 };

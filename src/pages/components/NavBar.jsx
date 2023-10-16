@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { IoIosArrowForward } from 'react-icons/io';
-import Logo from '../../../assets/logo.png'
+import { BiSolidDollarCircle } from 'react-icons/bi';
+import Logo from '../../assets/logo.png';
 import {
     Navbar,
     MobileNav,
@@ -105,9 +105,9 @@ const Navigation = () => {
                 <div className="hidden lg:block -mr-96 font-quicksand text-16">{navList}</div>
                 {showDonateButton && (
                     //Conditionally render the donate button, when the screen is greater than 960 pixels, then the button is displayed else it is hidden
-                    <Button variant="gradient" size="sm" className="mb-2 mt-2 flex items-center -ml-32 text-gray-600 bg-yellow-500 text-white rounded-lg">
-                        <span className="mr-1 font-quicksand text-sm">Donate</span>
-                        <IoIosArrowForward className="ml-1" />
+                    <Button variant="gradient" size="sm" className="mb-2 mt-2 flex items-center -ml-32 text-gray-600 bg-yellow-500 text-white rounded-lg hover:bg-gray-500">
+                        <BiSolidDollarCircle className="mr-2" />
+                        <span className="mr-1 font-quicksand text-sm font-medium capitalize">Donate</span>
                     </Button>
                 )}
                 <IconButton
@@ -151,9 +151,9 @@ const Navigation = () => {
             <MobileNav open={openNav}>
                 <div className="container mx-auto pb-4 ">
                     {navList}
-                    <Button variant="gradient" size="sm" className="flex items-center bg-yellow-500">
+                    <Button variant="gradient" size="sm" className="flex items-center capitalize bg-yellow-500">
+                        <BiSolidDollarCircle className="mr-2" />
                         <span className="mr-1">Donate</span>
-                        <IoIosArrowForward className="ml-1" />
                     </Button>
                 </div>
             </MobileNav>

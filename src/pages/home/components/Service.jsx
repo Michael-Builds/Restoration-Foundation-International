@@ -39,8 +39,9 @@ const Service = () => {
     return (
         <div className="justify-center align-center mt-6 pb-32">
             <div className="container">
-                <div className="text-center mx-auto mb-4">
-                    <p className="font-quicksand font-bold text-2xl text-yellow-500 mb-2 ml-[8%]">
+                <div className="text-center mx-auto mb-4 mt-16">
+
+                    <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 ml-[8%]">
                         What We Do?
                     </p>
                     <h2 className=" font-quicksand font-bold text-5xl text-blue-900 mb-4 max-w-[700px] ml-[25%] mt-6">
