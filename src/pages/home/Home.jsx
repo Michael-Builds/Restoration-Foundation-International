@@ -7,6 +7,8 @@ import Service from './components/Service'
 import Facts from './components/Facts';
 import Causes from './components/Causes';
 import Donate from './components/Donate';
+import Events from './components/Events';
+import Team from './components/Team';
 
 const Home = () => {
     const location = useLocation();
@@ -23,7 +25,9 @@ const Home = () => {
             <Service />
             <Facts />
             <Causes />
-            <Donate/>
+            <Donate />
+            <Events />
+            <Team />
         </>
     );
 };

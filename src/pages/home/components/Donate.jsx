@@ -1,6 +1,4 @@
-
 import React from "react";
-import { BiSolidDollarCircle } from 'react-icons/bi';
 import {
     Card,
     CardBody,
@@ -15,11 +13,63 @@ import {
 import {
     LockClosedIcon,
 } from "@heroicons/react/24/solid";
-// import { BsPhoneVibrateFill } from 'react-icons/bs';
-// import { HiBanknotes } from 'react-icons/hi2';
+import swal from "sweetalert";
 
 const About = () => {
     const [type, setType] = React.useState("momo");
+
+    const [donateInfo, setDonateInfo] = React.useState({
+        email: "",
+        fullname: "",
+        number: "",
+        amount: "",
+        email2: "",
+        fullname2: "",
+        number2: "",
+        amount2: "",
+    })
+
+    const handleClear = () => {
+        setDonateInfo({
+            email: "",
+            fullname: "",
+            number: "",
+            amount: "",
+            email2: "",
+            fullname2: "",
+            number2: "",
+            amount2: "",
+
+        })
+    };
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setDonateInfo((prevDonate) => ({
+            ...prevDonate,
+            [name]: value,
+        }));
+    };
+
+    const handleCancel = () => {
+        swal({
+            title: "Are you sure?",
+            text: "Once canceled, you will not be able to do this again!",
+            icon: "warning",
+            buttons: ["No", "Yes"],
+            dangerMode: true,
+        }).then((willCancel) => {
+            if (willCancel) {
+                swal("Donation", "Donate withrawn", "warning")
+                handleClear();
+            }
+        });
+    };
+
+    const handleSave = (e) => {
+        e.preventDefault();
+        swal("Donation", "Donation made", "success")
+    }
 
 
     return (
@@ -72,27 +122,19 @@ const About = () => {
                 {/* Right Column */}
                 <div className="w-full lg:w-1/2 ">
                     <div className=" ml-0">
-                        <Card className="w-full max-w-[24rem] rounded-lg">
+                        <Card className="w-full max-w-[24rem] rounded-lg p-2">
                             <CardBody>
                                 <Tabs value={type} className="overflow-visible">
-                                    <TabsHeader className="relative p-2 bg-gray-300">
-                                        <Tab
-                                            value="momo"
-                                            onClick={() => setType("momo")}
-                                            className={`font-quicksand ${type === "momo" ? "z-30" : "z-30"}`}
-                                        >
+                                    <TabsHeader className="relative z-0 p-2 bg-gray-200 mt-4">
+                                        <Tab value="momo" onClick={() => setType("momo")} className="font-quicksand p-1 ">
                                             Pay with MoMo
                                         </Tab>
-                                        <Tab
-                                            value="bank"
-                                            onClick={() => setType("bank")}
-                                            className={`font-quicksand ${type === "bank" ? "z-30" : "z-30"}`}
-                                        >
+                                        <Tab value="bank" onClick={() => setType("bank")} className="font-quicksand p-1  ">
                                             Pay with Bank
                                         </Tab>
                                     </TabsHeader>
-
                                     <TabsBody
+                                        className="!overflow-x-hidden !overflow-y-visible"
                                         animate={{
                                             initial: {
                                                 x: type === "momo" ? 400 : -400,
@@ -107,15 +149,60 @@ const About = () => {
                                     >
                                         <TabPanel value="momo" className="p-2">
                                             <p className="text-center font-quicksand font-medium mt-4">Who is Donating Today?</p>
-                                            <form className="mt-4 flex flex-col gap-4">
-                                                <input placeholder="Email Address" type="email" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
-                                                <input placeholder="Full Name" type="text" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
-                                                <input placeholder="MoMo Number" type="tel" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
-                                                <input placeholder="Amount" type="number" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
-                                                <Button type="submit" size="lg" className="p-2 bg-yellow-500 mt-2 justify-center flex items-center">
-                                                    <BiSolidDollarCircle className="mr-2 ml-2" />
-                                                    Donate
-                                                </Button>
+                                            <form
+                                                onSubmit={handleSave}
+                                                className="mt-5 flex flex-col gap-4">
+                                                <input
+                                                    id="email"
+                                                    name="email"
+                                                    value={donateInfo.email}
+                                                    onChange={handleInputChange}
+                                                    placeholder="Email Address"
+                                                    type="email"
+                                                    required
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input
+                                                    id="fullname"
+                                                    name="fullname"
+                                                    value={donateInfo.fullname}
+                                                    onChange={handleInputChange}
+
+                                                    placeholder="Full Name"
+                                                    type="text"
+                                                    required
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input
+                                                    id="number"
+                                                    name="number"
+                                                    value={donateInfo.number}
+                                                    onChange={handleInputChange}
+
+                                                    placeholder="MoMo Number"
+                                                    type="tel"
+                                                    required
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                <input
+                                                    id="amount"
+                                                    name="amount"
+                                                    value={donateInfo.amount}
+                                                    onChange={handleInputChange}
+
+                                                    placeholder="Amount"
+                                                    type="number"
+                                                    required
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+
+                                                <div className="flex items-center justify-center gap-x-6">
+                                                    <Button type="submit" size="lg" className="p-4 bg-yellow-500 mt-2 justify-center flex items-center font-quicksand">
+                                                        Donate
+                                                    </Button>
+                                                    <Button
+                                                        onClick={handleCancel}
+                                                        type="submit" size="lg" className="p-4 bg-gray-500 mt-2 justify-center flex items-center font-quicksand">
+                                                        Cancel
+                                                    </Button>
+                                                </div>
+
                                                 <Typography
                                                     variant="small"
                                                     color="gray"
@@ -131,16 +218,52 @@ const About = () => {
                                             <p className="text-center font-quicksand mb-4 mt-4 font-medium">
                                                 Who is Donating Today?
                                             </p>
-                                            <form className="mt-4 flex flex-col gap-4">
+                                            <form
+                                                onSubmit={handleSave}
+                                                className="mt-5 flex flex-col gap-4">
+                                                <input
+                                                    id="email2"
+                                                    name="email2"
+                                                    value={donateInfo.email2}
+                                                    onChange={handleInputChange}
+                                                    placeholder="Email Address"
+                                                    type="email"
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input
+                                                    id="fullname2"
+                                                    name="fullname2"
+                                                    value={donateInfo.fullname2}
+                                                    onChange={handleInputChange}
+                                                    placeholder="Full Name"
+                                                    type="text"
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input
+                                                    id="number2"
+                                                    name="number2"
+                                                    value={donateInfo.number2}
+                                                    onChange={handleInputChange}
+                                                    placeholder="Bank Number"
+                                                    type="tel"
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                <input
+                                                    id="amount2"
+                                                    name="amount2"
+                                                    value={donateInfo.amount2}
+                                                    onChange={handleInputChange}
+                                                    placeholder="Amount"
+                                                    type="number"
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+                                                <div className="flex items-center justify-center gap-x-6">
+                                                    <Button type="submit" size="lg" className="p-4 bg-yellow-500 mt-2 justify-center flex items-center font-quicksand">
+                                                        Donate
+                                                    </Button>
+                                                    <Button
+                                                        onClick={handleCancel}
+                                                        type="submit" size="lg" className="p-4 bg-gray-500 mt-2 justify-center flex items-center font-quicksand">
+                                                        Cancel
+                                                    </Button>
+                                                </div>
 
-                                                <input placeholder="Email Address" type="email" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
-                                                <input placeholder="Full Name" type="text" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
-                                                <input placeholder="Bank Number" type="tel" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
-                                                <input placeholder="Amount" type="number" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
-                                                <Button type="submit" size="lg" className="p-2 bg-yellow-500 mt-2 justify-center flex items-center">
-                                                    <BiSolidDollarCircle className="mr-2 ml-2" />
-                                                    Donate
-                                                </Button>
                                                 <Typography
                                                     variant="small"
                                                     color="gray"
@@ -151,7 +274,6 @@ const About = () => {
                                                 </Typography>
                                             </form>
                                         </TabPanel>
-
                                     </TabsBody>
                                 </Tabs>
                             </CardBody>
