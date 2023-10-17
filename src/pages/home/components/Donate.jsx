@@ -13,18 +13,17 @@ import {
     TabPanel,
 } from "@material-tailwind/react";
 import {
-
     LockClosedIcon,
 } from "@heroicons/react/24/solid";
-
+// import { BsPhoneVibrateFill } from 'react-icons/bs';
+// import { HiBanknotes } from 'react-icons/hi2';
 
 const About = () => {
-
     const [type, setType] = React.useState("momo");
 
 
     return (
-        <div className="relative w-full py-12">
+        <div className="relative w-full py-12 mt-10">
             <img
                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
                 alt=""
@@ -42,7 +41,7 @@ const About = () => {
                     }}
                 />
             </div>
-            <div
+            {/* <div
                 className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
                 aria-hidden="true"
             >
@@ -53,12 +52,12 @@ const About = () => {
                             'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
                     }}
                 />
-            </div>
-            <div className="container mx-auto flex flex-wrap items-center">
+            </div> */}
+            <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
                 <div className="w-full lg:w-1/2 lg:pr-10 mt-16">
-                    <div className="border-l-4 border-white  pl-2">
-                        <h2 className='text-white text-2xl font-quicksand'>Donate Now</h2>
+                    <div className="border-l-4 border-yellow-500  pl-2">
+                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium'>Donate Now</h2>
                     </div>
                     <h2 className='text-white text-5xl font-quicksand mt-6 font-bold'>
                         Let us donate to needy people for better lives
@@ -76,13 +75,14 @@ const About = () => {
                         <Card className="w-full max-w-[24rem] rounded-lg">
                             <CardBody>
                                 <Tabs value={type} className="overflow-visible">
-                                    <TabsHeader className="relative z-0 p-2 bg-gray-300 ">
-                                        <Tab value="momo" onClick={() => setType("momo")} >
+                                    <TabsHeader className="relative z-0 p-2 bg-gray-300  ">
+                                        <Tab value="momo" onClick={() => setType("momo")} className={type === "momo" ? "font-quicksand" : " font-quicksand"}>
                                             Pay with MoMo
                                         </Tab>
-                                        <Tab value="bank" onClick={() => setType("bank")}>
+                                        <Tab value="bank" onClick={() => setType("bank")} className={type === "bank" ? "font-quicksand" : " font-quicksand"}>
                                             Pay with Bank
                                         </Tab>
+
                                     </TabsHeader>
                                     <TabsBody
                                         animate={{
@@ -98,12 +98,16 @@ const About = () => {
                                         }}
                                     >
                                         <TabPanel value="momo" className="p-2">
-                                            <form className="mt-12 flex flex-col gap-4">
-
-                                                <p className="text-center font-quicksand mb-4">Mobile Details</p>
-                                                <Button size="lg" className="p-2 bg-yellow-600 justify-center flex items-center">
+                                            <p className="text-center font-quicksand font-medium mt-4">Who is Donating Today?</p>
+                                            <form className="mt-4 flex flex-col gap-4">
+                                                <input placeholder="Email Address" type="email" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input placeholder="Full Name" type="text" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input placeholder="MoMo Number" type="tel" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                <input placeholder="Amount" type="number" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+                                                <Button type="submit" size="lg" className="p-2 bg-yellow-500 mt-2 justify-center flex items-center">
                                                     <BiSolidDollarCircle className="mr-2 ml-2" />
-                                                    Donate</Button>
+                                                    Donate
+                                                </Button>
                                                 <Typography
                                                     variant="small"
                                                     color="gray"
@@ -115,14 +119,20 @@ const About = () => {
                                             </form>
                                         </TabPanel>
 
-
                                         <TabPanel value="bank" className="p-2">
-                                            <form className="mt-12 flex flex-col gap-4">
+                                            <p className="text-center font-quicksand mb-4 mt-4 font-medium">
+                                                Who is Donating Today?
+                                            </p>
+                                            <form className="mt-4 flex flex-col gap-4">
 
-                                                <p className="text-center font-quicksand mb-4">Bank Details</p>
-                                                <Button size="lg" className="p-2 bg-yellow-600 justify-center flex items-center">
+                                                <input placeholder="Email Address" type="email" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input placeholder="Full Name" type="text" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                <input placeholder="Bank Number" type="tel" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                <input placeholder="Amount" type="number" className="p-2 border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+                                                <Button type="submit" size="lg" className="p-2 bg-yellow-500 mt-2 justify-center flex items-center">
                                                     <BiSolidDollarCircle className="mr-2 ml-2" />
-                                                    Donate</Button>
+                                                    Donate
+                                                </Button>
                                                 <Typography
                                                     variant="small"
                                                     color="gray"

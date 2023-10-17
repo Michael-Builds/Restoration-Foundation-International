@@ -46,7 +46,7 @@ const Causes = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-4 mt-8">
                 {causesData.map((cause, index) => (
                     <div key={index} className="bg-gray-200 m-4 rounded-md w-[26%] h-160 flex flex-col justify-start items-center">
                         <img src={cause.image} alt={`Cause-${index + 1}`} className="w-full" />
