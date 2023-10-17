@@ -75,15 +75,23 @@ const About = () => {
                         <Card className="w-full max-w-[24rem] rounded-lg">
                             <CardBody>
                                 <Tabs value={type} className="overflow-visible">
-                                    <TabsHeader className="relative z-0 p-2 bg-gray-300  ">
-                                        <Tab value="momo" onClick={() => setType("momo")} className={type === "momo" ? "font-quicksand" : " font-quicksand"}>
+                                    <TabsHeader className="relative p-2 bg-gray-300">
+                                        <Tab
+                                            value="momo"
+                                            onClick={() => setType("momo")}
+                                            className={`font-quicksand ${type === "momo" ? "z-30" : "z-30"}`}
+                                        >
                                             Pay with MoMo
                                         </Tab>
-                                        <Tab value="bank" onClick={() => setType("bank")} className={type === "bank" ? "font-quicksand" : " font-quicksand"}>
+                                        <Tab
+                                            value="bank"
+                                            onClick={() => setType("bank")}
+                                            className={`font-quicksand ${type === "bank" ? "z-30" : "z-30"}`}
+                                        >
                                             Pay with Bank
                                         </Tab>
-
                                     </TabsHeader>
+
                                     <TabsBody
                                         animate={{
                                             initial: {
