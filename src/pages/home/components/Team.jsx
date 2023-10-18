@@ -50,7 +50,7 @@ const teamData = [
 
 const Team = () => {
     return (
-        <div className='justify-center align-center mt-8 pb-32'>
+        <div className='justify-center align-center mt-8 pb-16'>
             <div className=''>
                 <div className='text-center mx-auto mb-4 mt-24'>
                     <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 ">

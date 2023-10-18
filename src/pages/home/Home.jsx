@@ -9,6 +9,9 @@ import Causes from './components/Causes';
 import Donate from './components/Donate';
 import Events from './components/Events';
 import Team from './components/Team';
+import Volunteer from './components/Volunteer';
+import Testimonial from './components/Testimonial';
+import GetinTouch from '../components/GetinTouch';
 
 const Home = () => {
     const location = useLocation();
@@ -28,6 +31,10 @@ const Home = () => {
             <Donate />
             <Events />
             <Team />
+            <Volunteer />
+            <Testimonial />
+            <GetinTouch />
+
         </>
     );
 };
