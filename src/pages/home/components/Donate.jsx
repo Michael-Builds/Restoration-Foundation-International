@@ -91,23 +91,11 @@ const About = () => {
                     }}
                 />
             </div>
-            {/* <div
-                className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-                aria-hidden="true"
-            >
-                <div
-                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-                    style={{
-                        clipPath:
-                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                    }}
-                />
-            </div> */}
             <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
                 <div className="w-full lg:w-1/2 lg:pr-10 mt-16">
                     <div className="border-l-4 border-yellow-500  pl-2">
-                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium'>Donate Now</h2>
+                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Donate Now</h2>
                     </div>
                     <h2 className='text-white text-5xl font-quicksand mt-6 font-bold'>
                         Let us donate to needy people for better lives
@@ -160,7 +148,7 @@ const About = () => {
                                                     placeholder="Email Address"
                                                     type="email"
                                                     required
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                                                 <input
                                                     id="fullname"
                                                     name="fullname"
@@ -170,7 +158,7 @@ const About = () => {
                                                     placeholder="Full Name"
                                                     type="text"
                                                     required
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                                                 <input
                                                     id="number"
                                                     name="number"
@@ -180,7 +168,7 @@ const About = () => {
                                                     placeholder="MoMo Number"
                                                     type="tel"
                                                     required
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" min="10" />
                                                 <input
                                                     id="amount"
                                                     name="amount"
@@ -190,7 +178,7 @@ const About = () => {
                                                     placeholder="Amount"
                                                     type="number"
                                                     required
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" min="0" />
 
                                                 <div className="flex items-center justify-center gap-x-6">
                                                     <Button type="submit" size="lg" className="p-4 bg-yellow-500 mt-2 justify-center flex items-center font-quicksand">
@@ -228,7 +216,7 @@ const About = () => {
                                                     onChange={handleInputChange}
                                                     placeholder="Email Address"
                                                     type="email"
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                                                 <input
                                                     id="fullname2"
                                                     name="fullname2"
@@ -236,7 +224,7 @@ const About = () => {
                                                     onChange={handleInputChange}
                                                     placeholder="Full Name"
                                                     type="text"
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                                                 <input
                                                     id="number2"
                                                     name="number2"
@@ -244,7 +232,7 @@ const About = () => {
                                                     onChange={handleInputChange}
                                                     placeholder="Bank Number"
                                                     type="tel"
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="10" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" min="10" />
                                                 <input
                                                     id="amount2"
                                                     name="amount2"
@@ -252,9 +240,9 @@ const About = () => {
                                                     onChange={handleInputChange}
                                                     placeholder="Amount"
                                                     type="number"
-                                                    className="p-2 font-quicksand border border-gray-600 rounded-sm focus:outline-none border-b-2" min="0" />
+                                                    className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" min="0" />
                                                 <div className="flex items-center justify-center gap-x-6">
-                                                    <Button type="submit" size="lg" className="p-4 bg-yellow-500 mt-2 justify-center flex items-center font-quicksand">
+                                                    <Button type="submit" size="lg" className="p-4  bg-yellow-500 mt-2 justify-center flex items-center font-quicksand">
                                                         Donate
                                                     </Button>
                                                     <Button

@@ -76,7 +76,7 @@ const Events = () => {
                             <div className="w-full lg:w-1/2 border-l-4 border-yellow-400 pl-4">
                                 <h2 className=' font-quicksand text-blue-900 font-bold text-lg'> {event.title}</h2>
                                 <p className='max-w-[100%] text-sm mt-2'>{event.description}</p>
-                                <button className='mt-4 border border-yellow-500 border-b-2 pl-2 pb-1 pt-1 pr-2 rounded-full flex items-center font-quicksand font-medium ml-2 hover:border-yellow-600'>
+                                <button className='mt-4 border border-yellow-500 border-b-4 pl-2 pb-1 pt-1 pr-2 rounded-full flex items-center font-quicksand font-medium ml-2 hover:border-yellow-600'>
                                     {event.buttonText}
                                     <GoArrowRight className='ml-2 mr-2' />
                                 </button>

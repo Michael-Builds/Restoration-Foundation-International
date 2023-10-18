@@ -44,9 +44,11 @@ const Slider = () => {
             <Carousel
                 autoPlay={true} // Auto play the carousel
                 infiniteLoop={true} // Loop back to the first slide after reaching the last slide
-                showArrows={true} // Show left and right navigation arrows
+                showArrows={false} // Show left and right navigation arrows
                 showStatus={false} // Hide status indicators (dots)
                 showThumbs={false} // Hide thumbnail images
+                swipeScrollTolerance={3} // Set swipe time to 3 seconds
+                stopOnHover={true} // Pause on hover
             >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="relative w-full min-h-[400px] flex items-center justify-center flex-col">
@@ -63,13 +65,13 @@ const Slider = () => {
 
                             <div className=" flex">
 
-                                <button className="justify-center ml-6 flex items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer">
+                                <button className="justify-center ml-6 flex border-b-4 items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer">
                                     Donate Now
                                     <GoArrowRight className="ml-2 mr-2" />
                                 </button>
                                 <a
                                     onClick={handleOpen}
-                                    className="justify-center ml-6 flex items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer"
+                                    className="justify-center ml-6 flex border-b-4 items-center border border-yellow-500 hover:border-yellow-700 border-b-2 p-3 text-white font-quicksand mb-4 m-2 rounded-full cursor-pointer"
                                 >
                                     Watch Video
                                     <BiSolidVideos className="ml-2 mr-2" />

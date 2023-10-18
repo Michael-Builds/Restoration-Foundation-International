@@ -1,4 +1,4 @@
-import Image from '../../../assets/carousel-2.jpg';
+import Image from '../../../assets/team.jpeg';
 
 const teamData = [
     {
@@ -40,7 +40,6 @@ const Testimonial = () => {
                     </h2>
                 </div>
             </div>
-
             <div className="flex justify-center p-2 mt-8 relative">
                 {teamData.map((team, index) => (
                     <div key={index} className="m-4 rounded-md relative pb-16  w-[20rem] flex items-center border border-gray-400 border-b-4 p-6">

@@ -85,7 +85,7 @@ export default function About() {
                             <div key={index} className="flex items-center mb-4 gap-6">
                                 {item.icon}
                                 <div className="ml-2">
-                                    <dt className="text-5xl font-semibold leading-9 tracking-tight text-white font-quicksand mb-4" ref={inViewRefs[index]}>
+                                    <dt className="text-6xl font-semibold leading-9 tracking-tight text-white font-quicksand mb-6" ref={inViewRefs[index]}>
                                         <CountUp
                                             start={0}
                                             end={inViews[index] ? item.target : item.target}

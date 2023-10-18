@@ -63,7 +63,7 @@ const About = () => {
                 <div className="w-full lg:w-1/2 -mt-32">
                     <div className="mb-10 ml-0">
                         <div className="border-l-4 border-yellow-400  pl-2">
-                            <p className='text-2xl mr-2 font-semibold text-yellow-400 font-quicksand' >Learn About Us</p>
+                            <p className='text-2xl mr-2 ml-2 font-semibold text-yellow-400 font-quicksand' >Learn About Us</p>
                         </div>
                         <h2 className="text-5xl text-blue-900 font-quicksand mt-6 font-bold">
                             Worldwide non-profit charity organization
@@ -82,7 +82,7 @@ const About = () => {
                                     key={value}
                                     value={value}
                                     onClick={() => setActiveTab(value)}
-                                    className={activeTab === value ? "text-yellow-400 font-quicksand font-semibold " : "font-quicksand text-1xl font-semibold"}
+                                    className={activeTab === value ? "text-yellow-400 font-quicksand font-semibold text-xl" : "font-quicksand text-1xl font-semibold text-xl"}
                                 >
                                     {label}
                                 </Tab>
@@ -90,7 +90,7 @@ const About = () => {
                         </TabsHeader>
                         <TabsBody >
                             {data.map(({ value, desc }) => (
-                                <TabPanel key={value} value={value} className='font-quicksand text-1xl'>
+                                <TabPanel key={value} value={value} className='-mt-2 font-quicksand text-xl font-sm'>
                                     {desc}
                                 </TabPanel>
                             ))}

@@ -1,4 +1,4 @@
-import Image from '../../../assets/carousel-2.jpg';
+import Image from '../../../assets/team.jpeg';
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from 'react-icons/bi';
 
 const teamData = [
@@ -62,11 +62,11 @@ const Team = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center p-2 mt-8 relative">
+            <div className="flex justify-center p-2 mt-8 relative ">
                 {teamData.map((team, index) => (
                     <div key={index} className="m-4 rounded-md relative pb-16  ">
                         <img src={team.image} alt={`Team-${index + 1}`} className="w-full h-full object-cover object-center" />
-                        <div className="w-[60%] h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white  border-yellow-500 border-b-2 rounded-md text-center">
+                        <div className="w-[60%] h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white border-yellow-500 border-b-4 rounded-md text-center">
                             <h2 className='text-blue-900 font-quicksand mt-4 text-md font-semibold'>{team.name}</h2>
                             <p className='mt-2 font-quicksand font-medium text-gray-600'>{team.role}</p>
                             <div className="flex justify-center mt-5">
