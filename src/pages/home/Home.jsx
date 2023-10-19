@@ -12,6 +12,9 @@ import Team from './components/Team';
 import Volunteer from './components/Volunteer';
 import Testimonial from './components/Testimonial';
 import GetinTouch from '../components/GetinTouch';
+import Blog from './components/Blog';
+import Footer from '../components/Footer';
+import ScrollToTop from '../components/Scroll';
 
 const Home = () => {
     const location = useLocation();
@@ -34,7 +37,9 @@ const Home = () => {
             <Volunteer />
             <Testimonial />
             <GetinTouch />
-
+            <Blog />
+            <Footer />
+            <ScrollToTop />
         </>
     );
 };

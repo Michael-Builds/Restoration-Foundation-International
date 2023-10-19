@@ -47,7 +47,7 @@ const GetinTouch = () => {
                                 value={contactInfo.fullname}
                                 onChange={handleInputChange}
                                 type="text"
-                                required
+                                require
                                 placeholder="Enter your Full Name"
                                 className="p-2 font-quicksand border border-b-4 border-gray-400 rounded-md focus:outline-none border-b-2  "
 
