@@ -52,8 +52,8 @@ const Slider = () => {
             >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="relative w-full min-h-[400px] flex items-center justify-center flex-col">
-                        <div className="carousel-img relative w-full h-full min-h-[300px] text-right overflow-hidden">
-                            <img src={item.image} alt="Image" />
+                        <div className="carousel-img relative w-full h-[25rem] sm:h-[35rem] md:h-[35rem] lg:h-120 xl:h-[35rem] text-right overflow-hidden">
+                            <img src={item.image} alt="Image" className="object-cover object-center object-contain h-full w-full"/>
                         </div>
                         <div className="absolute carousel-text max-w-700 flex items-center justify-center flex-col z-10">
                             <h1 className="text-center font-quicksand text-white text-6xl font-bold mb-10">
