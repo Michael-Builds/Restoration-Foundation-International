@@ -10,12 +10,12 @@ const TopBar = () => {
                     <div className="flex lg:w-1/2  items-center justify-start">
                         <div className="text flex items-center justify-center flex-row h-16 px-10 text-center gap-2 first:-ml-8 ">
                             <FaLocationDot className="text-yellow-500 h-4 w-4 mr-1 hover:text-yellow-500 cursor-pointer" />
-                            <p className=" text-md my-0 font-quicksand">Ho, Volta Region</p>
+                            <p className=" text-sm my-0 font-quicksand">Ho, Volta Region</p>
                         </div>
 
                         <div className="text flex items-center justify-center flex-row h-16 px-10 text-center gap-2 last:border-l-0">
                             <MdEmail className="text-yellow-500 h-4 w-4 mr-1 hover:text-yellow-500 cursor-pointer" />
-                            <p className=" text-md my-0 font-quicksand">info@michaelkabanda.com</p>
+                            <p className=" text-sm my-0 font-quicksand">info@michaelkabanda.com</p>
                         </div>
                     </div>
                     <div className=" lg:w-1/2 flex items-center justify-end">

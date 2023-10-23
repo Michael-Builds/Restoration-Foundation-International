@@ -15,7 +15,7 @@ const Navigation = () => {
 
     const [openNav, setOpenNav] = React.useState(false);
     const [eventDropdownOpen, setEventDropdownOpen] = React.useState(false);
-    const [aboutDropdownOpen, setAboutDropDownOpen] = React.useState(false);
+    const [aboutDropdownOpen, setAboutDropdownOpen] = React.useState(false);
 
     const showDonateButton = window.innerWidth >= 960; // Check screen width for mobile view
 
@@ -23,17 +23,23 @@ const Navigation = () => {
         setEventDropdownOpen(true);
     };
 
-    const handleAboutMouseEnter = () => {
-        setAboutDropDownOpen(true);
-    }
+
 
     const handleEventMouseLeave = () => {
         setEventDropdownOpen(false);
     };
 
+    const handleAboutMouseEnter = () => {
+        if (!openNav) {
+            setAboutDropdownOpen(true);
+        }
+    };
+
     const handleAboutMouseLeave = () => {
-        setAboutDropDownOpen(false);
-    }
+        if (!openNav) {
+            setAboutDropdownOpen(false);
+        }
+    };
 
     React.useEffect(() => {
         window.addEventListener(
@@ -51,14 +57,14 @@ const Navigation = () => {
                 color="blue-gray"
                 className="p-1 font-normal font-quicksand"
             >
-                <NavLink to="/" className="flex items-center font-medium text-lg text-gray-500 hover:text-yellow-500 font-quicksand">
+                <NavLink to="/" className="flex items-center hover:border-b-2 border-yellow-500 font-medium text-lg text-gray-500 font-quicksand">
                     Home
                 </NavLink>
             </Typography>
             <li
                 className="relative"
-                onMouseEnter={openNav ? null : handleAboutMouseEnter}
-                onMouseLeave={openNav ? null : handleAboutMouseLeave}
+                onMouseEnter={handleAboutMouseEnter}
+                onMouseLeave={handleAboutMouseLeave}
             >
                 <Typography
                     as="div"
@@ -71,27 +77,28 @@ const Navigation = () => {
                         About
                         {openNav ? ( // Conditionally render the plus icon
                             <span
-                                className="ml-3 text-yellow-500 cursor-pointer"
-                                onClick={() => setAboutDropDownOpen(!aboutDropdownOpen)}
+                                className="ml-3 text-green-600 cursor-pointer"
+                                onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+
                             >
                                 <BiPlus />
                             </span>
                         ) : null}
                     </div>
                     {aboutDropdownOpen && (
-                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center text-gray-600 p-4 w-[10rem] lg:border-b-4 lg:border-yellow-500 rounded-md ${openNav ? '' : 'pointer-events-none'}`}>
+                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 border-yellow-500 p-4 w-[10rem] border-b-4 text-gray-600 rounded-md`}>
                             <li>
                                 <NavLink
                                     to="/about"
-                                    className={`block p-2 lg:hover:bg-white lg:hover:border-b-2 rounded-md lg:border-yellow-500 font-medium text-md mt-4 ${openNav ? 'lg:hover:text-yellow-500' : ''}`}
+                                    className={`block p-2 hover:bg-white hover:border-b-2 rounded-md border-yellow-500 font-medium text-md mt-4 hover:text-yellow-500`}
                                 >
                                     About Us
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    to="/service2"
-                                    className={`block p-2 lg:hover:bg-white lg:hover:border-b-2 rounded-md lg:border-yellow-500 font-medium text-md mt-4 ${openNav ? 'lg:hover:text-yellow-500' : ''}`}
+                                    to="/founder"
+                                    className={`block p-2 hover:bg-white hover:border-b-2 rounded-md border-yellow-500 font-medium text-md mt-4 hover:text-green-500`}
                                 >
                                     About Founder
                                 </NavLink>
@@ -100,13 +107,14 @@ const Navigation = () => {
                     )}
                 </Typography>
             </li>
+
             <Typography
                 as="li"
                 variant="small"
                 color="blue-gray"
                 className="p-1 font-normal font-quicksand "
             >
-                <NavLink to="/causes" className="flex items-center font-medium text-lg text-gray-500 hover:text-yellow-500 font-quicksand">
+                <NavLink to="/causes" className="flex items-center font-medium text-lg text-gray-500 hover:border-b-2 border-yellow-500 font-quicksand">
                     Causes
                 </NavLink>
             </Typography>
@@ -161,7 +169,7 @@ const Navigation = () => {
                 color="blue-gray"
                 className="p-1 font-normal font-quicksand flex items-center"
             >
-                <NavLink to="/service" className="flex items-center font-medium text-lg text-gray-500 hover:text-yellow-500 font-quicksand">
+                <NavLink to="/service" className="flex items-center font-medium text-lg text-gray-500 hover:border-b-2 border-yellow-500 font-quicksand">
                     Services
                 </NavLink>
             </Typography>
@@ -173,7 +181,7 @@ const Navigation = () => {
                 color="blue-gray"
                 className="p-1 font-normal font-quicksand"
             >
-                <NavLink to="/blogs" className="flex items-center font-medium text-lg text-gray-500 hover:text-yellow-500 font-quicksand">
+                <NavLink to="/blogs" className="flex items-center font-medium text-lg text-gray-500 hover:border-b-2 border-yellow-500 font-quicksand">
                     Blogs
                 </NavLink>
             </Typography>
