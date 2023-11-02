@@ -10,44 +10,108 @@
 @import "tailwindcss/utilities";
 
 
-@media (min-width: 992px) {
-  .top-bar {
-    padding: 0 60px;
-  }
+.main-logo {
+  width: 120px;
+  height: 60px;
+  /* margin-top: 5rem; */
 }
 
-.carousel-img::after {
+.about-img img {
+  position: relative;
+  z-index: 2;
+}
+
+.about-img::before {
   position: absolute;
   content: "";
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: #bf9410;
+  transform: skew(20deg);
   z-index: 1;
 }
 
-.carousel-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@keyframes counter-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.carousel-text {
-  max-width: 700px;
+.animate-counter-up {
+  animation: counter-up 0.2s ease-in-out;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .main-logo {
+    margin-top: 5rem;
+  }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+  .impact-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: 4.4rem;
+    /* margin-left: 1.8rem; */
+    margin-bottom: 2.5rem;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+  .counter-item {
+    width: 250px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+  .counter-item h2 {
+    font-size: 3.5rem;
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+  .list-content {
+    margin-left: 2.7rem;
+  }
+
+  .listing-button {
+    margin-right: 2.2rem;
+  }
+.right-section p{
+  font-size: 13px;
+}
+  .listing-main p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .footer {
+    margin-left: 20px;
+  }
+
+  .ike {
+    margin-left: -5.2rem;
+  }
+
+  .three {
+    margin-bottom: -2px;
+    margin-top: 4.5px;
+  }
+
+  .two {
+    margin-top: 4px;
+  }
+
+  .top {
+    font-size: 12px;
+  }
+
+  .footer-form {
+    margin-right: 6rem;
+  }
+}

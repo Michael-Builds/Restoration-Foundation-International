@@ -28,22 +28,19 @@ const Footer = () => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        swal("Restoration Foundation", "Subscription Successful", "success")
+        swal("Tamani Properties", "Subscription Successful", "success")
         handleClear();
     }
 
     // Create an array of link texts
     const linkData = [
         { text: "About Us", href: "/about" },
-        { text: "Blog Post", href: "/blog" },
-        { text: "Donners", href: "/donate" },
-        { text: "Documentation", href: "/document" },
-    ];
-    const usefulData = [
-        { text: "Privacy Policy", href: "/about" },
-        { text: "Terms of use", href: "/blog" },
-        { text: "Cookies", href: "/donate" },
-        { text: "Help Center", href: "/document" },
+        { text: "Services", href: "/service" },
+        { text: "Properties", href: "/properties" },
+        { text: "Contact Us", href: "/contact" },
+        { text: "Blog", href: "/blog" },
+
+
     ];
 
     // Function to get the current year
@@ -53,82 +50,83 @@ const Footer = () => {
     };
 
     return (
-        <section className='mt-16 justify-center items-center'>
-            <div className="bg-gray-800 p-4">
-                <div className="container mx-auto flex justify-between mt-10 gap-6">
+        <section className='justify-center  items-center'>
+            <div className="bg-blue p-4 ">
+                <div className="container footer md:mx-auto md:flex md:justify-between md:mt-10 md:gap-6">
+                    {/* Center Section */}
+                    <div className="md:w-1/3 ">
+                        <div className='border-l-4 pl-3 border-gold md:pl-4 md:mt-0 mt-6'>
+                            <h2 className='text-2xl font-yeseva mb-8 font-yeseva tracking-wide text-white'>About Us</h2>
+                        </div>
+                        <div >
+                            <p className=" font-quicksand md:text-16 text-sm pb-4 p-2 text-white">
+                                TaMaNi Properties LIMITED is a full service real estate, general contractor and a design
+                                consultancy firm that specializes in building constructions and civil works.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    {/* Center Section */}
+                    <div className="md:w-1/3 text-center">
+                        <div className='border-l-4 pl-3 border-gold md:mt-0 mt-6 md:pl-4'>
+                            <h2 className='text-2xl font-yeseva mb-8 font-yeseva text-white tracking-wide text-left'>Popular Links</h2>
+                        </div>
+                        <div className="grid md:grid-cols-1 grid-cols-2 gap-4 md:text-md text-sm md:ml-8">
+                            {linkData.map((data, index) => (
+                                <a key={index} href={data.href} className="font-quicksand flex items-center text-white text-md hover:text-yellow-500  text-left">
+                                    <IoIosArrowForward className='mr-4' />
+                                    {data.text}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Left Section */}
-                    <div className="w-1/3 ">
-                        <div className='border-l-4 border-yellow-500 pl-4'>
-                            <h2 className='text-3xl font-yeseva mb-8 font-yeseva text-yellow-500 tracking-wide'>Our Head Office</h2>
+                    <div className="md:w-1/3 ">
+                        <div className='border-l-4 pl-3 border-gold md:pl-4 md:mt-0 mt-10'>
+                            <h2 className='text-2xl font-yeseva md:mb-8 mb-6 font-yeseva text-white tracking-wide'>Our Head Office</h2>
                         </div>
-                        <div className='block items-center'>
-                            <p className=" flex items-center font-quicksand font-medium pb-4 text-white">
-                                <IoLocationSharp className='mr-4 h-6 w-6' />
-                                Ho, Volta Region
+                        <div className='block items-center md:text-md text-sm'>
+                            <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
+                                <IoLocationSharp className='mr-4 md:h-6 h-4 w-4 mdw-6' />
+                                Box WY 918 - Kwabenya - Accra.
                             </p>
-                            <p className=" flex items-center  font-quicksand font-medium pb-4 text-white">
-                                <MdOutlinePhoneMissed className='mr-4 h-6 w-6' />
-                                +233 54 454 1587
+                            <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
+                                <MdOutlinePhoneMissed className='mr-4 m:h-6 md:w-6 h-4 w-4' />
+                                +233 24 263 2692
                             </p>
-                            <p className=" flex items-center font-quicksand font-medium pb-4 text-white">
-                                <MdAttachEmail className='mr-4 h-6 w-6' />
-                                restoration@gmail.com
+                            <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
+                                <MdAttachEmail className='mr-4 md:h-6 md:w-6 w-4 h-4' />
+                                info@timanipropertiesgh.com
                             </p>
                         </div>
-                        <div className='flex items-center text-white gap-6'>
-                            <a href='#' className='p-2 border border-yellow-500 rounded-full inline-block'>
+                        <div className='flex items-center md:mt-5 mt-1 md:mb-0 mb-10 text-white gap-6'>
+                            <a href='#' className='p-2 border border-gold rounded-full inline-block'>
                                 <BsFacebook className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
 
-                            <a href='#' className='p-2 border border-yellow-500 rounded-full inline-block'>
+                            <a href='#' className='p-2 border border-gold rounded-full inline-block'>
                                 <BsInstagram className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
-                            <a href='#' className='p-2 border border-yellow-500 rounded-full inline-block'>
+                            <a href='#' className='p-2 border border-gold rounded-full inline-block'>
                                 <BsLinkedin className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
-                            <a href='#' className='p-2 border border-yellow-500 rounded-full inline-block'>
+                            <a href='#' className='p-2 border border-gold rounded-full inline-block'>
                                 <FaTiktok className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
                         </div>
                     </div>
-                    {/* Center Section */}
-                    <div className="w-1/3 text-center">
-                        <div className='border-l-4 border-yellow-500 pl-4'>
-                            <h2 className='text-3xl font-yeseva mb-8 font-yeseva text-yellow-500 tracking-wide text-left'>Popular Links</h2>
-                        </div>
-                        <div className="grid grid-cols-1 gap-4 ml-8">
-                            {linkData.map((data, index) => (
-                                <a key={index} href={data.href} className="font-quicksand flex items-center text-white text-md hover:text-yellow-500 font-medium text-left">
-                                    <IoIosArrowForward className='mr-4' />
-                                    {data.text}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                    {/* Center Section */}
-                    <div className="w-1/3 text-center">
-                        <div className='border-l-4 border-yellow-500 pl-4'>
-                            <h2 className='text-3xl font-yeseva text-yellow-500 mb-8 font-yeseva tracking-wide text-left'>Useful Links</h2>
-                        </div>
-                        <div className="grid grid-cols-1 gap-4 ml-8">
-                            {usefulData.map((data, index) => (
-                                <a key={index} href={data.href} className="font-quicksand flex items-center  text-white text-md hover:text-yellow-500 font-medium text-left">
-                                    <IoIosArrowForward className='mr-4' />
-                                    {data.text}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
 
                     {/* Right Section */}
-                    <div className="w-1/3 text-right">
-                        <div className='border-l-4 border-yellow-500 pl-4'>
-                            <h2 className='text-3xl font-yeseva mb-8 font-yeseva text-yellow-500 tracking-wide text-left'>Newsletter</h2>
+                    <div className="md:w-1/3 text-right">
+                        <div className='border-l-4 border-gold pl-4'>
+                            <h2 className='text-2xl font-yeseva mb-8 font-yeseva text-white tracking-wide text-left'>Newsletter</h2>
                         </div>
 
-                        <form onSubmit={handleSave}>
+                        <form onSubmit={handleSave} className='md:ml-0 -ml-2 footer-form'>
                             <input
-                                className='p-4 border border-yellow-500 rounded-md border-b-4 focus:outline-none font-quicksand w-72'
+                                className='p-4 border border-gold rounded-md border-b-2 focus:outline-none font-quicksand w-72 '
                                 placeholder='Email Adress'
                                 type='email'
                                 required
@@ -138,18 +136,16 @@ const Footer = () => {
                             />
                             <button
                                 type='submit'
-                                className='p-4 bg-white mt-4 w-72 font-quicksand rounded-md text-center align-center justify-center items-center'
+                                className='p-4 bg-white hover:bg-gold hover:text-white mt-4 w-72  font-quicksand rounded-md text-center align-center justify-center items-center'
                             >
                                 Submit
                             </button>
-
                         </form>
-
                     </div>
                 </div>
-                <div className='justify-center items-center text-center mt-16 mb-6'>
-                    <p className='font-medium font-quicksand text-white'
-                    >© {getCurrentYear()} <span className='text-yellow-500'>Restoration Foundation</span>. Developed by <span className='font-bold text-lg'>Michael Kabanda</span> </p>
+                <div className='justify-center items-center text-center md:mt-16 mt-10 mb-8 md:mb-6'>
+                    <p className=' font-quicksand text-white md:text-md text-sm'
+                    >© {getCurrentYear()} <span className='text-gold md:text-md'>Restoration Foundation Internation</span>  Developed by <a href='#' className='font-medium md:text-md text-sm hover:text-gold'>Michael Kabanda</a> </p>
 
                 </div>
             </div>

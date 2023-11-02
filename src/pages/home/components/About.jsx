@@ -1,105 +1,55 @@
 
-import AboutImage from '../../../assets/about.jpg';
-import {
-    Tabs,
-    TabsHeader,
-    TabsBody,
-    Tab,
-    TabPanel,
-} from "@material-tailwind/react";
-import React from 'react'
+import Image from '../../../assets/carousel-3.jpg';
+import { IoIosArrowForward } from 'react-icons/io';
 
-const About = () => {
 
-    const [activeTab, setActiveTab] = React.useState("about");
-
-    const data = [
-        {
-            label: "About",
-            value: "about",
-            desc: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            In vitae pellentesque turpis. Donec in hendrerit dui, vel blandit massa.
-            Ut vestibulum suscipit cursus. Cras quis porta nulla, ut placerat risus.
-            Aliquam nec magna eget velit luctus dictum. Phasellus et felis sed purus
-            tristique dignissim. Morbi sit amet leo at purus accumsan pellentesque.
-            Vivamus fermentum nisi vel dapibus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-        },
-        {
-            label: "Mission",
-            value: "mission",
-            desc: ` Sed tincidunt, magna ut vehicula volutpat, turpis diam condimentum justo,
-            posuere congue turpis massa in mi. Proin ornare at massa at fermentum.
-            Nunc aliquet sed nisi iaculis ornare. Nam semper tortor eget est egestas,
-            eu sagittis nunc sodales. Interdum et malesuada fames ac ante ipsum primis
-            in faucibus. Praesent bibendum sapien sed purus molestie malesuada.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-        },
-        {
-            label: "Vision",
-            value: "vision",
-            desc: ` Aliquam dolor odio, mollis sed feugiat sit amet, feugiat ut sapien.
-            Nunc eu dignissim lorem. Suspendisse at hendrerit enim. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Sed condimentum
-            semper turpis vel facilisis. Nunc vel faucibus orci. Mauris ut mauris
-            rhoncus, efficitur nisi at, venenatis quam. Praesent egestas pretium
-            enim sit amet finibus. Curabitur at erat molestie, tincidunt lorem eget,
-            consequat ligula.`,
-        },
-    ];
+const App = () => {
     return (
-        <div className="relative w-full py-12">
-            <div className="container mx-auto flex flex-wrap items-center">
-                {/* Left Column */}
-                <div className="w-full lg:w-1/2 lg:pr-10">
-                    <img
-                        data-parallax="scroll"
-                        src={AboutImage}
-                        alt="About Us"
-                        width={500}
-                        height={110}
-                    />
-                </div>
-                {/* Right Column */}
-                <div className="w-full lg:w-1/2 -mt-32">
-                    <div className="mb-10 ml-0">
-                        <div className="border-l-4 border-yellow-400  pl-2">
-                            <p className='text-2xl mr-2 ml-2 font-semibold text-yellow-400 font-quicksand' >Learn About Us</p>
+        <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 mb-16 mt-14">
+                <div className="lg:order-1">
+                    {/* Left Section */}
+                    <div className="left-section md:ml-6  ">
+                        <div className="lg:order-2 relative z-2">
+                            <div className="about-img relative overflow-hidden p-5 pe-0 ">
+                                <div className="absolute top-0 left-0 w-full h-full transform -skew-x-20 z-1"></div>
+                                <img className="w-96 md:w-full h-auto relative z-2" src={Image} alt="About Us" />
+                            </div>
                         </div>
-                        <h2 className="text-5xl text-blue-900 font-quicksand mt-6 font-bold">
-                            Worldwide non-profit charity organization
-                        </h2>
                     </div>
-                    <Tabs value={activeTab}>
-                        <TabsHeader
-                            className="rounded-none border-b border-blue-gray-50 font-quicksand bg-transparent p-0 mb-4"
-                            indicatorProps={{
-                                className:
-                                    "bg-transparent border-b-4 border-yellow-400 shadow-none rounded-none font-quicksand",
-                            }}
-                        >
-                            {data.map(({ label, value }) => (
-                                <Tab
-                                    key={value}
-                                    value={value}
-                                    onClick={() => setActiveTab(value)}
-                                    className={activeTab === value ? "text-yellow-400 font-quicksand font-semibold text-xl" : "font-quicksand text-1xl font-semibold text-xl"}
-                                >
-                                    {label}
-                                </Tab>
-                            ))}
-                        </TabsHeader>
-                        <TabsBody >
-                            {data.map(({ value, desc }) => (
-                                <TabPanel key={value} value={value} className='-mt-2 font-quicksand text-xl font-sm'>
-                                    {desc}
-                                </TabPanel>
-                            ))}
-                        </TabsBody>
-                    </Tabs>
+                </div>
+
+                <div className="lg:order-2">
+                    {/* Right Section */}
+                    <div className="right-section">
+                        <div className="lg:order-1 ml-8" >
+                            <div className=' border-l-4 border-gold md:-ml-1 -ml-8 max-w-full'>
+                                <h1 className="mb-5 text-xl max-w-[95%] w-full lg:text-4xl ml-3 font-bold font-raleway">
+                                    Learn About Us
+                                </h1>
+                            </div>
+                            <h1 className="mb-4 md:p-0 text-sm lg:text-lg md:ml-0 -ml-8 font-quicksand">
+                                Worldwide non-profit charity organization
+                            </h1>
+
+                            <p className="  mb-4  text-sm md:p-0 lg:text-lg md:ml-0 -ml-8 font-quicksand">
+                                Over the years, the Company has undertaken challenging projects and
+                                accumulated the technical know-how, the expertise and experience in
+                                building solutions, supply & install as well as related
+                                engineering works in various project works.
+                            </p>
+
+
+                            <div className='md:p-3 p-2 bg-gold mt-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
+                                <a href="#" className=" text-center">Read More</a>
+                                <IoIosArrowForward className='ml-2' />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default About;
+export default App;
