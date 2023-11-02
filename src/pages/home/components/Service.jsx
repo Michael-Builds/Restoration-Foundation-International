@@ -37,18 +37,18 @@ const services = [
 
 const Service = () => {
     return (
-        <div className="justify-center align-center mt-6 pb-32">
+        <div className="justify-center align-center mt-6 md:pb-24 pb-2">
             <div className="container">
                 <div className="text-center mx-auto mb-4 mt-16">
 
-                    <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 ml-[16%]">
+                    <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 md:ml-[5%]">
                         What We Do?
                     </p>
-                    <h2 className=" font-quicksand font-bold text-5xl text-blue-900 mb-4 max-w-[700px] ml-[32%] mt-6">
+                    <h2 className=" font-quicksand font-bold md:text-5xl text-3xl md:-p-0 p-4 text-blue-900 mb-4 md:-mb-6 md:max-w-[700px] md:ml-[25%] md:mt-6 mt-4">
                         We believe that we can save more lives with you
                     </h2>
                 </div>
-                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-24 ml-[14%]">
+                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-10 md:mt-24 md:p-6 p-6 ">
                     {services.map((service, index) => (
                         <div className="col-lg-4 col-md-6" key={index}>
                             <div className="service-item flex items-center">
@@ -56,10 +56,10 @@ const Service = () => {
                                     {service.icon}
                                 </div>
                                 <div className="border-l-4 border-gray-500 rounded-lg ml-4 pl-4">
-                                    <h3 className='font-quicksand font-bold text-2xl text-blue-900 mb-2 '>
+                                    <h3 className='font-quicksand font-bold text-2xl text-blue-800 mb-2 '>
                                         {service.title}
                                     </h3>
-                                    <p className='mt-2 font-quicksand'>{service.description}</p>
+                                    <p className='mt-2 font-quicksand text-sm mb-4'>{service.description}</p>
                                 </div>
                             </div>
                         </div>

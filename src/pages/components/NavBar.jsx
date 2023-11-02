@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BiPlus } from 'react-icons/bi';
+import { BiSolidDollarCircle, BiPlus } from 'react-icons/bi';
 import Logo from '../../assets/logo.png';
 import {
     Navbar,
@@ -9,33 +9,21 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import { NavLink } from 'react-router-dom';
-import { BiSearchAlt2 } from 'react-icons/bi';
 
 const Navigation = () => {
 
     const [openNav, setOpenNav] = React.useState(false);
-    const [showSearchInput, setShowSearchInput] = React.useState(false);
     const [eventDropdownOpen, setEventDropdownOpen] = React.useState(false);
     const [aboutDropdownOpen, setAboutDropdownOpen] = React.useState(false);
 
-    const toggleSearchInput = () => {
-        setShowSearchInput(!showSearchInput);
-    };
+    const showDonateButton = window.innerWidth >= 960;
 
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 960) {
-                setOpenNav(false);
-            }
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+        window.addEventListener(
+            "resize",
+            () => window.innerWidth >= 960 && setOpenNav(false)
+        );
     }, []);
-
 
     const handleEventMouseEnter = () => {
         if (!openNav) {
@@ -212,42 +200,13 @@ const Navigation = () => {
                         className="mt-16 mb-16 main-logo"
                     />
                 </NavLink>
-                <div className="hidden lg:block -mr-72 font-quicksand ">{navList}</div>
-                {window.innerWidth >= 960 && (
-                    <div className="flex items-center">
-                        {showSearchInput ? (
-                            <div className="flex items-center">
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="p-2 ml-2 border rounded text-gray-500 focus:border border-gold focus:border-b-2 focus:outline-none "
-                                />
-                                <div
-                                    className="p-3 ml-2 bg-blue hover:bg-gold cursor-pointer"
-                                    onClick={toggleSearchInput}
-                                >
-                                    <BiSearchAlt2 className="text-white hover:text-white" />
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="flex items-center">
-                                <Button
-                                    variant="gradient"
-                                    size="sm"
-                                    className="mb-2 mt-2 flex rounded-sm items-center text-white bg-blue text-white lg:hover:bg-gold"
-                                    onClick={toggleSearchInput}
-                                >
-                                    <span className="mr-1 font-quicksand text-sm font-medium capitalize">Browse Properties</span>
-                                </Button>
-                                <div
-                                    className="p-2.5 ml-2 bg-gold text-white hover:bg-primary cursor-pointer"
-                                    onClick={toggleSearchInput}
-                                >
-                                    <BiSearchAlt2 className="text-white hover:text-white" />
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                <div className="hidden lg:block font-quicksand -mr-96">{navList}</div>
+                {showDonateButton && (
+                    //Conditionally render the donate button, when the screen is greater than 960 pixels, then the button is displayed else it is hidden
+                    <Button variant="gradient" size="sm" className="mb-2 mt-2 mr-12 flex items-center text-gray-600 bg-gold text-white rounded-sm lg:hover:bg-gray-500">
+                        <BiSolidDollarCircle className="mr-2" />
+                        <span className="mr-1 font-quicksand text-sm font-medium capitalize">Donate</span>
+                    </Button>
                 )}
                 <IconButton
                     variant="text"
@@ -290,38 +249,10 @@ const Navigation = () => {
             <MobileNav open={openNav}>
                 <div className="container mx-auto pb-2">
                     {navList}
-                    {showSearchInput ? (
-                        <div className="flex items-center">
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                className="p-2 ml-2 border rounded text-gray-500 focus:border border-gold focus:border-b-2 focus:outline-none"
-                            />
-                            <div
-                                className="p-3 ml-2 bg-blue hover-bg-gold cursor-pointer"
-                                onClick={toggleSearchInput}
-                            >
-                                <BiSearchAlt2 className="text-white hover:text-white" />
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="flex items-center">
-                            <Button
-                                variant="gradient"
-                                size="sm"
-                                className="mb-2 mt-2 flex items-center text-white bg-blue text-white rounded-sm lg:hover-bg-gold"
-                                onClick={toggleSearchInput}
-                            >
-                                <span className="mr-1 font-quicksand text-sm font-medium capitalize">Browse Properties</span>
-                            </Button>
-                            <div
-                                className="p-2.5 ml-2 bg-gray-200 hover-bg-gold cursor-pointer"
-                                onClick={toggleSearchInput}
-                            >
-                                <BiSearchAlt2 className="text-gray-700 hover:text-white" />
-                            </div>
-                        </div>
-                    )}
+                    <Button variant="gradient" size="sm" className="flex items-center rounded-sm capitalize lg:bg-green-500 bg-gold">
+                        <BiSolidDollarCircle className="mr-2" />
+                        <span className="mr-1">Donate</span>
+                    </Button>
                 </div>
             </MobileNav>
         </Navbar>

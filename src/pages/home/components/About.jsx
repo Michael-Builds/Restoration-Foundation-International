@@ -36,7 +36,7 @@ const App = () => {
                                 Our mandate is to train, educate, entertain, develop and nurture (TEEN) the youth in the areas of Health, Environment, Education, Construction,
                                 Water and Sanitaion to make them conscious and responsible leaders in their respective communities.
                             </p>
-                            <div className='md:p-3 p-2 bg-gold mt-8 md:ml-0 -ml-10 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
+                            <div className='md:p-3 p-2 bg-gold mt-8 md:ml-0 -ml-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
                                 <a href="#" className=" text-center">Read More</a>
                                 <IoIosArrowForward className='ml-2' />
                             </div>
