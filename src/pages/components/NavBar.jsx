@@ -35,17 +35,19 @@ const Navigation = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    
+
 
     const handleEventMouseEnter = () => {
-        setEventDropdownOpen(true);
+        if (!openNav) {
+            setEventDropdownOpen(true);
+        }
     };
 
     const handleEventMouseLeave = () => {
-        setEventDropdownOpen(false);
+        if (!openNav) {
+            setEventDropdownOpen(false);
+        }
     };
-
-
     const handleAboutMouseEnter = () => {
         if (!openNav) {
             setAboutDropdownOpen(true);
@@ -92,12 +94,12 @@ const Navigation = () => {
                                 onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
 
                             >
-                                <BiPlus />
+                                <BiPlus className='text-gold' />
                             </span>
                         ) : null}
                     </div>
                     {aboutDropdownOpen && (
-                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 border-yellow-500 p-4 w-[10rem] border-b-4 text-gray-600 rounded-md`}>
+                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-yellow-500 p-4 w-[10rem] md:border-b-4  rounded-md`}>
                             <li>
                                 <NavLink
                                     to="/about"
@@ -148,14 +150,13 @@ const Navigation = () => {
                             <span
                                 className="ml-3 text-green-600 cursor-pointer"
                                 onClick={() => setEventDropdownOpen(!eventDropdownOpen)}
-
                             >
-                                <BiPlus />
+                                <BiPlus className='text-gold' />
                             </span>
                         ) : null}
                     </div>
                     {eventDropdownOpen && (
-                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 border-yellow-500 p-4 w-[10rem] border-b-4 text-gray-600 rounded-md`}>
+                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-yellow-500 p-4 w-[10rem] md:border-b-4  rounded-md`}>
                             <li>
                                 <NavLink
                                     to="/about"

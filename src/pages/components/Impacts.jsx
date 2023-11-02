@@ -17,7 +17,7 @@ const Impacts = () => {
 
     useEffect(() => {
         if (CountriesInView) {
-            setCountries(50);
+            setCountries(10);
         }
     }, [CountriesInView]);
 

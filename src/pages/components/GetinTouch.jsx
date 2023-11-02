@@ -132,7 +132,6 @@ const GetinTouch = () => {
                             Aliquam interdum at lacus non blandit.
                         </p>
                     </div>
-
                 </div>
             </div>
         </div>
