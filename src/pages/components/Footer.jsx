@@ -28,7 +28,7 @@ const Footer = () => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        swal("Tamani Properties", "Subscription Successful", "success")
+        swal("Restoration Foundation International", "Subscription Successful", "success")
         handleClear();
     }
 
@@ -59,13 +59,12 @@ const Footer = () => {
                             <h2 className='text-2xl font-yeseva mb-8 font-yeseva tracking-wide text-white'>About Us</h2>
                         </div>
                         <div >
-                            <p className=" font-quicksand md:text-16 text-sm pb-4 p-2 text-white">
-                                TaMaNi Properties LIMITED is a full service real estate, general contractor and a design
-                                consultancy firm that specializes in building constructions and civil works.
+                            <p className=" font-quicksand md:text-md text-sm pb-4 p-2 text-white">
+                                Restoration Foundation International is a Christian non-profit, charitable and humanitarian
+                                organization incorporated in Ghana in 2006 with representatives in USA, Canada, UK and Germany
                             </p>
                         </div>
                     </div>
-
 
                     {/* Center Section */}
                     <div className="md:w-1/3 text-center">
@@ -90,15 +89,15 @@ const Footer = () => {
                         <div className='block items-center md:text-md text-sm'>
                             <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
                                 <IoLocationSharp className='mr-4 md:h-6 h-4 w-4 mdw-6' />
-                                Box WY 918 - Kwabenya - Accra.
+                                Opposite VAG Hall - Ho, Volta Region
                             </p>
                             <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
                                 <MdOutlinePhoneMissed className='mr-4 m:h-6 md:w-6 h-4 w-4' />
-                                +233 24 263 2692
+                                +233 54 3826 606 / +233 20 6655 964
                             </p>
                             <p className=" flex items-center font-quicksand md:pb-5 pb-4 text-white">
                                 <MdAttachEmail className='mr-4 md:h-6 md:w-6 w-4 h-4' />
-                                info@timanipropertiesgh.com
+                                restorationfoundation@gmail.com
                             </p>
                         </div>
                         <div className='flex items-center md:mt-5 mt-1 md:mb-0 mb-10 text-white gap-6'>
