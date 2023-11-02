@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/Scroll';
 import Impact from '../components/Impacts';
 import Service from './components/Service';
+import Events from './components/Events';
 
 const Home = () => {
     const location = useLocation();
@@ -22,6 +23,7 @@ const Home = () => {
             <Carousel />
             <About />
             <Service />
+            <Events />
             <Impact />
             <Blog />
             <Footer />
