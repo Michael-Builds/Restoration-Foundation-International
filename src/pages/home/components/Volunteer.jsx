@@ -63,7 +63,7 @@ const Volunteer = () => {
                                 placeholder="Full Name"
                                 type="text"
                                 required
-                                className="p-2 font-quicksand border border-b-4 border-gray-600 rounded-md focus:outline-none border-b-2" />
+                                className="p-2 font-quicksand border  border-gray-600 rounded-md focus:outline-none border-b-2" />
                             <input
                                 id="email"
                                 name="email"
@@ -72,7 +72,7 @@ const Volunteer = () => {
                                 placeholder="Email Address"
                                 type="email"
                                 required
-                                className="p-2 font-quicksand border border-b-4 border-gray-600 rounded-md focus:outline-none border-b-2" />
+                                className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                             <textarea
                                 id="reason"
                                 name="reason"
@@ -80,12 +80,12 @@ const Volunteer = () => {
                                 onChange={handleInputChange}
                                 placeholder="Why do you want to become and Volunteer?"
                                 required
-                                className="p-2 font-quicksand border border-gray-600 border-b-4 rounded-md focus:outline-none border-b-2"
+                                className="p-2 font-quicksand border border-gray-600  rounded-md focus:outline-none border-b-2"
                                 min="0"
                                 rows="3" // Set the number of rows you want the text area to display
                             />
 
-                            <Button type="submit" className="p-4 mt-2 justify-center text-lg bg-white text-yellow-500 border border-b-4 border-yellow-500 flex items-center font-quicksand">
+                            <Button type="submit" className="p-4 mt-2 justify-center text-lg bg-white text-gold border border-b-2 border-gold flex items-center font-quicksand">
                                 Become a Volunteer
                             </Button>
 
@@ -97,10 +97,10 @@ const Volunteer = () => {
                     <div className="border-l-4 border-yellow-500 pl-2">
                         <h2 className='text-white text-2xl font-quicksand text-yellow-500 ml-2 font-medium'>Become A Volunteer</h2>
                     </div>
-                    <h2 className='text-white text-5xl font-quicksand mt-6 font-bold'>
+                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Let us make a difference in the lives of others
                     </h2>
-                    <p className='mt-6 text-white font-quicksand max-w-[90%]'>
+                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
                         Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
                         Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
                         Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.

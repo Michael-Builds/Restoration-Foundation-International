@@ -12,6 +12,7 @@ import Events from './components/Events';
 import Testimonial from './components/Testimonial';
 import Team from './components/Team';
 import Donate from './components/Donate';
+import Volunteer from './components/Volunteer';
 
 const Home = () => {
     const location = useLocation();
@@ -31,6 +32,7 @@ const Home = () => {
             <Team />
             <Donate />
             <Impact />
+            <Volunteer />
             <Blog />
             <Footer />
             <ScrollToTop />
