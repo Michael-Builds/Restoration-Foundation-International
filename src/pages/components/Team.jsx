@@ -1,4 +1,4 @@
-import Image from '../../../assets/team.jpeg';
+import Image from '../../assets/team.jpeg';
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from 'react-icons/bi';
 
 const teamData = [

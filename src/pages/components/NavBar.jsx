@@ -76,7 +76,7 @@ const Navigation = () => {
                 >
                     <div className="flex items-center md:text-lg justify-between font-medium text-md cursor-pointer">
                         About
-                        {openNav ? ( // Conditionally render the plus icon
+                        {openNav ? ( 
                             <span
                                 className="ml-3 text-green-600 cursor-pointer"
                                 onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
@@ -147,7 +147,7 @@ const Navigation = () => {
                         <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-yellow-500 p-4 w-[10rem] md:border-b-4  rounded-md`}>
                             <li>
                                 <NavLink
-                                    to="/about"
+                                    to="/recent"
                                     className={`block p-2 hover:bg-white  rounded-md border-yellow-500 font-medium text-md mt-4 hover:text-yellow-500`}
                                 >
                                     Recent
@@ -155,7 +155,7 @@ const Navigation = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/founder"
+                                    to="/upcoming"
                                     className={`block p-2 hover:bg-white  rounded-md border-yellow-500 font-medium text-md mt-4 hover:text-yellow-500`}
                                 >
                                     Upcoming
@@ -191,7 +191,7 @@ const Navigation = () => {
     );
 
     return (
-        <Navbar className="mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-sm shadow-gray-200">
+        <Navbar className="mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-sm rounded-xs shadow-gray-200">
             <div className=" -mb-14 container mx-auto flex items-center justify-between text-blue-gray-900">
                 <NavLink to="/" className='-ml-2'>
                     <img

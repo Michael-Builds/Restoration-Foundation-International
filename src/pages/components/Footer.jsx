@@ -34,13 +34,12 @@ const Footer = () => {
 
     // Create an array of link texts
     const linkData = [
+        { text: "Home", href: "/" },
         { text: "About Us", href: "/about" },
-        { text: "Services", href: "/service" },
-        { text: "Properties", href: "/properties" },
+        { text: "Causes", href: "/causes" },
+        { text: "Events", href: "/events" },
         { text: "Contact Us", href: "/contact" },
         { text: "Blog", href: "/blog" },
-
-
     ];
 
     // Function to get the current year
@@ -135,14 +134,14 @@ const Footer = () => {
                             />
                             <button
                                 type='submit'
-                                className='p-4 bg-white hover:bg-gold hover:text-white mt-4 w-72  font-quicksand rounded-md text-center align-center justify-center items-center'
+                                className='p-4 bg-white hover:bg-gold hover:text-white mt-4 w-72 font-quicksand rounded-md text-center align-center justify-center items-center'
                             >
                                 Submit
                             </button>
                         </form>
                     </div>
                 </div>
-                <div className='justify-center items-center text-center md:mt-16 mt-10 mb-8 md:mb-6'>
+                <div className='justify-center items-center text-center md:mt-16 mt-10 mb-8 md:mb-8'>
                     <p className=' font-quicksand text-white md:text-md text-sm'
                     >© {getCurrentYear()} <span className='text-gold md:text-md'>Restoration Foundation Internation</span>  Developed by <a href='#' className='font-medium md:text-md text-sm hover:text-gold'>Michael Kabanda</a> </p>
 

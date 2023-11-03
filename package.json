@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "@material-tailwind/react": "^2.1.2",
+    "@material-tailwind/react": "^2.1.4",
     "@ramonak/react-progress-bar": "^5.0.3",
     "autoprefixer": "^10.4.16",
     "fontsource-quicksand": "^4.0.0",

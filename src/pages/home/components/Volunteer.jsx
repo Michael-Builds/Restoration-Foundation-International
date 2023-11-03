@@ -12,8 +12,7 @@ const Volunteer = () => {
         fullname: "",
         reason: "",
     })
-
-
+ 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setDonateInfo((prevDonate) => ({

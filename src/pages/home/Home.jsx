@@ -9,7 +9,7 @@ import ScrollToTop from '../components/Scroll';
 import Impact from '../components/Impacts';
 import Service from './components/Service';
 import Events from './components/Events';
-import Team from './components/Team';
+import Team from '../components/Team';
 import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
 import Causes from './components/Causes';
