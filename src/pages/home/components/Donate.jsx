@@ -55,21 +55,20 @@ const About = () => {
                     <div className="border-l-4 border-yellow-500  pl-2">
                         <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Donate Now</h2>
                     </div>
-                    <h2 className='text-white text-5xl font-quicksand mt-6 font-bold'>
+                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Let us donate to needy people for better lives
                     </h2>
-                    <p className='mt-6 text-white font-quicksand max-w-[90%]'>
+                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-3xl text-sm'>
                         Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
                         Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
                         Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
                     </p>
-
                 </div>
                 {/* Right Column */}
                 <div className="w-full lg:w-1/2 p-6">
                     <div className="ml-0">
-                        <form onSubmit={handleSave} className="bg-white p-6 rounded-md">
-                            <p className="font-quicksand mt-4 mb-4 text-center">
+                        <form onSubmit={handleSave} className="bg-white p-6 rounded-md md:ml-0 -ml-12">
+                            <p className="font-quicksand mt-4 mb-4 text-center md:max-w-[90%]">
                                 We appreciate your willingness to make a donation! Please fill out the form below,
                                 and we will get in touch with you shortly to facilitate your generous contribution.
                             </p>
@@ -86,7 +85,6 @@ const About = () => {
                                     placeholder="Full Name"
                                 />
                             </div>
-
                             <div className="mb-4">
                                 <label htmlFor="email" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Email</label>
                                 <input
@@ -100,7 +98,6 @@ const About = () => {
                                     placeholder="Email Address"
                                 />
                             </div>
-
                             <div className="mb-4">
                                 <label htmlFor="contact" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Contact</label>
                                 <input
