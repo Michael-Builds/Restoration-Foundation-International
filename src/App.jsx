@@ -3,6 +3,7 @@ import './App.css'
 import './index.css';
 import Home from './pages/home/Home'
 import About from "./pages/about/About";
+import Founder from './pages/founder/Founder'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/founder" element={<Founder />} />
       </Routes>
     </Router>
   )
