@@ -13,6 +13,8 @@ const eventsData = [
         buttonText: "Read More!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Image,
+        link: "#",
+
     },
     {
         title: 'Lorem ipsum dolor ',
@@ -22,6 +24,8 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Image,
+        link: "#",
+
     },
     {
         title: 'Lorem ipsum dolor ',
@@ -31,6 +35,7 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Image,
+        link: "#",
     },
 ];
 
@@ -64,30 +69,27 @@ const Events = () => {
                             {/* Left Content */}
                             <div className="w-full lg:w-1/2 lg:pr-10 ">
                                 <p className='flex items-center gap-2 font-quicksand font-sm  pb-1'>
-                                    <FaCalendarAlt className='text-blue-900 mr-2 h-4 w-4' />{event.date}
+                                    <FaCalendarAlt className='text-gold mr-2 h-4 w-4'/>{event.date}
                                 </p>
                                 <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1'>
-                                    <BsClock className='text-blue-900 mr-2 h-4 w-4' />{event.time}
+                                    <BsClock className='text-gold mr-2 h-4 w-4'/>{event.time}
                                 </p>
                                 <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1 '>
-                                    <IoLocationSharp className='text-blue-900 mr-2 h-6 w-6 -ml-1' />{event.location}
+                                    <IoLocationSharp className='text-gold mr-2 h-6 w-6 -ml-1'/>{event.location}
                                 </p>
                             </div>
                             {/* Right Content */}
                             <div className="w-full lg:w-1/2 md:border-l-4 border-gold pl-4 md:mt-0 mt-4 md:ml-0 -ml-4">
                                 <p className=' text-sm font-quicksand'>{event.description}</p>
-                                <button className='mt-4 border border-gold border-b-4 pl-2 pb-1 pt-1 pr-2 rounded-full flex items-center font-quicksand font-medium ml-2 hover:border-yellow-600'>
+                                <button href={event.link} className='mt-4 border border-gold border-b-4 md:ml-0  pl-2 pb-1 pt-1 pr-2 rounded-md flex items-center font-quicksand font-medium -ml-1 hover:border-yellow-600'>
                                     {event.buttonText}
-                                    <GoArrowRight className='ml-2 mr-2' />
+                                    <GoArrowRight className='ml-2 mr-2'/>
                                 </button>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-
-
-
         </div>
     )
 }

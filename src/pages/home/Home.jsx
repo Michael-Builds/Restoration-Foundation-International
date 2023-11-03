@@ -9,6 +9,9 @@ import ScrollToTop from '../components/Scroll';
 import Impact from '../components/Impacts';
 import Service from './components/Service';
 import Events from './components/Events';
+import Testimonial from './components/Testimonial';
+import Team from './components/Team';
+import Donate from './components/Donate';
 
 const Home = () => {
     const location = useLocation();
@@ -24,6 +27,9 @@ const Home = () => {
             <About />
             <Service />
             <Events />
+            <Testimonial />
+            <Team />
+            <Donate />
             <Impact />
             <Blog />
             <Footer />
