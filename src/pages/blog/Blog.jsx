@@ -34,9 +34,9 @@ const Blog = () => {
     ];
 
     return (
-        <section className="p-6">
+        <section className="p-6 md:mt-24">
             <div className="container mx-auto pb-8">
-                <h2 className="md:text-4xl font-bold text-gray-600 text-2xl font-raleway mb-6 text-center">Latest Blog Posts</h2>
+                <h2 className="md:text-4xl font-bold text-gray-600 text-2xl font-raleway mb-6 text-center md:mb-12">Latest Blog Posts</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {blogData.map((post, index) => (
                         <div

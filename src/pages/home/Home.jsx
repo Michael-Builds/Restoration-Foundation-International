@@ -9,10 +9,11 @@ import ScrollToTop from '../components/Scroll';
 import Impact from '../components/Impacts';
 import Service from './components/Service';
 import Events from './components/Events';
-import Testimonial from './components/Testimonial';
 import Team from './components/Team';
 import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
+import Causes from './components/Causes';
+import GetinTouch from '../components/GetinTouch';
 
 const Home = () => {
     const location = useLocation();
@@ -27,12 +28,13 @@ const Home = () => {
             <Carousel />
             <About />
             <Service />
-            <Events />
-            <Testimonial />
-            <Team />
-            <Donate />
             <Impact />
+            <Causes />
+            <Donate />
+            <Events />
+            <Team />
             <Volunteer />
+            <GetinTouch />
             <Blog />
             <Footer />
             <ScrollToTop />

@@ -40,7 +40,7 @@ const Volunteer = () => {
                 aria-hidden="true"
             >
                 <div
-                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                    className="aspect-[1097/845] w-[68.5625rem]  opacity-20"
                     style={{
                         clipPath:
                             'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
@@ -49,7 +49,23 @@ const Volunteer = () => {
             </div>
 
             <div className="mx-auto flex flex-wrap items-center ml-12">
-                <div className="w-full lg:w-1/2">
+                {/* Second Component (Will appear first on mobile) */}
+                <div className="w-full lg:w-1/2 lg:pr-10 mt-4 order-1 lg:order-2 mb-8">
+                    <div className="border-l-4 border-yellow-500 pl-2">
+                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 ml-2 font-medium'>Become A Volunteer</h2>
+                    </div>
+                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
+                        Let us make a difference in the lives of others
+                    </h2>
+                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
+                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+                        Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
+                        Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                    </p>
+                </div>
+
+                {/* First Component (Will appear second on mobile) */}
+                <div className="w-full lg:w-1/2 order-2 lg:order-1">
                     <div className=" -ml-6 mr-10 bg-gray-300 p-6 pt-10 pb-10 rounded-md">
                         <form
                             onSubmit={handleSave}
@@ -59,11 +75,10 @@ const Volunteer = () => {
                                 name="fullname"
                                 value={donateInfo.fullname}
                                 onChange={handleInputChange}
-
                                 placeholder="Full Name"
                                 type="text"
                                 required
-                                className="p-2 font-quicksand border  border-gray-600 rounded-md focus:outline-none border-b-2" />
+                                className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
                             <input
                                 id="email"
                                 name="email"
@@ -78,36 +93,21 @@ const Volunteer = () => {
                                 name="reason"
                                 value={donateInfo.reason}
                                 onChange={handleInputChange}
-                                placeholder="Why do you want to become and Volunteer?"
+                                placeholder="Why do you want to become a Volunteer?"
                                 required
                                 className="p-2 font-quicksand border border-gray-600  rounded-md focus:outline-none border-b-2"
                                 min="0"
-                                rows="3" // Set the number of rows you want the text area to display
+                                rows="3"
                             />
 
                             <Button type="submit" className="p-4 mt-2 justify-center text-lg bg-white text-gold border border-b-2 border-gold flex items-center font-quicksand">
                                 Become a Volunteer
                             </Button>
-
                         </form>
                     </div>
-
                 </div>
-                <div className="w-full lg:w-1/2 lg:pr-10 mt-16">
-                    <div className="border-l-4 border-yellow-500 pl-2">
-                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 ml-2 font-medium'>Become A Volunteer</h2>
-                    </div>
-                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
-                        Let us make a difference in the lives of others
-                    </h2>
-                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
-                        Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
-                        Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
-                    </p>
-                </div>
-
             </div>
+
         </div>
     );
 };

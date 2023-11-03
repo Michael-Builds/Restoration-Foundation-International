@@ -41,7 +41,7 @@ const About = () => {
                 aria-hidden="true"
             >
                 <div
-                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                    className="aspect-[1097/845] w-[68.5625rem]  opacity-20"
                     style={{
                         clipPath:
                             'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
@@ -68,8 +68,8 @@ const About = () => {
                     <div className="ml-0">
                         <form onSubmit={handleSave} className="bg-white p-6 rounded-md md:ml-0 -ml-12">
                             <p className="font-quicksand mt-4 mb-4 text-center md:max-w-[90%]">
-                                We appreciate your willingness to make a donation! Please fill out the form below,
-                                and we will get in touch with you shortly to facilitate your generous contribution.
+                                Please fill out the form below, and we will get in touch with you
+                                shortly to facilitate your generous contribution.
                             </p>
                             <div className="mb-4">
                                 <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Name</label>
