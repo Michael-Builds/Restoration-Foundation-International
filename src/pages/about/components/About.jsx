@@ -16,22 +16,18 @@ const About = () => {
         {
             label: "Mission",
             value: "mission",
-            desc: `It really matters and then like it really doesn't matter.
-          What matters is the people who are sparked by it. And the people 
-          who are like offended by it, it doesn't matter.`,
+            desc: `Ministering to the needs of the young person and restoring them to their divine destiny`,
         },
         {
             label: "Vision",
             value: "vision",
-            desc: `Because it's about motivating the doers. Because I'm here
-          to follow my dreams and inspire other people to follow their dreams, too.`,
+            desc: `To develop a community of friendship, personal fulfillment and recreation for all participants`,
         },
         {
             label: "Values",
             value: "core-values",
-            desc: `We're not always in the position that we want to be at.
-          We're constantly growing. We're constantly making mistakes. We're
-          constantly trying to express ourselves and actualize our dreams.`,
+            desc: `We are divinely Chosen to Share and Share. Donors, Board, Staff, Volunteers and Beneficiaries are set for social development
+            and re-orientation. We respect each individual's dignity and uniqueness`,
         },
     ];
 

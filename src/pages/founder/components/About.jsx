@@ -18,7 +18,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="lg:order-2">
+                <div className="lg:order-2 md:mb-0 -mb-16">
                     {/* Right Section */}
                     <div className="right-section">
                         <div className="lg:order-1 ml-8 md:-mb-24" >
