@@ -15,7 +15,6 @@ const About = () => {
             contact: "",
         })
     };
-
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setDonateInfo((prevDonate) => ({
@@ -51,14 +50,14 @@ const About = () => {
             </div>
             <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
-                <div className="w-full lg:w-1/2 lg:pr-10 mt-16">
+                <div className="w-full lg:w-1/2 lg:pr-10 md:mt-16 -mt-2">
                     <div className="border-l-4 border-yellow-500  pl-2">
                         <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Donate Now</h2>
                     </div>
                     <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Let us donate to needy people for better lives
                     </h2>
-                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-3xl text-sm'>
+                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
                         Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
                         Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
                         Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
