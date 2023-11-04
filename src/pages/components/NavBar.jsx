@@ -75,7 +75,7 @@ const Navigation = () => {
                     className={`p-1 font-normal font-quicksand ${aboutDropdownOpen ? "text-gray-500" : "text-gray-500"
                         }`}
                 >
-                    <div className="flex items-center md:text-lg lg:hover:text-gold  justify-between font-medium text-md cursor-pointer">
+                    <div className="flex items-center md:text-lg lg:hover:text-gold justify-between font-medium text-md cursor-pointer">
                         About
                         {openNav ? (
                             <span
