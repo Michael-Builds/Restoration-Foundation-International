@@ -14,7 +14,7 @@ const eventsData = [
         buttonText: "Read More!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img3,
-        link: "#",
+        link: "/upcoming",
 
     },
     {
@@ -25,7 +25,8 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img2,
-        link: "#",
+        link: "/upcoming",
+
 
     },
     {
@@ -36,7 +37,7 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img3,
-        link: "#",
+        link: "/upcoming",
     },
 ];
 
@@ -82,10 +83,10 @@ const Events = () => {
                             {/* Right Content */}
                             <div className="w-full lg:w-1/2 md:border-l-4 border-gold pl-4 md:mt-0 mt-4 md:ml-0 -ml-4">
                                 <p className=' text-sm font-quicksand'>{event.description}</p>
-                                <button href={event.link} className='mt-4 border border-gold border-b-4 md:ml-0  pl-2 pb-1 pt-1 pr-2 rounded-md flex items-center font-quicksand font-medium -ml-1 hover:border-yellow-600'>
+                                <a href={event.link} className='mt-4 border border-gold w-full justify-center border-b-4 md:ml-0 p-2 -ml-1 rounded-md flex items-center font-quicksand font-medium hover:border-yellow-600'>
                                     {event.buttonText}
-                                    <GoArrowRight className='ml-2 mr-2' />
-                                </button>
+                                    <GoArrowRight className='ml-2' />
+                                </a>
                             </div>
                         </div>
                     </div>

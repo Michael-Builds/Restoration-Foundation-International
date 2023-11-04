@@ -14,6 +14,10 @@ const causesData = [
         description: 'We aim to ensure that every child has access to quality education, regardless of their background. Your support helps us reach this goal.',
         author: 'Education Foundation',
         image: Img1,
+        link: "/donate",
+        join: "/about"
+
+
     },
     {
         goal: "$75,000",
@@ -23,6 +27,9 @@ const causesData = [
         description: 'Our mission is to bring clean and safe drinking water to underserved communities. Join us in making a significant impact.',
         author: 'Water Relief Organization',
         image: Img2,
+        link: "/donate",
+        join: "/about"
+
     },
     {
         goal: "$40,000",
@@ -32,6 +39,8 @@ const causesData = [
         description: 'Together, we can combat hunger in our local neighborhoods. Your contribution helps feed those in need.',
         author: 'Community Food Drive',
         image: Img3,
+        link: "/donate",
+        join: "/about"
     },
 ];
 
@@ -69,14 +78,15 @@ const Causes = () => {
                             </h3>
                             <p className="ml-4 mt-4 font-quicksand pb-6">{cause.description}</p>
                             <div className="mb-4 justify-center flex items-center">
-                                <button className="justify-center border-b-4 font-semibold flex items-center border border-gold hover:border-yellow-700 border-b-2 p-3 text-gray-600 font-quicksand mb-4 m-2 rounded-md cursor-pointer">
+                                <a href={cause.join} className="justify-center border-b-4 font-semibold flex items-center border border-gold hover:border-yellow-700 border-b-2 p-3 text-gray-600 font-quicksand mb-4 m-2 rounded-md cursor-pointer">
                                     Learn More
                                     <GoArrowRight className="ml-2 mr-2" />
-                                </button>
-                                <button className="justify-center border-b-4 font-semibold flex items-center border border-gold hover:border-yellow-700 border-b-2 p-3 text-gray-600 font-quicksand mb-4 m-2 rounded-md cursor-pointer">
+                                </a>
+                                <a href={cause.link} className="flex items-center border-b-4 font-semibold border border-gold hover:border-yellow-700 border-b-2 p-3 text-gray-600 font-quicksand mb-4 m-2 rounded-md cursor-pointer">
                                     Donate Now
                                     <GoArrowRight className="ml-2 mr-2" />
-                                </button>
+                                </a>
+
                             </div>
                         </div>
                     ))}
