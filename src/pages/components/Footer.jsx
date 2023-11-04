@@ -51,7 +51,7 @@ const Footer = () => {
     return (
         <section className='justify-center  items-center'>
             <div className="bg-blue p-4 ">
-                <div className="container footer md:mx-auto md:flex md:justify-between md:mt-10 md:gap-6">
+                <div className="container md:ml-0 ml-4 md:mx-auto md:flex md:justify-between md:mt-10 md:gap-6">
                     {/* Center Section */}
                     <div className="md:w-1/3 ">
                         <div className='border-l-4 pl-3 border-gold md:pl-4 md:mt-0 mt-6'>
@@ -122,7 +122,7 @@ const Footer = () => {
                             <h2 className='text-2xl font-yeseva mb-8 font-yeseva text-white tracking-wide text-left'>Newsletter</h2>
                         </div>
 
-                        <form onSubmit={handleSave} className='md:ml-0 -ml-2 footer-form'>
+                        <form onSubmit={handleSave} className='md:mr-0 mr-24'>
                             <input
                                 className='p-4 border border-gold rounded-md border-b-2 focus:outline-none font-quicksand w-72 '
                                 placeholder='Email Adress'

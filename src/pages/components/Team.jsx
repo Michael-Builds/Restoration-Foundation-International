@@ -62,7 +62,6 @@ const Team = () => {
                     </h2>
                 </div>
             </div>
-
             <div className="flex justify-center p-2 mt-8 relative">
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-4">
                     {teamData.map((team, index) => (

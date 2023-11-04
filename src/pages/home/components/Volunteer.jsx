@@ -12,7 +12,7 @@ const Volunteer = () => {
         fullname: "",
         reason: "",
     })
- 
+
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setDonateInfo((prevDonate) => ({
@@ -57,18 +57,19 @@ const Volunteer = () => {
                         Let us make a difference in the lives of others
                     </h2>
                     <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
-                        Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
-                        Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                        Your commitment can bring about a positive change. Join us as a volunteer and
+                        contribute to transforming the lives of those who require assistance.
+                        Our mission is to make a meaningful impact. Together, we can make a difference
+                        in the lives of those in need. Your support matters.
                     </p>
                 </div>
 
                 {/* First Component (Will appear second on mobile) */}
                 <div className="w-full lg:w-1/2 order-2 lg:order-1">
-                    <div className=" -ml-6 mr-10 bg-gray-300 p-6 pt-10 pb-10 rounded-md">
+                    <div className=" -ml-6 mr-10 bg-white p-6 pt-10 pb-10 rounded-md">
                         <form
                             onSubmit={handleSave}
-                            className="mt-5 flex flex-col gap-4">
+                            className="mt-5 flex flex-col gap-6">
                             <input
                                 id="fullname"
                                 name="fullname"
@@ -77,7 +78,8 @@ const Volunteer = () => {
                                 placeholder="Full Name"
                                 type="text"
                                 required
-                                className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2" />
+                                className="p-2 font-quicksand border border-gray-600 rounded-md focus:outline-none border-b-2"
+                            />
                             <input
                                 id="email"
                                 name="email"
@@ -99,7 +101,7 @@ const Volunteer = () => {
                                 rows="3"
                             />
 
-                            <Button type="submit" className="p-4 mt-2 justify-center text-lg bg-white text-gold border border-b-2 border-gold flex items-center font-quicksand">
+                            <Button type="submit" className="p-4 mt-2 justify-center  bg-gold text-white border border-b-2 border-gold flex items-center font-quicksand">
                                 Become a Volunteer
                             </Button>
                         </form>

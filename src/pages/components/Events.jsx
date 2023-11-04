@@ -1,4 +1,5 @@
-import Image from '../../../assets/carousel-3.jpg';
+import Img2 from '../../assets/event-1.jpg';
+import Img3 from '../../assets/event-2.jpg';
 import { GoArrowRight } from 'react-icons/go';
 import { BsClock } from 'react-icons/bs';
 import { IoLocationSharp } from 'react-icons/io5';
@@ -12,7 +13,7 @@ const eventsData = [
         location: "Volta Region",
         buttonText: "Read More!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
-        image: Image,
+        image: Img3,
         link: "#",
 
     },
@@ -23,7 +24,7 @@ const eventsData = [
         location: "Volta Region",
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
-        image: Image,
+        image: Img2,
         link: "#",
 
     },
@@ -34,14 +35,14 @@ const eventsData = [
         location: "Volta Region",
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
-        image: Image,
+        image: Img3,
         link: "#",
     },
 ];
 
 const Events = () => {
     return (
-        <div className='justify-center align-center '>
+        <div className='justify-center align-center md:mb-10'>
             <div className=''>
                 <div className='text-center mx-auto mb-4 mt-24'>
                     <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 ">
@@ -69,13 +70,13 @@ const Events = () => {
                             {/* Left Content */}
                             <div className="w-full lg:w-1/2 lg:pr-10 ">
                                 <p className='flex items-center gap-2 font-quicksand font-sm  pb-1'>
-                                    <FaCalendarAlt className='text-gold mr-2 h-4 w-4'/>{event.date}
+                                    <FaCalendarAlt className='text-gold mr-2 h-4 w-4' />{event.date}
                                 </p>
                                 <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1'>
-                                    <BsClock className='text-gold mr-2 h-4 w-4'/>{event.time}
+                                    <BsClock className='text-gold mr-2 h-4 w-4' />{event.time}
                                 </p>
                                 <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1 '>
-                                    <IoLocationSharp className='text-gold mr-2 h-6 w-6 -ml-1'/>{event.location}
+                                    <IoLocationSharp className='text-gold mr-2 h-6 w-6 -ml-1' />{event.location}
                                 </p>
                             </div>
                             {/* Right Content */}
@@ -83,7 +84,7 @@ const Events = () => {
                                 <p className=' text-sm font-quicksand'>{event.description}</p>
                                 <button href={event.link} className='mt-4 border border-gold border-b-4 md:ml-0  pl-2 pb-1 pt-1 pr-2 rounded-md flex items-center font-quicksand font-medium -ml-1 hover:border-yellow-600'>
                                     {event.buttonText}
-                                    <GoArrowRight className='ml-2 mr-2'/>
+                                    <GoArrowRight className='ml-2 mr-2' />
                                 </button>
                             </div>
                         </div>

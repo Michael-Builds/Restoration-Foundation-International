@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navigation from '../components/Navigation'
 import Header from './components/Header';
-import Main from './components/Main';
+import Events from './components/Events';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/Scroll'
 
-const Founder = () => {
+const Upcoming = () => {
     const location = useLocation();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Founder = () => {
             <Navigation />
             <section style={{ marginTop: "-40px" }}>
                 <Header />
-                <Main />
+                <Events />
                 <Footer />
                 <ScrollToTop />
             </section>
@@ -27,5 +27,5 @@ const Founder = () => {
     );
 };
 
-export default Founder;
+export default Upcoming;
 

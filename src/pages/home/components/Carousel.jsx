@@ -9,51 +9,34 @@ import { GoArrowRight } from 'react-icons/go';
 const carouselItems = [
     {
         image: Image,
-        title: "Explore the Office",
-        description: " Family, business pleasure",
-        buttonText: "Explore Now ",
-        link: "#"
-    },
-
-    {
-        image: Image,
-        title: "Disvover your Living",
-        description: " Family, business pleasure",
-        buttonText: "Explore Now ",
+        title: "Join Our Mission",
+        description: "Together for a better world",
+        buttonText: "Get Involved",
         link: "#"
     },
     {
         image: Image,
-        title: "Explore the Office",
-        description: " Family, business pleasure",
-        buttonText: "Discover More",
+        title: "Discover Our Initiatives",
+        description: "Supporting those in need",
+        buttonText: "Learn More",
         link: "#"
-
     },
     {
         image: Image,
-        title: "Luxury Interiors",
-        description: " Family, business pleasure",
-        buttonText: "Book Viewing",
+        title: "Make a Difference",
+        description: "Every contribution counts",
+        buttonText: "Donate Now",
         link: "#"
-
     },
     {
         image: Image,
-        title: "Fully Furnished",
-        description: " Family, business pleasure",
-        buttonText: "Book Viewing",
-        link: "#"
-
-    },
-    {
-        image: Image,
-        title: "Explore the Office",
-        description: " Family, business pleasure",
-        buttonText: "Explore Now",
+        title: "Spread Kindness",
+        description: "Touching lives, one act at a time",
+        buttonText: "Volunteer Today",
         link: "#"
     },
 ];
+
 
 const Hero = () => {
     return (
@@ -81,7 +64,7 @@ const Hero = () => {
                             <p className="text-white font-quicksand md:text-2xl mb-6">
                                 {item.description}
                             </p>
-                            <Link to={item.link} className="p-2 text-sm md:text-md flex items-center text-center md:items-center md:text-center bg-primary md:w-[10rem] md:p-3  text-white font-quicksand mb-2 rounded-md cursor-pointer ">
+                            <Link to={item.link} className="p-2 text-sm md:text-md flex items-center text-center md:items-center md:text-center bg-gold md:w-[10rem] md:p-3  text-white font-quicksand mb-2 rounded-md cursor-pointer ">
                                 {item.buttonText}
                                 <GoArrowRight className="ml-2" />
                             </Link>

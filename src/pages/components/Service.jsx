@@ -6,38 +6,38 @@ const services = [
     {
         icon: <GiFruitBowl className='h-14 w-14 text-yellow-500' />,
         title: 'Healthy Food',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Providing nutritious and delicious meals for your well-being.',
     },
     {
         icon: <GiWaterBottle className='h-14 w-14 text-yellow-500' />,
         title: 'Pure Water',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Ensuring access to clean and safe drinking water for all.',
     },
     {
         icon: <GiHealthCapsule className='h-14 w-14 text-yellow-500' />,
         title: 'Health Care',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Delivering quality healthcare services to promote a healthy community.',
     },
     {
         icon: <GiTeacher className='h-14 w-14 text-yellow-500' />,
         title: 'Primary Education',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Empowering young minds through quality primary education programs.',
     },
     {
         icon: <MdMapsHomeWork className='h-14 w-14 text-yellow-500' />,
         title: 'Residence Facilities',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Providing safe and comfortable housing for individuals and families.',
     },
     {
         icon: <FaPeopleCarry className='h-14 w-14 text-yellow-500' />,
         title: 'Social Care',
-        description: 'Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor',
+        description: 'Supporting and caring for our community with compassion and dedication.',
     },
 ];
 
 const Service = () => {
     return (
-        <div className="justify-center align-center mt-6 md:pb-10 -pb-8">
+        <div className="justify-center align-center mt-6 md:pb-10 md:mb-14 mb-8 -pb-8">
             <div className="container">
                 <div className="text-center mx-auto mb-4 mt-16">
 
@@ -48,11 +48,11 @@ const Service = () => {
                         We believe that we can save more lives with you
                     </h2>
                 </div>
-                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-10 md:mt-24 md:p-6 p-6 ">
+                <div className="services mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-10 md:mt-24 md:p-7 p-6 ">
                     {services.map((service, index) => (
                         <div className="col-lg-4 col-md-6" key={index}>
-                            <div className="service-item flex items-center">
-                                <div className="service-icon mb-2">
+                            <div className=" flex items-center">
+                                <div className=" mb-2">
                                     {service.icon}
                                 </div>
                                 <div className="border-l-4 border-gray-500 rounded-lg ml-4 pl-4">

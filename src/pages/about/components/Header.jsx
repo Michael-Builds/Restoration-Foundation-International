@@ -14,7 +14,7 @@ const Header = () => {
                 <h2 className="font-raleway font-bold text-gold text-center items-center md:text-5xl text-4xl mt-16">About us</h2>
                 <nav>
                     <p className="font-quicksand mt-4 text-white md:text-xl font-medium cursor-pointer mb-16 text-lg">
-                        <Link to="/" >Home</Link> // <span className="text-white  text-gold">About</span>
+                        <Link to="/" >Home</Link> // <span className="text-gold">About</span>
                     </p>
                 </nav>
             </div>

@@ -11,10 +11,10 @@ const Header = () => {
             />
 
             <div className="mx-auto text-center  items-center justify-center">
-                <h2 className="font-raleway font-bold text-gold text-center items-center md:text-5xl text-4xl mt-16">About Founder</h2>
+                <h2 className="font-raleway font-bold text-gold text-center items-center md:text-5xl text-4xl mt-16">From Blog</h2>
                 <nav>
                     <p className="font-quicksand mt-4 text-white md:text-xl font-medium cursor-pointer mb-16 text-lg">
-                        <Link to="/" >Home</Link> // <span className="text-gold">About Founder</span>
+                        <Link to="/" >Home</Link> // <span className="text-gold">Blog</span>
                     </p>
                 </nav>
             </div>

@@ -32,7 +32,7 @@ const App = () => {
                                 Worldwide non-profit charity organization
                             </h1>
 
-                            <p className="  mb-4  text-sm md:p-0 lg:text-lg md:ml-0 -ml-8 font-quicksand">
+                            <p className="mb-4 text-sm md:p-0 lg:text-lg md:ml-0 -ml-8 font-quicksand">
                                 Our mandate is to train, educate, entertain, develop and nurture (TEEN) the youth in the areas of Health, Environment, Education, Construction,
                                 Water and Sanitaion to make them conscious and responsible leaders in their respective communities.
                             </p>

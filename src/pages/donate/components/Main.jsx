@@ -1,24 +1,23 @@
 import React from "react";
 import swal from "sweetalert";
 
-const GetinTouch = () => {
+const Donate = () => {
 
-    const [contactInfo, setContactInfo] = React.useState({
+    const [donateInfo, setDonateInfo] = React.useState({
         email: "",
         fullname: "",
-        message: "",
-    });
-
+        contact: "",
+    })
     const handleClear = () => {
-        setContactInfo({
+        setDonateInfo({
             email: "",
             fullname: "",
-            message: "",
+            contact: "",
         })
     };
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setContactInfo((prevDonate) => ({
+        setDonateInfo((prevDonate) => ({
             ...prevDonate,
             [name]: value,
         }));
@@ -31,29 +30,31 @@ const GetinTouch = () => {
     }
 
     return (
-        <div className="relative w-full py-12 mt-10 bg-white md:-mb-14">
+        <div className="relative w-full py-12 ">
+
             <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
-                <div className="w-full lg:w-1/2 lg:pr-10 md:-mt-16 -mt-2">
-                    <div className="border-l-4 border-gold pl-2">
-                        <h2 className=' text-2xl font-quicksand text-gold font-medium ml-2'> Contact for any query
-                        </h2>
+                <div className="w-full lg:w-1/2 lg:pr-10 md:mt-4 -mt-2">
+                    <div className="border-l-4 border-yellow-500 pl-2">
+                        <h2 className='text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Donate Now</h2>
                     </div>
-                    <h2 className='md:text-5xl text-gray-600 text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
-                        Contact for any query
+                    <h2 className=' md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
+                        Let us donate to needy people for better lives
                     </h2>
                     <p className='mt-6  font-quicksand max-w-[90%] md:text-lg text-sm'>
-                        If you have any questions or require assistance, please do not hesitate to reach out to us.
-                        We are dedicated to providing support and addressing your inquiries promptly.
-                        Your satisfaction is our priority, and we are committed to helping you.
-                        Feel free to contact us at any time. Our team is here to assist you in any way we can.
-                        We appreciate your trust and look forward to serving you
+                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+                        Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
+                        Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
                     </p>
                 </div>
                 {/* Right Column */}
                 <div className="w-full lg:w-1/2 p-6">
-                    <div className="ml-0">
+                    <div className="ml-0 ">
                         <form onSubmit={handleSave} className="bg-gray-200 p-6 rounded-md md:ml-0 -ml-12">
+                            <p className="font-quicksand mt-4 mb-4 text-center md:max-w-[90%]">
+                                Please fill out the form below, and we will get in touch with you
+                                shortly to facilitate your generous contribution.
+                            </p>
                             <div className="mb-4">
                                 <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Name</label>
                                 <input
@@ -61,9 +62,9 @@ const GetinTouch = () => {
                                     type="text"
                                     id="fullname"
                                     name="fullname"
-                                    value={contactInfo.fullname}
+                                    value={donateInfo.fullname}
                                     onChange={handleInputChange}
-                                    className="w-full font-quicksand bg-transparent text-sm border border-gray-400 rounded-md border-b-4  focus:outline-none p-2"
+                                    className="w-full font-quicksand text-sm border border-gray-300 rounded-sm focus:outline-none p-2"
                                     placeholder="Full Name"
                                 />
                             </div>
@@ -74,29 +75,28 @@ const GetinTouch = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    value={contactInfo.email}
+                                    value={donateInfo.email}
                                     onChange={handleInputChange}
-                                    className="w-full font-quicksand bg-transparent text-sm border border-gray-400 rounded-md border-b-4  focus:outline-none p-2"
+                                    className="w-full border font-quicksand text-sm border-gray-300 rounded-sm focus:outline-none p-2"
                                     placeholder="Email Address"
                                 />
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="message" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Contact</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={contactInfo.message}
-                                    onChange={handleInputChange}
-                                    placeholder="Type your message here"
+                                <label htmlFor="contact" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Contact</label>
+                                <input
                                     required
-                                    className="p-2 w-full font-quicksand border border-b-4 border-gray-400 rounded-md focus:outline-none border-b-2 bg-transparent"
-                                    min="0"
-                                    rows="3" // Set the number of rows you want the text area to display
+                                    type="tel"
+                                    id="contact"
+                                    name="contact"
+                                    value={donateInfo.contact}
+                                    onChange={handleInputChange}
+                                    className="w-full font-quicksand text-sm border border-gray-300 rounded-sm focus:outline-none p-2"
+                                    placeholder="Phone Number"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="bg-gold w-full text-white font-medium rounded-sm font-quicksand px-4 py-2 hover:bg-blue-600"
+                                className="bg-gold w-full text-white font-medium rounded-sm font-quicksand px-4 py-2 md:mt-6 mt-4 hover:bg-blue-600"
                             >
                                 Submit
                             </button>
@@ -108,4 +108,4 @@ const GetinTouch = () => {
     );
 };
 
-export default GetinTouch;
+export default Donate;
