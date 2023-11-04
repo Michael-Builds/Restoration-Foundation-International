@@ -12,28 +12,28 @@ const carouselItems = [
         title: "Join Our Mission",
         description: "Together for a better world",
         buttonText: "Get Involved",
-        link: "#"
+        link: "/about"
     },
     {
         image: Image,
         title: "Discover Our Initiatives",
         description: "Supporting those in need",
         buttonText: "Learn More",
-        link: "#"
+        link: "/about"
     },
     {
         image: Image,
         title: "Make a Difference",
         description: "Every contribution counts",
         buttonText: "Donate Now",
-        link: "#"
+        link: "/donate"
     },
     {
         image: Image,
         title: "Spread Kindness",
         description: "Touching lives, one act at a time",
         buttonText: "Volunteer Today",
-        link: "#"
+        link: "/donate"
     },
 ];
 
@@ -64,7 +64,7 @@ const Hero = () => {
                             <p className="text-white font-quicksand md:text-2xl mb-6">
                                 {item.description}
                             </p>
-                            <Link to={item.link} className="p-2 text-sm md:text-md flex items-center text-center md:items-center md:text-center bg-gold md:w-[10rem] md:p-3  text-white font-quicksand mb-2 rounded-md cursor-pointer ">
+                            <Link to={item.link} className="p-2 text-sm md:text-md flex items-center text-center md:items-center md:text-center bg-gold md:p-3 text-white font-quicksand mb-2 rounded-md cursor-pointer ">
                                 {item.buttonText}
                                 <GoArrowRight className="ml-2" />
                             </Link>
