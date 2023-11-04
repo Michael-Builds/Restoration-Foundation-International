@@ -42,9 +42,8 @@ const Donate = () => {
                         Let us donate to needy people for better lives
                     </h2>
                     <p className='mt-6  font-quicksand max-w-[90%] md:text-lg text-sm'>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
-                        Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem.
-                        Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                        Your contribution has the power to transform lives. When you support our cause, you are making a significant impact.
+                        Together, we can provide essential resources to those in need, ensuring a better future for all. Your generosity truly makes a difference.
                     </p>
                 </div>
                 {/* Right Column */}
