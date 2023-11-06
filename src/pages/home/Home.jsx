@@ -16,7 +16,6 @@ import Causes from '../components/Causes';
 import GetinTouch from '../components/GetinTouch';
 import Spinner from '../components/Spinner'
 
-
 const Home = () => {
     const location = useLocation();
 
