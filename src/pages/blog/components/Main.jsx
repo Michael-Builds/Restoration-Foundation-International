@@ -2,7 +2,7 @@ import card1 from "../../../assets/blog-1.jpg";
 import card2 from "../../../assets/blog-2.jpg";
 import card6 from "../../../assets/blog-3.jpg";
 import { FaCalendarAlt } from 'react-icons/fa';
-import { LuMessagesSquare } from 'react-icons/lu';
+import { IoPersonCircleOutline } from 'react-icons/io5';
 
 const Main = () => {
 
@@ -12,7 +12,7 @@ const Main = () => {
             image: card6,
             title: 'Searches at Lands Commission to Get Easier from 1st October, 2021',
             content: 'From 1st October, 2021, the Greater Accra Regional Office of the Lands Commission shall no longer issue separate search reports from its divisions.',
-            author: 'John Doe',
+            author: 'Michael Kabanda',
             date: 'October 10, 2023',
         },
         {
@@ -20,7 +20,7 @@ const Main = () => {
             category: "Article",
             title: 'Your 2022 property investment plan(12 - steps to Note)',
             content: '	It is a new year : 12 months lie ahead. With some discipline and focus you could be much closer to your investment goals this time next year: just follow',
-            author: 'Jane Smith',
+            author: 'Michael Kabanda',
             date: 'October 15, 2023',
         },
         {
@@ -28,7 +28,7 @@ const Main = () => {
             category: "Announcement",
             title: 'Why you Need a House in Ghana',
             content: 'There are a lot of reasons why you will want to buy a property in some specific part of the world. This may include safety reasons, availability of social centers',
-            author: 'Alice Johnson',
+            author: 'Michael Kabanda',
             date: 'October 20, 2023',
         },
         {
@@ -36,7 +36,7 @@ const Main = () => {
             image: card6,
             title: 'Searches at Lands Commission to Get Easier from 1st October, 2021',
             content: 'From 1st October, 2021, the Greater Accra Regional Office of the Lands Commission shall no longer issue separate search reports from its divisions.',
-            author: 'John Doe',
+            author: 'Michael Kabanda',
             date: 'October 10, 2023',
         },
         {
@@ -44,7 +44,7 @@ const Main = () => {
             category: "Article",
             title: 'Your 2022 property investment plan(12 - steps to Note)',
             content: '	It is a new year : 12 months lie ahead. With some discipline and focus you could be much closer to your investment goals this time next year: just follow',
-            author: 'Jane Smith',
+            author: 'Michael Kabanda',
             date: 'October 15, 2023',
         },
         {
@@ -52,7 +52,7 @@ const Main = () => {
             category: "Announcement",
             title: 'Why you Need a House in Ghana',
             content: 'There are a lot of reasons why you will want to buy a property in some specific part of the world. This may include safety reasons, availability of social centers',
-            author: 'Alice Johnson',
+            author: 'Michael Kabanda',
             date: 'October 20, 2023',
         },
     ];
@@ -85,8 +85,8 @@ const Main = () => {
                                     <p className="font-quicksand">{post.date}</p>
                                 </div>
                                 <div className="flex items-center">
-                                    <LuMessagesSquare className="mr-2 md:h-6 md:w-6 text-blue cursor-pointer hover:text-gold" />
-                                    <p> {post.author}</p>
+                                    <IoPersonCircleOutline className="mr-2 md:h-6 md:w-6 text-blue cursor-pointer hover:text-gold" />
+                                    <p className="font-quicksand"> {post.author}</p>
                                 </div>
                             </div>
                             <p className="text-gray-900 mb-4 text-sm font-quicksand">{post.content}</p>

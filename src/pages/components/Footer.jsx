@@ -144,10 +144,8 @@ const Footer = () => {
                 <div className='justify-center items-center text-center md:mt-16 mt-10 mb-8 md:mb-8'>
                     <p className=' font-quicksand text-white md:text-md text-sm'
                     >© {getCurrentYear()} <span className='text-gold md:text-md'>Restoration Foundation Internation</span>  Developed by <a href='#' className='font-medium md:text-md text-sm hover:text-gold'>Michael Kabanda</a> </p>
-
                 </div>
             </div>
-
         </section>
     );
 }

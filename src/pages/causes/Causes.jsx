@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navigation from '../components/Navigation'
 import Header from './components/Header';
 import Services from '../components/Service';
 import Causes from '../components/Causes';
 import Footer from '../components/Footer';
-import ScrollToTop from '../components/Scroll'
+import ScrollToTop from '../components/Scroll';
+import Spinner from '../components/Spinner'
+
 
 const Founder = () => {
     const location = useLocation();
@@ -14,17 +16,33 @@ const Founder = () => {
         window.scrollTo(0, 0);
     }, [location]);
 
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+
+        return () => {
+            clearTimeout(timer); // Clear the timeout when the component is unmounted or the dependency changes
+        };
+    }, []);
+
     return (
         <>
-            <Navigation />
-            <section style={{ marginTop: "-40px" }}>
-                <Header />
-                <Services />
-                <Causes />
-                <Footer />
-                <ScrollToTop />
-            </section>
-
+            {isLoading ?
+                <Spinner />
+                :
+                <div>
+                    <Navigation />
+                    <section style={{ marginTop: "-40px" }}>
+                        <Header />
+                        <Services />
+                        <Causes />
+                        <Footer />
+                        <ScrollToTop />
+                    </section>
+                </div>
+            }
         </>
     );
 };
