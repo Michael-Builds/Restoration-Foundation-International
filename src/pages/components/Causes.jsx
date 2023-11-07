@@ -59,9 +59,9 @@ const Causes = () => {
                 </div>
             </div>
             <div className="flex justify-center gap-4 mt-8 ">
-                <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-2 md:p-0 p-4 sm:p-6">
+                <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-2 md:p-0 p-2 sm:p-6">
                     {causesData.map((cause, index) => (
-                        <div key={index} className="bg-gray-200 m-4 rounded-lg flex flex-col justify-start items-center">
+                        <div key={index} className="bg-gray-200 m-2 rounded-lg flex flex-col justify-start items-center">
                             <div className="image-container relative overflow-hidden">
                                 <img src={cause.image} alt={`Cause-${index + 1}`} className="w-full object-center object-cover cursor-pointer transition-transform transform hover:scale-110" />
                             </div>
