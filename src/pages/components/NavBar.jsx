@@ -11,6 +11,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+
 const Navigation = () => {
 
     const [openNav, setOpenNav] = React.useState(false);
@@ -191,6 +192,9 @@ const Navigation = () => {
     );
 
     return (
+        <div>
+
+            {/* NavBar Component */}
         <Navbar className="mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-sm rounded-xs shadow-gray-200">
             <div className=" -mb-14 container mx-auto flex items-center justify-between text-blue-gray-900">
                 <NavLink to="/" className='-ml-2'>
@@ -261,6 +265,7 @@ const Navigation = () => {
                 </div>
             </MobileNav>
         </Navbar>
+        </div>
     );
 };
 export default Navigation;
