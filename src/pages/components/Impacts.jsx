@@ -55,7 +55,7 @@ const Impacts = () => {
                     <h2 className="text-3xl md:text-6xl text-gold font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
                         <CounterInline end={countries} /><span>+</span>
                     </h2>
-                    <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Countires</span>
+                    <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Countries</span>
                 </div>
 
                 <div

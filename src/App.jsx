@@ -3,7 +3,7 @@ import Home from './pages/home/Home';
 import About from "./pages/about/About";
 import Founder from './pages/founder/Founder';
 import Blog from './pages/blog/Blog';
-import Causes from "./pages/causes/Causes";
+// import Causes from "./pages/causes/Causes";
 import Upcoming from './pages/upcoming/Upcoming';
 import Recent from './pages/events/Events';
 import Contact from './pages/contact/Contact';
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/founder" element={<Founder />} />
-        <Route path="/causes" element={<Causes />} />
+        {/* <Route path="/causes" element={<Causes />} /> */}
         <Route path="/upcoming" element={<Upcoming />} />
         <Route path="/recent" element={<Recent />} />
         <Route path="/blog" element={<Blog />} />

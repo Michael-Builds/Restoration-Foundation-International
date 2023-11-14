@@ -110,7 +110,7 @@ const Navigation = () => {
                     )}
                 </Typography>
             </li>
-            <Typography
+            {/* <Typography
                 as='li'
                 variant="small"
                 color="blue-gray"
@@ -119,7 +119,7 @@ const Navigation = () => {
                 <NavLink to="/causes" className="flex items-center font-medium md:text-lg text-md text-gray-500 lg:hover:text-gold  lg:hover:border-b-2 lg:hover:border-gold font-quicksand">
                     Causes
                 </NavLink>
-            </Typography>
+            </Typography> */}
 
             <li
                 className="relative"
