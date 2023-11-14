@@ -36,7 +36,7 @@ const causesData = [
         raise: "$12,000",
         progress: 30,
         title: 'Fighting Hunger Together',
-        description: 'Together, we can combat hunger in our local neighborhoods. Your contribution helps feed those in need.',
+        description: 'Together, we can combat hunger in our local neighborhoods and communities. Your contribution helps feed those in need.',
         author: 'Community Food Drive',
         image: Img3,
         link: "/donate",
