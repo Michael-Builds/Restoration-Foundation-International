@@ -65,8 +65,8 @@ const Volunteer = () => {
                 </div>
 
                 {/* First Component (Will appear second on mobile) */}
-                <div className="w-full lg:w-1/2 order-2 lg:order-1">
-                    <div className="  mr-10 bg-white p-6 pt-10 pb-10 rounded-md">
+                <div className="w-full lg:w-1/2 order-2 lg:order-1 md:p-0 p-4">
+                    <div className="md:mr-10 bg-white md:p-6 p-4 pt-10 pb-10 rounded-md -ml-14">
                         <form
                             onSubmit={handleSave}
                             className="mt-5 flex flex-col gap-6">
