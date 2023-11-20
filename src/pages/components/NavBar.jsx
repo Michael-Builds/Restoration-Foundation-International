@@ -200,7 +200,7 @@ const Navigation = () => {
                     <NavLink to="/" className='-ml-2'>
                         <img
                             src={Logo}
-                            alt='Tamani Properties'
+                            alt='Restoration Foundation International'
                             className=" mt-16 mb-16 main-logo md:ml-6 ml-2"
                         />
                     </NavLink>
