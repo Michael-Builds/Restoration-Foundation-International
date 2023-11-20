@@ -35,12 +35,18 @@ const Main = () => {
             <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
                 <div className="w-full lg:w-1/2 lg:pr-10 md:mt-16 -mt-2">
-                    <div className="border-l-4 border-yellow-500  pl-2">
-                        <h2 className=' text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Get In Touch</h2>
+                    <div className="border-l-4 border-green pl-2">
+                        <h2 className=' text-2xl font-quicksand text-green font-medium ml-2'>Get In Touch</h2>
                     </div>
                     <h2 className=' md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Contact for any query
                     </h2>
+                    <p className='mt-6  font-quicksand max-w-[90%] md:text-lg text-sm'>
+                        Your satisfaction is our priority, and we are committed to helping you.
+                        Feel free to contact us at any time. Our team is here to assist you in any way we can.
+                        We appreciate your trust and look forward to serving you
+                    </p>
+
                     <div className=" p-10">
                         <form onSubmit={handleSave} className="bg-gray-200 p-6 rounded-md md:-ml-12 -ml-12 md:p-6 ">
                             <div className="mb-4">
@@ -84,7 +90,7 @@ const Main = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="bg-gold w-full text-white font-medium rounded-sm md:mt-6 mt-4 font-quicksand px-4 py-2 hover:bg-blue-600"
+                                className="bg-green hover:bg-purple w-full text-white font-medium rounded-sm md:mt-6 mt-4 font-quicksand px-4 py-2 hover:bg-blue-600"
                             >
                                 Submit
                             </button>

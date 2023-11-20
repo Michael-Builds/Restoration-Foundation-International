@@ -2,7 +2,6 @@ import React from "react";
 import {
     Button,
 } from "@material-tailwind/react";
-
 import swal from "sweetalert";
 
 const Volunteer = () => {
@@ -47,11 +46,11 @@ const Volunteer = () => {
                 />
             </div>
 
-            <div className="mx-auto flex flex-wrap items-center ml-12">
+            <div className="mx-auto flex flex-wrap items-center ml-12 p-4">
                 {/* Second Component (Will appear first on mobile) */}
                 <div className="w-full lg:w-1/2 lg:pr-10 mt-4 order-1 lg:order-2 mb-8">
-                    <div className="border-l-4 border-yellow-500 pl-2">
-                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 ml-2 font-medium'>Become A Volunteer</h2>
+                    <div className="border-l-4 border-green pl-2">
+                        <h2 className='text-2xl font-quicksand text-green ml-2 font-medium'>Become A Volunteer</h2>
                     </div>
                     <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Let us make a difference in the lives of others
@@ -101,7 +100,7 @@ const Volunteer = () => {
                                 rows="3"
                             />
 
-                            <Button type="submit" className="p-4 mt-2 justify-center  bg-gold text-white border border-b-2 border-gold flex items-center font-quicksand">
+                            <Button type="submit" className="p-4 mt-2 justify-center bg-green text-white border border-b-2 border-green flex items-center font-quicksand hover:bg-purple hover:border-purple">
                                 Become a Volunteer
                             </Button>
                         </form>

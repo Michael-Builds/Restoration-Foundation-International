@@ -23,7 +23,7 @@ const App = () => {
                     {/* Right Section */}
                     <div className="right-section">
                         <div className="lg:order-1 ml-8" >
-                            <div className=' border-l-4 border-gold md:-ml-1 -ml-8 max-w-full'>
+                            <div className=' border-l-4 border-green md:-ml-1 -ml-8 max-w-full'>
                                 <h1 className="mb-5 text-xl max-w-[95%] w-full lg:text-4xl ml-3 text-gray-600 font-semibold font-raleway">
                                     Learn About Us
                                 </h1>
@@ -36,7 +36,7 @@ const App = () => {
                                 Our mandate is to train, educate, entertain, develop and nurture (TEEN) the youth in the areas of Health, Environment, Education, Construction,
                                 Water and Sanitaion to make them conscious and responsible leaders in their respective communities.
                             </p>
-                            <div className='md:p-3 p-2 bg-gold mt-8 md:ml-0 -ml-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
+                            <div className='md:p-3 p-2 bg-green hover:bg-purple mt-8 md:ml-0 -ml-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
                                 <a href="#" className=" text-center">Read More</a>
                                 <IoIosArrowForward className='ml-2' />
                             </div>

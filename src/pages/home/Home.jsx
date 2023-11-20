@@ -13,7 +13,7 @@ import Team from '../components/Team';
 import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
 // import Causes from '../components/Causes';
-import GetinTouch from '../components/GetinTouch';
+// import GetinTouch from '../components/GetinTouch';
 import Spinner from '../components/Spinner'
 
 const Home = () => {
@@ -48,9 +48,9 @@ const Home = () => {
                     {/* <Causes /> */}
                     <Donate />
                     <Events />
-                    <Team />
                     <Volunteer />
-                    <GetinTouch />
+                    <Team />
+                    {/* <GetinTouch /> */}
                     <Blog />
                     <Footer />
                     <ScrollToTop />

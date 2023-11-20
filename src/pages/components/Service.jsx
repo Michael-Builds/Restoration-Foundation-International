@@ -4,32 +4,32 @@ import { FaPeopleCarry } from 'react-icons/fa';
 
 const services = [
     {
-        icon: <GiFruitBowl className='h-14 w-14 text-yellow-500' />,
+        icon: <GiFruitBowl className='h-14 w-14 text-green' />,
         title: 'Healthy Food',
         description: 'Providing nutritious and delicious meals for your well-being.',
     },
     {
-        icon: <GiWaterBottle className='h-14 w-14 text-yellow-500' />,
+        icon: <GiWaterBottle className='h-14 w-14 text-green' />,
         title: 'Pure Water',
         description: 'Ensuring access to clean and safe drinking water for all.',
     },
     {
-        icon: <GiHealthCapsule className='h-14 w-14 text-yellow-500' />,
+        icon: <GiHealthCapsule className='h-14 w-14 text-green' />,
         title: 'Health Care',
         description: 'Delivering quality healthcare services to promote a healthy community.',
     },
     {
-        icon: <GiTeacher className='h-14 w-14 text-yellow-500' />,
+        icon: <GiTeacher className='h-14 w-14 text-green' />,
         title: 'Primary Education',
         description: 'Empowering young minds through quality primary education programs.',
     },
     {
-        icon: <MdMapsHomeWork className='h-14 w-14 text-yellow-500' />,
+        icon: <MdMapsHomeWork className='h-14 w-14 text-green' />,
         title: 'Residence Facilities',
         description: 'Providing safe and comfortable housing for individuals and families.',
     },
     {
-        icon: <FaPeopleCarry className='h-14 w-14 text-yellow-500' />,
+        icon: <FaPeopleCarry className='h-14 w-14 text-green' />,
         title: 'Social Care',
         description: 'Supporting and caring for our community with compassion and dedication.',
     },
@@ -41,7 +41,7 @@ const Service = () => {
             <div className="container">
                 <div className="text-center mx-auto mb-4 mt-16">
 
-                    <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 md:ml-[15%]">
+                    <p className="font-quicksand items-center font-bold text-2xl text-green mb-2 md:ml-[15%]">
                         What We Do?
                     </p>
                     <h2 className=" font-quicksand font-bold md:text-5xl text-3xl md:-p-0 p-4 text-gray-600 mb-4 md:-mb-6 md:max-w-[700px] md:ml-[32%] md:mt-6 mt-4">
@@ -55,7 +55,7 @@ const Service = () => {
                                 <div className=" mb-2">
                                     {service.icon}
                                 </div>
-                                <div className="border-l-4 border-gray-500 rounded-lg ml-4 pl-4">
+                                <div className="border-l-4 border-green rounded-lg ml-4 pl-4">
                                     <h3 className='font-quicksand font-bold text-2xl text-gray-600 mb-2 '>
                                         {service.title}
                                     </h3>

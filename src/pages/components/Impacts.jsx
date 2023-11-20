@@ -45,14 +45,14 @@ const Impacts = () => {
     };
 
     return (
-        <section className='flex justify-center p-2 mt-14 md:mt-0 relative'>
+        <section className='flex justify-center p-2 mt-14 md:mb-14 md:mt-0 relative'>
             <div className="grid md:grid-cols-4 grid-cols-1 md:gap-6 gap-8 ">
                 <div
                     ref={countriesRef}
-                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-gold items-center text-center rounded ${hasAnimated && CountriesInView ? 'animate-counter-up' : ''
+                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-green items-center text-center rounded ${hasAnimated && CountriesInView ? 'animate-counter-up' : ''
                         }`}
                 >
-                    <h2 className="text-3xl md:text-6xl text-gold font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
+                    <h2 className="text-3xl md:text-6xl text-green font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
                         <CounterInline end={countries} /><span>+</span>
                     </h2>
                     <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Countries</span>
@@ -60,10 +60,10 @@ const Impacts = () => {
 
                 <div
                     ref={volunteersRef}
-                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-gold items-center text-center rounded ${hasAnimated && VolunteersInView ? 'animate-counter-up' : ''
+                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-green items-center text-center rounded ${hasAnimated && VolunteersInView ? 'animate-counter-up' : ''
                         }`}
                 >
-                    <h2 className="text-3xl md:text-6xl text-gold font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
+                    <h2 className="text-3xl md:text-6xl text-green font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
                         <CounterInline end={volunteers} /><span>+</span>
                     </h2>
                     <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Hard Working Employees</span>
@@ -71,10 +71,10 @@ const Impacts = () => {
 
                 <div
                     ref={goalRef}
-                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-gold items-center text-center rounded ${hasAnimated && GoalInView ? 'animate-counter-up' : ''
+                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-green items-center text-center rounded ${hasAnimated && GoalInView ? 'animate-counter-up' : ''
                         }`}
                 >
-                    <h2 className="text-3xl md:text-6xl text-gold font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
+                    <h2 className="text-3xl md:text-6xl text-green font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
                         <CounterInline end={goal} /><span>M</span>
                     </h2>
                     <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Our Goal</span>
@@ -82,10 +82,10 @@ const Impacts = () => {
 
                 <div
                     ref={raisedRef}
-                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-gold items-center text-center rounded ${hasAnimated && RaisedInView ? 'animate-counter-up' : ''
+                    className={`counter-item p-6 w-72 bg-white shadow-lg bg-white border border-b-4 border-green items-center text-center rounded ${hasAnimated && RaisedInView ? 'animate-counter-up' : ''
                         }`}
                 >
-                    <h2 className="text-3xl md:text-6xl text-gold font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
+                    <h2 className="text-3xl md:text-6xl text-green font-aclonica font-bold mt-8 md:mt-4 mb-6 " >
                         <CounterInline end={raised} /><span>+</span>
                     </h2>
                     <span className="text-gray-600 mb-10 mt-4 font-quicksand font-medium" >Raised</span>

@@ -74,20 +74,20 @@ const Main = () => {
                                     alt="Blog Image"
                                     className="object-center object-cover"
                                 />
-                                <div className="top-left-text bg-gold text-white text-center text-sm font-semibold font-quicksand absolute top-4 md:pt-2 md:pb-2 md:pr-8 md:pl-8 pl-4  pr-4 pb-2 pt-2 rounded-sm">
+                                <div className="top-left-text bg-green text-white text-center text-sm font-semibold font-quicksand absolute top-4 md:pt-2 md:pb-2 md:pr-8 md:pl-8 pl-4  pr-4 pb-2 pt-2 rounded-sm">
                                     {post.category}
                                 </div>
                             </div>
 
-                            <h3 className="text-sm md:text-lg hover:text-gold cursor-pointer font-medium font-quicksand mt-4 mb-2">{post.title}</h3>
+                            <h3 className="text-sm md:text-lg hover:text-green cursor-pointer font-medium font-quicksand mt-4 mb-2">{post.title}</h3>
                             <div className="text-sm text-gray-500 mb-4 mt-4 flex gap-4">
                                 <div className="flex items-center">
-                                    <FaCalendarAlt className="mr-2 md:h-4 md:w-4 text-blue cursor-pointer hover:text-gold" />
+                                    <FaCalendarAlt className="mr-1 md:h-4 md:w-4 text-green cursor-pointer hover:text-purple" />
                                     <p className="font-quicksand">{post.date}</p>
                                 </div>
                                 <div className="flex items-center">
-                                    <IoPersonCircleOutline className="mr-2 md:h-6 md:w-6 text-blue cursor-pointer hover:text-gold" />
-                                    <p className="font-quicksand"> {post.author}</p>
+                                    <IoPersonCircleOutline className="mr-1 md:h-6 md:w-6 text-green cursor-pointer hover:text-purple" />
+                                    <p className="font-quicksand md:text-sm"> {post.author}</p>
                                 </div>
                             </div>
                             <p className="text-gray-900 mb-4 text-sm font-quicksand">{post.content}</p>

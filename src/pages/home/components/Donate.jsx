@@ -51,8 +51,8 @@ const About = () => {
             <div className="mx-auto flex flex-wrap items-center ml-12">
                 {/* Left Column */}
                 <div className="w-full lg:w-1/2 lg:pr-10 md:mt-16 -mt-2">
-                    <div className="border-l-4 border-yellow-500 pl-2">
-                        <h2 className='text-white text-2xl font-quicksand text-yellow-500 font-medium ml-2'>Donate Now</h2>
+                    <div className="border-l-4 border-green pl-2">
+                        <h2 className=' text-2xl font-quicksand text-green font-medium ml-2'>Donate Now</h2>
                     </div>
                     <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
                         Join us in making a difference through your generous donation
@@ -112,7 +112,7 @@ const About = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="bg-gold w-full text-white font-medium rounded-sm font-quicksand md:mt-6 mt-4 px-4 py-2 hover:bg-blue-600"
+                                className="bg-green w-full text-white font-medium rounded-sm font-quicksand md:mt-6 mt-4 px-4 py-2 hover:bg-purple"
                             >
                                 Submit
                             </button>

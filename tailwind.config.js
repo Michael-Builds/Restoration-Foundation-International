@@ -11,8 +11,14 @@ export default {
       },
       colors: {
         gold: '#bf9410', // Define the custom gold color
-        blue: "#32506d",
+        blue1: "#32506d",
         primary: "#0088ff",
+        sea: "#4c8373",
+        purple: "#7826e5",
+        black: "#000000",
+        green: "#85ba51",
+        red: "#d41418",
+        blue: "#2b159b"
       },
     },
   },

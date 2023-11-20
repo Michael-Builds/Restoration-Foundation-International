@@ -1,11 +1,14 @@
 import Image from '../../assets/team.jpeg';
-import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from 'react-icons/bi';
+// import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from 'react-icons/bi';
+import { HiBadgeCheck } from "react-icons/hi";
 
 const teamData = [
     {
         name: 'Kabanda Michael',
         role: "Software Developer",
+        role2: "Board Member",
         image: Image,
+        badge: <HiBadgeCheck />,
         socialLinks: {
             facebook: 'https://www.facebook.com/michael.kabanda',
             instagram: 'https://www.instagram.com/michael.kabanda',
@@ -16,7 +19,9 @@ const teamData = [
     {
         name: 'Kabanda Daniel',
         role: "Director",
+        role2: "Board Member",
         image: Image,
+        badge: <HiBadgeCheck />,
         socialLinks: {
             facebook: 'https://www.facebook.com/daniel.kabanda',
             instagram: 'https://www.instagram.com/daniel.kabanda',
@@ -27,7 +32,9 @@ const teamData = [
     {
         name: 'Kabanda Suzzy',
         role: "Accountant",
+        role2: "Board Member",
         image: Image,
+        badge: <HiBadgeCheck />,
         socialLinks: {
             facebook: 'https://www.facebook.com/suzzy.kabanda',
             instagram: 'https://www.instagram.com/suzzy.kabanda',
@@ -38,7 +45,9 @@ const teamData = [
     {
         name: 'Kabanda Blessing',
         role: "Medical Assistant",
+        role2: "Board Member",
         image: Image,
+        badge: <HiBadgeCheck />,
         socialLinks: {
             facebook: 'https://www.facebook.com/blessing.kabanda',
             instagram: 'https://www.instagram.com/blessing.kabanda',
@@ -53,7 +62,7 @@ const Team = () => {
         <div className='justify-center align-center mt-8 pb-16'>
             <div className=''>
                 <div className='text-center mx-auto mb-4 mt-24'>
-                <p className="font-quicksand items-center font-bold text-2xl text-yellow-500 mb-2 ">
+                    <p className="font-quicksand items-center font-bold text-2xl text-green mb-2 ">
                         Meet Our Team
                     </p>
                     <h2 className=" font-quicksand font-bold md:text-5xl text-3xl text-gray-600 mb-4 md:max-w-[700px] md:ml-[25%] mt-6 md:p-0 p-2">
@@ -67,10 +76,14 @@ const Team = () => {
                     {teamData.map((team, index) => (
                         <div key={index} className="m-4 rounded-md relative pb-16">
                             <img src={team.image} alt={`Team-${index + 1}`} className="w-full h-full object-cover object-center" />
-                            <div className="w-[60%] h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white border-yellow-500 border-b-4 rounded-md text-center">
-                                <h2 className='text-blue-900 font-quicksand mt-4 text-md font-semibold'>{team.name}</h2>
+                            <div className="w-[64%] h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white border-green border-b-4 rounded-md text-center">
+                                <h2 className=' font-quicksand mt-4 text-md font-bold'>{team.name}</h2>
+                                <div className='flex items-center justify-center mt-3'>
+                                    <p className='font-quicksand font-medium text-gray-600'>{team.role2}</p>
+                                    <p className='ml-4 items-center text-green'>{team.badge}</p>
+                                </div>
                                 <p className='mt-2 font-quicksand font-medium text-gray-600'>{team.role}</p>
-                                <div className="flex justify-center mt-5">
+                                {/* <div className="flex justify-center mt-5">
                                     <a href={team.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
                                         <BiLogoFacebook className="text-blue-600 mx-2 text-lg hover:text-gray-500 " />
                                     </a>
@@ -83,7 +96,7 @@ const Team = () => {
                                     <a href={team.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
                                         <BiLogoTwitter className="text-blue-400 mx-2 text-lg hover:text-gray-500" />
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}
