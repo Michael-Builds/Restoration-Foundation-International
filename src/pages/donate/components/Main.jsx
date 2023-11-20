@@ -2,6 +2,7 @@ import React from "react";
 import swal from "sweetalert";
 
 const Donate = () => {
+    const [loading, setLoading] = React.useState(false);
 
     const [donateInfo, setDonateInfo] = React.useState({
         email: "",
@@ -23,11 +24,48 @@ const Donate = () => {
         }));
     };
 
-    const handleSave = (e) => {
+    const handleSave = async (e) => {
         e.preventDefault();
-        swal("Restoration Foundation International", "Information Sent", "success")
-        handleClear()
-    }
+        setLoading(true);
+
+        // Destructure the donateInfo object for clarity
+        const { fullname, email, contact } = donateInfo;
+
+        try {
+            // Assuming you are using fetch, I've corrected the code
+            const res = await fetch('https://v1.nocodeapi.com/kpanti/google_sheets/yyCouxnLhvkpKRdz?tabId=Donation', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify([
+                    [
+                        new Date().toLocaleString(),
+                        fullname,
+                        email,
+                        contact,
+                    ],
+                ]),
+            });
+
+            // Check if the response is successful
+            if (res.ok) {
+                // Use SweetAlert to show success message
+                swal("Restoration Foundation International", "Information Submitted", "success");
+                // Optionally, you can handle other actions after a successful submission here
+            } else {
+                // Handle errors if the response is not successful
+                swal("Restoration Foundation International", "Error Sending Information", "error");
+            }
+        } catch (error) {
+            // Handle errors in the fetch or other unexpected errors
+            console.log(error);
+            swal("Restoration Foundation International", "Error Sending Information", "error");
+        }
+
+        setLoading(false);
+        handleClear();
+    };
 
     return (
         <div className="relative w-full py-12 ">
@@ -97,7 +135,11 @@ const Donate = () => {
                                 type="submit"
                                 className="bg-green w-full text-white font-medium rounded-sm font-quicksand px-4 py-2 md:mt-6 mt-4 hover:bg-purple"
                             >
-                                Submit
+                                {!loading ? (
+                                    "Submit"
+                                ) : (
+                                    "Submitting..."
+                                )}
                             </button>
                         </form>
                     </div>

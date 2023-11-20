@@ -8,6 +8,7 @@ import React from "react";
 import { FaPhone } from 'react-icons/fa6';
 
 const Footer = () => {
+    const [loading, setLoading] = React.useState(false);
 
     const [newletterInfo, setNewsLetterInfo] = React.useState({
         email: "",
@@ -27,11 +28,47 @@ const Footer = () => {
         });
     };
 
-    const handleSave = (e) => {
+    const handleSave = async (e) => {
         e.preventDefault();
-        swal("Restoration Foundation International", "Subscription Successful", "success")
+        setLoading(true);
+
+        // Destructure the donateInfo object for clarity
+        const { email } = newletterInfo;
+
+        try {
+            // Assuming you are using fetch, I've corrected the code
+            const res = await fetch('https://v1.nocodeapi.com/kpanti/google_sheets/yyCouxnLhvkpKRdz?tabId=NewsLetter', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify([
+                    [
+                        new Date().toLocaleString(),
+                        email,
+
+                    ],
+                ]),
+            });
+
+            // Check if the response is successful
+            if (res.ok) {
+                // Use SweetAlert to show success message
+                swal("Restoration Foundation International", "Subscription Successful", "success");
+                // Optionally, you can handle other actions after a successful submission here
+            } else {
+                // Handle errors if the response is not successful
+                swal("Restoration Foundation International", "Error Subscribing", "error");
+            }
+        } catch (error) {
+            // Handle errors in the fetch or other unexpected errors
+            console.log(error);
+            swal("Restoration Foundation International", "Error Subscribing", "error");
+        }
+
+        setLoading(false);
         handleClear();
-    }
+    };
 
     // Create an array of link texts
     const linkData = [
@@ -48,8 +85,8 @@ const Footer = () => {
         const currentYear = new Date().getFullYear();
         return currentYear;
     };
-      // old: '#bf9410',
-     
+    // old: '#bf9410',
+
     return (
         <section className='justify-center  items-center'>
             <div className="bg-blue1 p-4 ">
@@ -136,9 +173,13 @@ const Footer = () => {
                             />
                             <button
                                 type='submit'
-                                className='p-4 bg-green text-white hover:bg-purple hover:text-white mt-4 w-72 font-quicksand rounded-md text-center align-center justify-center items-center'
+                                className='p-4 bg-green text-white hover:bg-primary hover:text-white mt-4 w-72 font-quicksand rounded-md text-center align-center justify-center items-center'
                             >
-                                Submit
+                                {!loading ? (
+                                    "Submit"
+                                ) : (
+                                    "Submitting..."
+                                )}
                             </button>
                         </form>
                     </div>

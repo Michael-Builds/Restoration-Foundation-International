@@ -5,6 +5,7 @@ import {
 import swal from "sweetalert";
 
 const Volunteer = () => {
+    const [loading, setLoading] = React.useState(false);
 
     const [donateInfo, setDonateInfo] = React.useState({
         email: "",
@@ -20,11 +21,56 @@ const Volunteer = () => {
         }));
     };
 
+    const handleClear = () => {
+        setDonateInfo({
+            email: "",
+            fullname: "",
+            reason: "",
+        })
+    };
 
-    const handleSave = (e) => {
+    const handleSave = async (e) => {
         e.preventDefault();
-        swal("Donation", "Donation made", "success")
-    }
+        setLoading(true);
+
+        // Destructure the donateInfo object for clarity
+        const { fullname, email, reason } = donateInfo;
+
+        try {
+            // Assuming you are using fetch, I've corrected the code
+            const res = await fetch('https://v1.nocodeapi.com/kpanti/google_sheets/yyCouxnLhvkpKRdz?tabId=Volunteers', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify([
+                    [
+                        new Date().toLocaleString(),
+                        fullname,
+                        email,
+                        reason,
+                    ],
+                ]),
+            });
+            
+            // Check if the response is successful
+            if (res.ok) {
+                // Use SweetAlert to show success message
+                swal("Restoration Foundation International", "Information Submitted", "success");
+                // Optionally, you can handle other actions after a successful submission here
+            } else {
+                // Handle errors if the response is not successful
+                swal("Restoration Foundation International", "Error Sending Information", "error");
+            }
+        } catch (error) {
+            // Handle errors in the fetch or other unexpected errors
+            console.log(error);
+            swal("Restoration Foundation International", "Error Sending Information", "error");
+        }
+
+        setLoading(false);
+        handleClear();
+    };
 
     return (
         <div className="relative w-full py-12 mt-10">
@@ -101,7 +147,11 @@ const Volunteer = () => {
                             />
 
                             <Button type="submit" className="p-4 mt-2 justify-center bg-green text-white border border-b-2 border-green flex items-center font-quicksand hover:bg-purple hover:border-purple">
-                                Become a Volunteer
+                                {!loading ? (
+                                    "Become a volunteer"
+                                ) : (
+                                    "Submitting..."
+                                )}
                             </Button>
                         </form>
                     </div>
