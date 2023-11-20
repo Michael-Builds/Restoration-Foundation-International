@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navigation from '../components/Navigation'
-import Header from './components/Header';
-import Services from '../components/Service';
-import Main from './components/Main';
-import Footer from '../components/Footer';
-import ScrollToTop from '../components/Scroll';
-import Spinner from '../components/Spinner'
+import Navigation from '../../../components/Navigation';
+import Footer from '../../../components/Footer';
+import ScrollToTop from '../../../components/Scroll';
+import Spinner from '../../../components/Spinner'
 
-
-const Founder = () => {
+const Blog1 = () => {
     const location = useLocation();
 
     useEffect(() => {
@@ -26,7 +22,6 @@ const Founder = () => {
             clearTimeout(timer); // Clear the timeout when the component is unmounted or the dependency changes
         };
     }, []);
-
     return (
         <>
             {isLoading ?
@@ -34,18 +29,11 @@ const Founder = () => {
                 :
                 <div>
                     <Navigation />
-                    <section style={{ marginTop: "-40px" }}>
-                        <Header />
-                        <Services />
-                        <Main />
-                        <Footer />
-                        <ScrollToTop />
-                    </section>
+                    <Footer />
+                    <ScrollToTop />
                 </div>
             }
         </>
-    );
-};
-
-export default Founder;
-
+    )
+}
+export default Blog1;

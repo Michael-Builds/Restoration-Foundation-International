@@ -63,7 +63,6 @@ const Navigation = () => {
                     Home
                 </NavLink>
             </Typography>
-
             <li
                 className="relative"
                 onMouseEnter={handleAboutMouseEnter}
@@ -82,7 +81,6 @@ const Navigation = () => {
                             <span
                                 className="ml-3 text-green-600 cursor-pointer"
                                 onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
-
                             >
                                 <BiPlus className='text-green' />
                             </span>
@@ -116,7 +114,8 @@ const Navigation = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <NavLink to="/causes" className="flex items-center font-medium md:text-lg text-md text-gray-500 hover:text-green hover:border-b-2 hover:border-green font-quicksand">
+                <NavLink to="/causes" className="flex text-16 items-center font-medium md:text-lg text-md text-gray-500 lg:hover:text-green lg:hover:border-b-2 lg:hover:border-green font-quicksand">
+
                     Causes
                 </NavLink>
             </Typography>
@@ -166,7 +165,6 @@ const Navigation = () => {
                     )}
                 </Typography>
             </li>
-
             <Typography
                 as="li"
                 variant="small"
@@ -190,7 +188,6 @@ const Navigation = () => {
             </Typography>
         </ul>
     );
-
     return (
         <div>
 
@@ -208,7 +205,7 @@ const Navigation = () => {
                     {showDonateButton && (
                         //Conditionally render the donate button, when the screen is greater than 960 pixels, then the button is displayed else it is hidden
                         <Link to='/donate'>
-                            <Button variant="gradient" size="sm" className="mb-2 mt-2 mr-12 flex items-center text-gray-600 bg-green text-white rounded-sm md:hover:bg-purple ">
+                            <Button variant="gradient" size="sm" className="mb-2 mt-2 mr-12 flex items-center text-gray-600 bg-green text-white rounded-sm hover:bg-primary ">
                                 <BiSolidDollarCircle className="mr-2" />
                                 <span className="mr-1 font-quicksand text-sm font-medium capitalize">Donate</span>
                             </Button>
@@ -257,7 +254,7 @@ const Navigation = () => {
                     <div className="container mx-auto pb-4">
                         {navList}
                         <Link to="/donate">
-                            <Button variant="gradient" size="sm" className="flex items-center rounded-sm capitalize lg:bg-green bg-green hover:bg-purple">
+                            <Button variant="gradient" size="sm" className="flex items-center rounded-sm capitalize  bg-green hover:bg-primary">
                                 <BiSolidDollarCircle className="mr-2" />
                                 <span className="mr-1">Donate</span>
                             </Button>

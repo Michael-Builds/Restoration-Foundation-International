@@ -3,72 +3,55 @@ import card2 from "../../../assets/blog-2.jpg";
 import card6 from "../../../assets/blog-3.jpg";
 import { FaCalendarAlt } from 'react-icons/fa';
 import { IoPersonCircleOutline } from 'react-icons/io5';
+import { IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
     const blogData = [
         {
-            category: "Arts",
+            category: "Community Outreach",
             image: card6,
-            title: 'Searches at Lands Commission to Get Easier from 1st October, 2021',
-            content: 'From 1st October, 2021, the Greater Accra Regional Office of the Lands Commission shall no longer issue separate search reports from its divisions.',
-            author: 'Michael Kabanda',
+            title: 'Empowering Local Communities through Education Initiatives',
+            content: 'Discover how our organization is making education accessible and empowering local communities. Learn about our initiatives starting October 1, 2023.',
+            author: 'Charity Foundation Team',
             date: 'October 10, 2023',
+            link: "/blog1",
+
         },
         {
             image: card1,
-            category: "Article",
-            title: 'Your 2022 property investment plan(12 - steps to Note)',
-            content: '	It is a new year : 12 months lie ahead. With some discipline and focus you could be much closer to your investment goals this time next year: just follow',
-            author: 'Michael Kabanda',
+            category: "Impact Stories",
+            title: 'Changing Lives: A Year in Review of our Philanthropic Journey',
+            content: 'As we step into a new year, let us reflect on the positive impact we made in the past 12 months. Join us on this journey and explore the stories of lives transformed.',
+            author: 'Charity Foundation Team',
             date: 'October 15, 2023',
+            link: "/blog2",
+
         },
         {
             image: card2,
             category: "Announcement",
-            title: 'Why you Need a House in Ghana',
-            content: 'There are a lot of reasons why you will want to buy a property in some specific part of the world. This may include safety reasons, availability of social centers',
-            author: 'Michael Kabanda',
+            title: 'Building Hope: Our Latest Project for Shelter and Support',
+            content: 'Learn more about our ongoing project focused on providing shelter and support to those in need. Discover the reasons behind our mission and how you can contribute.',
+            author: 'Charity Foundation Team',
             date: 'October 20, 2023',
-        },
-        {
-            category: "Arts",
-            image: card6,
-            title: 'Searches at Lands Commission to Get Easier from 1st October, 2021',
-            content: 'From 1st October, 2021, the Greater Accra Regional Office of the Lands Commission shall no longer issue separate search reports from its divisions.',
-            author: 'Michael Kabanda',
-            date: 'October 10, 2023',
-        },
-        {
-            image: card1,
-            category: "Article",
-            title: 'Your 2022 property investment plan(12 - steps to Note)',
-            content: '	It is a new year : 12 months lie ahead. With some discipline and focus you could be much closer to your investment goals this time next year: just follow',
-            author: 'Michael Kabanda',
-            date: 'October 15, 2023',
-        },
-        {
-            image: card2,
-            category: "Announcement",
-            title: 'Why you Need a House in Ghana',
-            content: 'There are a lot of reasons why you will want to buy a property in some specific part of the world. This may include safety reasons, availability of social centers',
-            author: 'Michael Kabanda',
-            date: 'October 20, 2023',
+            link: "/blog3",
+
         },
     ];
 
     return (
-        <section className="p-6 md:mt-24">
+        <section className="p-6 md:mt-12">
             <div className="container mx-auto pb-8">
                 <h2 className="md:text-4xl font-bold text-gray-600 text-2xl font-raleway mb-6 text-center md:mb-12">Latest Blog Posts</h2>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {blogData.map((post, index) => (
                         <div
                             key={index}
                             className="bg-white p-4 rounded-lg shadow-md border border-gray-300">
                             <div className="image-container relative cursor-pointer">
-                                <div className="image-overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 hover:opacity-70"></div>
+                                <div className="image-overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 hover:opacity-60"></div>
                                 <img
                                     src={post.image}
                                     alt="Blog Image"
@@ -91,7 +74,12 @@ const Main = () => {
                                 </div>
                             </div>
                             <p className="text-gray-900 mb-4 text-sm font-quicksand">{post.content}</p>
-
+                            <div className='md:p-2 p-2 md:mb-4 mb-3 bg-green hover:bg-primary mt-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
+                                <Link to={post.link} className="text-center flex items-center">
+                                    Read More
+                                    <IoIosArrowForward className='ml-2' />
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>

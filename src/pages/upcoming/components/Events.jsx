@@ -57,12 +57,11 @@ const Events = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 md:p-14 md:mb-4 mb-10">
                 {eventsData.map((event, index) => (
                     <div key={index} className="bg-white p-4 rounded-lg shadow-md border border-gray-300">
-                        <div className="image-container relative cursor-pointer">
-                            <div className="image-overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-300 hover:opacity-70"></div>
+                        <div className="image-container relative cursor-pointer overflow-hidden">
                             <img
                                 src={event.image}
-                                alt="Blog Image"
-                                className="object-center object-cover"
+                                alt="Recent Events"
+                                className="object-center object-cover transition-transform duration-300 transform hover:scale-110"
                             />
                         </div>
                         <h3 className="text-sm md:text-lg hover:text-green cursor-pointer text-center capitalize font-semibold font-quicksand mt-4 mb-2">{event.title}</h3>

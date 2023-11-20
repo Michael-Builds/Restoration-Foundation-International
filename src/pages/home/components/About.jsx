@@ -1,6 +1,6 @@
-
 import Image from '../../../assets/carousel-3.jpg';
 import { IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 
 const App = () => {
@@ -36,8 +36,10 @@ const App = () => {
                                 Our mandate is to train, educate, entertain, develop and nurture (TEEN) the youth in the areas of Health, Environment, Education, Construction,
                                 Water and Sanitaion to make them conscious and responsible leaders in their respective communities.
                             </p>
-                            <div className='md:p-3 p-2 bg-green hover:bg-purple mt-8 md:ml-0 -ml-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
-                                <a href="#" className=" text-center">Read More</a>
+                            <div className='md:p-3 p-2 bg-green hover:bg-primary mt-8 md:ml-0 -ml-8 flex items-center text-white w-32 text-center hover:bg-blue hover:text-white rounded-md cursor-pointer '>
+                                <Link to="/about" className=" text-center">
+                                    Read More
+                                </Link>
                                 <IoIosArrowForward className='ml-2' />
                             </div>
                         </div>
