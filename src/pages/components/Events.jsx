@@ -83,7 +83,7 @@ const Events = () => {
                             {/* Right Content */}
                             <div className="w-full lg:w-1/2 md:border-l-4 border-green pl-4 md:mt-0 mt-4 md:ml-0 -ml-4">
                                 <p className=' text-sm font-quicksand'>{event.description}</p>
-                                <a href={event.link} className='mt-4 border border-green w-32 justify-center border-b-4 md:ml-0 p-2 -ml-1 rounded-md flex items-center font-quicksand font-medium hover:border-purple'>
+                                <a href={event.link} className='mt-4 border border-green w-32 justify-center border-b-4 md:ml-0 p-2 -ml-1 rounded-md flex items-center font-quicksand font-medium hover:border-primary'>
                                     {event.buttonText}
                                     <GoArrowRight className='ml-2' />
                                 </a>

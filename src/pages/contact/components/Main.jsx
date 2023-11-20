@@ -131,7 +131,7 @@ const Main = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="bg-green hover:bg-purple w-full text-white font-medium rounded-sm md:mt-6 mt-4 font-quicksand px-4 py-2 hover:bg-blue-600"
+                                className="bg-green hover:bg-purple w-full text-white font-medium rounded-sm md:mt-6 mt-4 font-quicksand px-4 py-2 hover:bg-primary"
                             >
 
                                 {!loading ? (

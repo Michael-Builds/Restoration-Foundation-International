@@ -52,7 +52,7 @@ const Volunteer = () => {
                     ],
                 ]),
             });
-            
+
             // Check if the response is successful
             if (res.ok) {
                 // Use SweetAlert to show success message
@@ -146,7 +146,7 @@ const Volunteer = () => {
                                 rows="3"
                             />
 
-                            <Button type="submit" className="p-4 mt-2 justify-center bg-green text-white border border-b-2 border-green flex items-center font-quicksand hover:bg-purple hover:border-purple">
+                            <Button type="submit" className="p-3 mt-2 justify-center bg-green text-white border border-b-2 border-green flex items-center font-quicksand hover:bg-primary hover:border-primary">
                                 {!loading ? (
                                     "Become a volunteer"
                                 ) : (
