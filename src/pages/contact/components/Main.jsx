@@ -50,7 +50,7 @@ const Main = () => {
                     <div className=" p-10">
                         <form onSubmit={handleSave} className="bg-gray-200 p-6 rounded-md md:-ml-12 -ml-12 md:p-6 ">
                             <div className="mb-4">
-                                <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Name</label>
+                                <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Full Name</label>
                                 <input
                                     required
                                     type="text"

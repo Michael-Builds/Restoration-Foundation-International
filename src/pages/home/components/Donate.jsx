@@ -72,7 +72,7 @@ const About = () => {
                                 shortly to facilitate your generous contribution.
                             </p>
                             <div className="mb-4">
-                                <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Name</label>
+                                <label htmlFor="fullname" className="block font-quicksand mb-2 text-gray-600 text-sm font-medium">Full Name</label>
                                 <input
                                     required
                                     type="text"
