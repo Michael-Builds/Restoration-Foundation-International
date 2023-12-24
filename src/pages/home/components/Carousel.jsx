@@ -1,42 +1,42 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Image from '../../../assets/court4.jpg';
+import Image1 from '../../../assets/image1.jpg';
+import Image2 from '../../../assets/image2.jpg';
+import Image3 from '../../../assets/image3.jpg';
+import Image4 from '../../../assets/carousel-3.jpg';
 import { Link } from 'react-router-dom';
-
-
 import { GoArrowRight } from 'react-icons/go';
 
 const carouselItems = [
     {
-        image: Image,
+        image: Image1,
         title: "Join Our Mission",
         description: "Together for a better world",
         buttonText: "Get Involved",
         link: "/about"
     },
     {
-        image: Image,
+        image: Image2,
         title: "Discover Our Initiatives",
         description: "Supporting those in need",
         buttonText: "Learn More",
         link: "/about"
     },
     {
-        image: Image,
+        image: Image3,
         title: "Make a Difference",
         description: "Every contribution counts",
         buttonText: "Donate Now",
         link: "/donate"
     },
     {
-        image: Image,
+        image: Image4,
         title: "Spread Kindness",
         description: "Touching lives, one act at a time",
         buttonText: "Volunteer Today",
         link: "/donate"
     },
 ];
-
 
 const Hero = () => {
     return (
@@ -54,8 +54,8 @@ const Hero = () => {
                 {carouselItems.map((item, index) => (
                     <div key={index} className="relative w-full flex items-center justify-center flex-col">
                         <div className="carousel-img relative w-full h-[25rem] sm:h-[35rem] md:h-[35rem] lg:h-120 xl:h-[35rem] text-right overflow-hidden">
-                            <img src={item.image} alt="Image" className="object-cover object-center h-full w-full" />
-                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-10"></div>
+                            <img src={item.image} alt="Image" className="" />
+                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10"></div>
                         </div>
                         <div className="absolute pl-[15%] carousel-text flex flex-col items-start z-20 left-0">
                             <h1 className="font-raleway text-white text-2xl md:text-5xl font-bold mb-4 tracking-wide leading-tight">
@@ -76,6 +76,7 @@ const Hero = () => {
 
     );
 };
+
 export default Hero;
 
 

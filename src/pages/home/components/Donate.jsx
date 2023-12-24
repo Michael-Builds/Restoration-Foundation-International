@@ -139,7 +139,7 @@ const About = () => {
                 {/* Right Column */}
                 <div className="w-full lg:w-1/2 p-6">
                     <div className="bg-white p-6 rounded-md md:ml-0 -ml-14 md:mr-0 -mr-2">
-                        <div className="flex justify-center gap-2 mb-6">
+                        <div className="flex justify-center gap-4 mb-6 mt-4">
                             <button
                                 onClick={() => setActiveForm("donate")}
                                 className={`px-8 py-2 ${activeForm === "donate" ? "bg-green text-white rounded-sm font-quicksand" : "bg-gray-300 rounded-sm font-quicksand"
