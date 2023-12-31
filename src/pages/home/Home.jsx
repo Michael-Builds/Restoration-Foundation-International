@@ -10,10 +10,8 @@ import Impact from '../components/Impacts';
 import Service from '../components/Service';
 import Events from '../components/Events';
 import Team from '../components/Team';
-import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
 import Causes from '../components/Causes';
-// import GetinTouch from '../components/GetinTouch';
 import Spinner from '../components/Spinner'
 
 const Home = () => {
@@ -30,7 +28,7 @@ const Home = () => {
         }, 1000);
 
         return () => {
-            clearTimeout(timer); // Clear the timeout when the component is unmounted or the dependency changes
+            clearTimeout(timer);
         };
     }, []);
 
@@ -45,22 +43,16 @@ const Home = () => {
                     <About />
                     <Service />
                     <Impact />
+                    <Team />
                     <Causes />
-                    <Donate />
                     <Events />
                     <Volunteer />
-                    <Team />
-                    {/* <GetinTouch /> */}
                     <Blog />
                     <Footer />
                     <ScrollToTop />
                 </div>
-
             }
-
-
         </>
     );
 };
-
 export default Home;

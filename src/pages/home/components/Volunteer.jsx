@@ -92,16 +92,16 @@ const Volunteer = () => {
                 />
             </div>
 
-            <div className="mx-auto flex flex-wrap items-center ml-12 p-4">
+            <div className="mx-auto flex flex-wrap items-center md:ml-12 p-4">
                 {/* Second Component (Will appear first on mobile) */}
                 <div className="w-full lg:w-1/2 lg:pr-10 mt-4 order-1 lg:order-2 mb-8">
                     <div className="border-l-4 border-green pl-2">
                         <h2 className='text-2xl font-quicksand text-green ml-2 font-medium'>Become A Volunteer</h2>
                     </div>
-                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1 font-quicksand mt-6 font-bold'>
+                    <h2 className='text-white md:text-5xl text-3xl md:p-0 pr-1  font-quicksand mt-6 font-bold'>
                         Let us make a difference in the lives of others
                     </h2>
-                    <p className='mt-6 text-white font-quicksand max-w-[90%] md:text-lg text-sm'>
+                    <p className='mt-6 text-white font-quicksand max-w-[100%] md:text-lg text-sm'>
                         Your commitment can bring about a positive change. Join us as a volunteer and
                         contribute to transforming the lives of those who require assistance.
                         Our mission is to make a meaningful impact. Together, we can make a difference
@@ -109,9 +109,8 @@ const Volunteer = () => {
                     </p>
                 </div>
 
-                {/* First Component (Will appear second on mobile) */}
                 <div className="w-full lg:w-1/2 order-2 lg:order-1 md:p-0 p-4">
-                    <div className="md:mr-10 bg-white md:p-6 p-4 pt-10 pb-10 rounded-md -ml-12">
+                    <div className="md:mr-10 bg-white md:p-6 p-3 pt-10 pb-10 rounded-md -ml-6 -mr-4">
                         <form
                             onSubmit={handleSave}
                             className="mt-5 flex flex-col gap-6">

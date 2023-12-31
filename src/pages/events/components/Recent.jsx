@@ -7,12 +7,12 @@ import { FaCalendarAlt } from 'react-icons/fa';
 
 const eventsData = [
     {
-        title: 'Lorem ipsum dolor',
-        date: "22-Jun-23",
-        time: "8:00 - 10:00",
-        location: "Volta Region",
+        title: 'Inauguration Ceremony',
+        date: "30-Dec-23",
+        time: "16:00 - 18:00",
+        location: "Sky-Plus Hotel",
         buttonText: "Read More!",
-        description: 'Lorem Ipsum is simply dummy text of the industry',
+        description: 'Our Inauguration Ceremony on December 30, 2023, at Sky-Plus Hotel was a memorable celebration of new beginnings!',
         image: Img3,
         link: "#",
 
@@ -68,19 +68,19 @@ const Recent = () => {
                         <div className="container mx-auto mt-8 pl-4 mb-4 flex flex-wrap items-center">
                             {/* Left Content */}
                             <div className="w-full lg:w-1/2 lg:pr-10 ">
-                                <p className='flex items-center gap-2 font-quicksand font-sm  pb-1'>
+                                <p className='flex items-center gap-2 font-quicksand font-xs pb-1'>
                                     <FaCalendarAlt className='text-green mr-2 h-4 w-4' />{event.date}
                                 </p>
-                                <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1'>
+                                <p className='flex items-center gap-2 mt-3 font-quicksand font-xs pb-1'>
                                     <BsClock className='text-green mr-2 h-4 w-4' />{event.time}
                                 </p>
-                                <p className='flex items-center gap-2 mt-3 font-quicksand font-sm  pb-1 '>
+                                <p className='flex items-center gap-2 mt-3 font-quicksand font-sm pb-1 '>
                                     <IoLocationSharp className='text-green mr-2 h-6 w-6 -ml-1' />{event.location}
                                 </p>
                             </div>
                             {/* Right Content */}
                             <div className="w-full lg:w-1/2 md:border-l-4 border-green pl-4 md:mt-0 mt-4 md:ml-0 -ml-4">
-                                <p className=' text-sm font-quicksand'>{event.description}</p>
+                                <p className=' text-xs font-quicksand'>{event.description}</p>
                                 <button href={event.link} className='mt-4 border border-green border-b-4 md:ml-0  pl-2 pb-1 pt-1 pr-2 rounded-md flex items-center font-quicksand font-medium -ml-1 hover:border-primary'>
                                     {event.buttonText}
                                     <GoArrowRight className='ml-2 mr-2' />

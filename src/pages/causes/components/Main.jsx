@@ -13,7 +13,7 @@ const causesData = [
         title: 'Providing Education for All',
         progress: 30,
         goal: "$40,000",
-        raise: "$12,000",
+        raise: "------",
         description: 'We aim to ensure that every child has access to quality education, regardless of their background. Your support helps us reach this goal.',
         link: "/donate",
         join: "/about"
@@ -24,7 +24,7 @@ const causesData = [
         title: 'Clean Water for Communities',
         progress: 45,
         goal: "$40,000",
-        raise: "$12,000",
+        raise: "------",
         description: 'Our mission is to bring clean and safe drinking water to underserved communities. Join us in making a significant impact.',
         link: "/donate",
         join: "/about"
@@ -35,7 +35,7 @@ const causesData = [
         title: 'Fighting Hunger Together',
         progress: 50,
         goal: "$40,000",
-        raise: "$12,000",
+        raise: "------",
         description: 'Together, we can combat hunger in our local neighborhoods and communities. Your contribution helps feed those in need.',
         link: "/donate",
         join: "/about"

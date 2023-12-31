@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Image1 from '../../../assets/image1.jpg';
+import Image1 from '../../../assets/carousel-1.jpg';
 import Image2 from '../../../assets/image2.jpg';
 import Image3 from '../../../assets/image3.jpg';
 import Image4 from '../../../assets/carousel-3.jpg';
@@ -54,14 +54,14 @@ const Hero = () => {
                 {carouselItems.map((item, index) => (
                     <div key={index} className="relative w-full flex items-center justify-center flex-col">
                         <div className="carousel-img relative w-full h-[25rem] sm:h-[35rem] md:h-[35rem] lg:h-120 xl:h-[35rem] text-right overflow-hidden">
-                            <img src={item.image} alt="Image" className="" />
-                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10"></div>
+                            <img src={item.image} alt="Image" className="object-center object-fit object-cover h-full" />
+                            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-10"></div>
                         </div>
                         <div className="absolute pl-[15%] carousel-text flex flex-col items-start z-20 left-0">
-                            <h1 className="font-raleway text-white text-2xl md:text-5xl font-bold mb-4 tracking-wide leading-tight">
+                            <h1 className="font-raleway text-white text-2xl md:text-5xl font-bold mb-2 tracking-wide leading-tight">
                                 {item.title}
                             </h1>
-                            <p className="text-white font-quicksand md:text-2xl mb-6">
+                            <p className="text-white font-quicksand md:text-2xl mb-4">
                                 {item.description}
                             </p>
                             <Link to={item.link} className="p-2 text-sm md:text-md flex items-center text-center md:items-center md:text-center bg-green hover:bg-primary md:p-3 text-white font-quicksand mb-2 rounded-md cursor-pointer ">
@@ -76,7 +76,6 @@ const Hero = () => {
 
     );
 };
-
 export default Hero;
 
 

@@ -37,11 +37,8 @@ const Donate = () => {
         };
     }, []);
 
-
     const [loading, setLoading] = React.useState(false);
     const [activeForm, setActiveForm] = React.useState("donate");
-
-
 
     const [donateInfo, setDonateInfo] = React.useState({
         email: "",
@@ -162,8 +159,8 @@ const Donate = () => {
                                                     />
                                                 </h2>
                                                 <div className="">
-                                                    <p className="font-quicksand font-medium text-md mt-1">0544541587</p>
-                                                    <p className="font-quicksand mt-1 md:text-md text-sm">Kabanda Kpanti Michael</p>
+                                                    <p className="font-quicksand font-medium text-md mt-1">----------</p>
+                                                    <p className="font-quicksand mt-1 md:text-md text-sm">---------</p>
                                                 </div>
                                             </div>
                                             {/* VODA */}
@@ -179,8 +176,8 @@ const Donate = () => {
                                                     />
                                                 </h2>
                                                 <div className="">
-                                                    <p className="font-quicksand font-medium text-md">0202872814</p>
-                                                    <p className="font-quicksand mt-1 md:text-md text-sm">Kabanda Kpanti Michael</p>
+                                                    <p className="font-quicksand font-medium text-md">----------</p>
+                                                    <p className="font-quicksand mt-1 md:text-md text-sm">----------</p>
                                                 </div>
 
 
@@ -206,8 +203,8 @@ const Donate = () => {
                                                 />
                                             </h2>
                                             <div className="">
-                                                <p className="font-quicksand font-medium text-md mt-1">03200900980</p>
-                                                <p className="font-quicksand mt-1 md:text-md text-sm">Kabanda Kpanti Michael</p>
+                                                <p className="font-quicksand font-medium text-md mt-1">---------</p>
+                                                <p className="font-quicksand mt-1 md:text-md text-sm">---------</p>
                                             </div>
                                         </div>
                                         {/* VODA */}
@@ -223,8 +220,8 @@ const Donate = () => {
                                                 />
                                             </h2>
                                             <div className="">
-                                                <p className="font-quicksand font-medium text-md">032009009</p>
-                                                <p className="font-quicksand mt-1 md:text-md text-sm">Kabanda Kpanti Michael</p>
+                                                <p className="font-quicksand font-medium text-md">---------</p>
+                                                <p className="font-quicksand mt-1 md:text-md text-sm">----------</p>
                                             </div>
                                         </div>
                                     </div>
