@@ -1,4 +1,4 @@
-import Founder from '../../../assets/team.jpeg'
+import Founder from '../../../assets/team/William.png';
 
 const About = () => {
     return (

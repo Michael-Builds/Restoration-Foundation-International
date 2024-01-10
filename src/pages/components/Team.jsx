@@ -13,7 +13,7 @@ import William from '../../assets/team/William.png';
 import George from '../../assets/team/George.png';
 import Vincent from '../../assets/team/Vincent.png';
 import Isaac from '../../assets/team/Isaac.png';
-
+    
 const teamData = [
     {
         name: 'Dr. George Tesilimi Banji ',

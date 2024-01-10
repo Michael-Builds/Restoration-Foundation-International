@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navigation from '../components/Navigation'
-import Header from './components/Header';
-import About from './components/About'
-import Footer from '../components/Footer';
-import ScrollToTop from '../components/Scroll';
-import Impact from '../components/Impacts';
-// import Team from '../components/Team';
-import Spinner from '../components/Spinner'
+import Navigation from '../../components/Navigation'
+import Header from '../../events/components/Header';
+import Footer from '../../components/Footer';
+import ScrollToTop from '../../components/Scroll'
+import Spinner from '../../components/Spinner'
+import Recent from './component/Recent';
 
-
-const Founder = () => {
+const Event = () => {
     const location = useLocation();
 
     useEffect(() => {
@@ -28,8 +25,9 @@ const Founder = () => {
         };
     }, []);
 
+
     return (
-        <>
+        <div>
             {isLoading ?
                 <Spinner />
                 :
@@ -37,18 +35,15 @@ const Founder = () => {
                     <Navigation />
                     <section style={{ marginTop: "-40px" }}>
                         <Header />
-                        <About />
-                        <Impact />
-                        {/* <Team /> */}
+                        <Recent />
                         <Footer />
                         <ScrollToTop />
                     </section>
                 </div>
             }
 
-        </>
-    );
-};
+        </div>
+    )
+}
 
-export default Founder;
-
+export default Event;

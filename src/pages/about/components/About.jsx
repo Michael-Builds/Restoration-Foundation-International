@@ -32,7 +32,7 @@ const About = () => {
     ];
 
     return (
-        <div className="container">
+        <div className="">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 mb-16 mt-14">
                 <div className="lg:order-1">
                     {/* Left Section */}
