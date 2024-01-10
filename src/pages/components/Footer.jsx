@@ -3,90 +3,124 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { FaTiktok } from 'react-icons/fa';
-import swal from "sweetalert";
-import React from "react";
+import { useState } from 'react';
+// import swal from "sweetalert";
+// import React from "react";
 import { FaPhone } from 'react-icons/fa6';
+import Img1 from '../../assets/inauguration/1.jpg';
+import Img2 from '../../assets/inauguration/2.jpg';
+import Img3 from '../../assets/inauguration/3.jpg';
+import Img4 from '../../assets/inauguration/4.jpg';
+import { IoCameraOutline } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 const Footer = () => {
-    const [loading, setLoading] = React.useState(false);
+    // const [loading, setLoading] = React.useState(false);
 
-    const [newletterInfo, setNewsLetterInfo] = React.useState({
-        email: "",
-    });
+    // const [newletterInfo, setNewsLetterInfo] = React.useState({
+    //     email: "",
+    // });
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setNewsLetterInfo((prevNewsLetter) => ({
-            ...prevNewsLetter,
-            [name]: value,
-        }));
-    };
+    // const handleInputChange = (event) => {
+    //     const { name, value } = event.target;
+    //     setNewsLetterInfo((prevNewsLetter) => ({
+    //         ...prevNewsLetter,
+    //         [name]: value,
+    //     }));
+    // };
 
-    const handleClear = () => {
-        setNewsLetterInfo({
-            email: "",
-        });
-    };
+    // const handleClear = () => {
+    //     setNewsLetterInfo({
+    //         email: "",
+    //     });
+    // };
 
-    const handleSave = async (e) => {
-        e.preventDefault();
-        setLoading(true);
+    // const handleSave = async (e) => {
+    //     e.preventDefault();
+    //     setLoading(true);
 
-        // Destructure the donateInfo object for clarity
-        const { email } = newletterInfo;
+    //     // Destructure the donateInfo object for clarity
+    //     const { email } = newletterInfo;
 
-        try {
-            // Assuming you are using fetch, I've corrected the code
-            const res = await fetch('https://v1.nocodeapi.com/kpanti/google_sheets/yyCouxnLhvkpKRdz?tabId=NewsLetter', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify([
-                    [
-                        new Date().toLocaleString(),
-                        email,
+    //     try {
+    //         // Assuming you are using fetch, I've corrected the code
+    //         const res = await fetch('https://v1.nocodeapi.com/kpanti/google_sheets/yyCouxnLhvkpKRdz?tabId=NewsLetter', {
+    //             method: "POST",
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify([
+    //                 [
+    //                     new Date().toLocaleString(),
+    //                     email,
 
-                    ],
-                ]),
-            });
+    //                 ],
+    //             ]),
+    //         });
 
-            // Check if the response is successful
-            if (res.ok) {
-                // Use SweetAlert to show success message
-                swal("Restoration Foundation International", "Subscription Successful", "success");
-                // Optionally, you can handle other actions after a successful submission here
-            } else {
-                // Handle errors if the response is not successful
-                swal("Restoration Foundation International", "Error Subscribing", "error");
-            }
-        } catch (error) {
-            // Handle errors in the fetch or other unexpected errors
-            console.log(error);
-            swal("Restoration Foundation International", "Error Subscribing", "error");
-        }
+    //         // Check if the response is successful
+    //         if (res.ok) {
+    //             // Use SweetAlert to show success message
+    //             swal("Restoration Foundation International", "Subscription Successful", "success");
+    //             // Optionally, you can handle other actions after a successful submission here
+    //         } else {
+    //             // Handle errors if the response is not successful
+    //             swal("Restoration Foundation International", "Error Subscribing", "error");
+    //         }
+    //     } catch (error) {
+    //         // Handle errors in the fetch or other unexpected errors
+    //         console.log(error);
+    //         swal("Restoration Foundation International", "Error Subscribing", "error");
+    //     }
 
-        setLoading(false);
-        handleClear();
-    };
+    //     setLoading(false);
+    //     handleClear();
+    // };
 
     // Create an array of link texts
     const linkData = [
         { text: "Home", href: "/" },
         { text: "About Us", href: "/about" },
-        { text: "Causes", href: "/causes" },
         { text: "Events", href: "/recent" },
-        { text: "Contact Us", href: "/contact" },
         { text: "Blog", href: "/blog" },
     ];
+
+    const gallery = [
+        {
+            id: 1,
+            image: Img1
+        },
+        {
+            id: 1,
+            image: Img2
+        },
+        {
+            id: 1,
+            image: Img3
+        },
+        {
+            id: 1,
+            image: Img4
+        },
+    ]
 
     // Function to get the current year
     const getCurrentYear = () => {
         const currentYear = new Date().getFullYear();
         return currentYear;
     };
-    // old: '#bf9410',
 
+    const [isImageOpen, setIsImageOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+        setIsImageOpen(true);
+    };
+
+    const handleCloseImage = () => {
+        setIsImageOpen(false);
+    };
     return (
         <section className='justify-center  items-center'>
             <div className="bg-blue1 p-4 ">
@@ -158,10 +192,27 @@ const Footer = () => {
                     {/* Right Section */}
                     <div className="md:w-1/3 text-right">
                         <div className='border-l-4 border-green pl-4'>
-                            <h2 className='text-2xl font-yeseva mb-8 font-yeseva text-white tracking-wide text-left'>Newsletter</h2>
+                            <h2 className='text-2xl font-yeseva mb-8 font-yeseva text-white tracking-wide text-left'>Gallery</h2>
                         </div>
-
-                        <form onSubmit={handleSave} className='md:mr-0 mr-24'>
+                        <div className="grid grid-cols-2 gap-4 md:mr-0 mr-12">
+                            {gallery.map((item) => (
+                                <div className="relative cursor-pointer" key={item.id} onClick={() => handleImageClick(item.image)}>
+                                    <img className="w-full h-full object-cover" src={item.image} alt={`Image ${item.id}`} />
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                        <IoCameraOutline className="text-white" />
+                                    </div>
+                                </div>
+                            ))}
+                            {isImageOpen && (
+                                <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 p-6">
+                                    <img className="max-w-full max-h-full" src={selectedImage} alt="Enlarged Image" />
+                                    <button className="absolute top-4 right-4 text-white" onClick={handleCloseImage}>
+                                        <IoMdClose className='text-red h-6 w-6' />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                        {/* <form onSubmit={handleSave} className='md:mr-0 mr-24'>
                             <input
                                 className='p-4 border border-green rounded-md border-b-2 focus:outline-none font-quicksand w-72 '
                                 placeholder='Email Adress'
@@ -181,7 +232,7 @@ const Footer = () => {
                                     "Submitting..."
                                 )}
                             </button>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 <div className='justify-center items-center text-center md:mt-16 mt-10 mb-8 md:mb-8'>
