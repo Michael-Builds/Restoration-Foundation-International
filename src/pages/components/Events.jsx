@@ -14,7 +14,7 @@ const eventsData = [
         buttonText: "Read More!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img3,
-        link: "/upcoming",
+        link: "#",
 
     },
     {
@@ -25,7 +25,7 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img2,
-        link: "/upcoming",
+        link: "#",
 
 
     },
@@ -37,7 +37,7 @@ const eventsData = [
         buttonText: "Join Now!",
         description: 'Lorem Ipsum is simply dummy text of the industry',
         image: Img3,
-        link: "/upcoming",
+        link: "#",
     },
 ];
 
