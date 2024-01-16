@@ -16,7 +16,7 @@ const Main = () => {
             content: 'Discover how our organization is making education accessible and empowering local communities. Learn about our initiatives starting October 1, 2023.',
             author: 'Charity Foundation Team',
             date: 'October 10, 2023',
-            link: "/blog1",
+            link: "#",
 
         },
         {
@@ -26,7 +26,7 @@ const Main = () => {
             content: 'As we step into a new year, let us reflect on the positive impact we made in the past 12 months. Join us on this journey and explore the stories of lives transformed.',
             author: 'Charity Foundation Team',
             date: 'October 15, 2023',
-            link: "/blog2",
+            link: "#",
 
         },
         {
@@ -36,7 +36,7 @@ const Main = () => {
             content: 'Learn more about our ongoing project focused on providing shelter and support to those in need. Discover the reasons behind our mission and how you can contribute.',
             author: 'Charity Foundation Team',
             date: 'October 20, 2023',
-            link: "/blog3",
+            link: "#",
 
         },
     ];
