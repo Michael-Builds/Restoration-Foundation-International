@@ -174,11 +174,11 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className='flex items-center md:mt-5 mt-1 md:mb-0 mb-10 text-white gap-6'>
-                            <a href='#' className='p-2 border border-green rounded-full inline-block'>
+                            <a href='https://web.facebook.com/profile.php?id=61553867905255' className='p-2 border border-green rounded-full inline-block'>
                                 <BsFacebook className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
 
-                            <a href='#' className='p-2 border border-green rounded-full inline-block'>
+                            <a href='https://www.instagram.com/restorationfoundation_int' className='p-2 border border-green rounded-full inline-block'>
                                 <BsInstagram className='h-4 w-4 transition-transform transform hover:scale-110' />
                             </a>
                             <a href='#' className='p-2 border border-green rounded-full inline-block'>
