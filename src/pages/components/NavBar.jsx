@@ -166,6 +166,17 @@ const Navigation = () => {
                 </Typography>
             </li>
             <Typography
+                as='li'
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+            >
+                <NavLink to="gallery" className="flex text-16 items-center font-medium md:text-lg text-md text-gray-500 lg:hover:text-green lg:hover:border-b-2 lg:hover:border-green font-quicksand">
+
+                    Gallery
+                </NavLink>
+            </Typography>
+            <Typography
                 as="li"
                 variant="small"
                 color="blue-gray"
@@ -201,7 +212,7 @@ const Navigation = () => {
                             className=" mt-16 mb-16 main-logo md:ml-6 ml-2"
                         />
                     </NavLink>
-                    <div className="hidden lg:block font-quicksand -mr-[35%]">{navList}</div>
+                    <div className="hidden lg:block font-quicksand -mr-[31%]">{navList}</div>
                     {showDonateButton && (
                         //Conditionally render the donate button, when the screen is greater than 960 pixels, then the button is displayed else it is hidden
                         <Link to='/donate'>
