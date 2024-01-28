@@ -1,5 +1,5 @@
 import { HiBadgeCheck } from "react-icons/hi";
-import React from 'react';
+// import { useEffect, useRef } from 'react';
 import Michael from '../../assets/team/Michael.png';
 import Christopher from '../../assets/team/Christopher.png';
 import Doris from '../../assets/team/Doris.png';
@@ -13,13 +13,49 @@ import William from '../../assets/team/William.png';
 import George from '../../assets/team/George.png';
 import Vincent from '../../assets/team/Vincent.png';
 import Isaac from '../../assets/team/Isaac.png';
-    
+import { useInView } from "react-intersection-observer";
+
 const teamData = [
+    {
+        name: 'William Kojo Amoabeng',
+        role: "Founder and President of RFI",
+        role2: "Board Member",
+        image: William,
+        badge: <HiBadgeCheck />,
+    },
+    {
+        name: 'Doris Esinam Amoabeng',
+        role: "CEO of Ambassadors Academy",
+        role2: "Board Member",
+        image: Doris,
+        badge: <HiBadgeCheck />,
+    },
     {
         name: 'Dr. George Tesilimi Banji ',
         role: "Librarian and Lecturer at HTU",
         role2: "Board Member",
         image: George,
+        badge: <HiBadgeCheck />,
+    },
+    {
+        name: 'Mrs. Sitsofe Kumoji',
+        role: "Lecturer at Taviefe S.H.S",
+        role2: "Board Member",
+        image: Sitsofe,
+        badge: <HiBadgeCheck />,
+    },
+    {
+        name: 'Mr. Mawuli Katahene',
+        role: "Cheer Leader for MTN Ghana",
+        role2: "Board Member",
+        image: Katahene,
+        badge: <HiBadgeCheck />,
+    },
+    {
+        name: 'Mrs. Martha Gato-Lagle',
+        role: "Enterpreneur and Political Activist",
+        role2: "Board Member",
+        image: Martha,
         badge: <HiBadgeCheck />,
     },
     {
@@ -41,41 +77,6 @@ const teamData = [
         role: "Metallurgist in the Mining Industry",
         role2: "Board Member",
         image: Isaac,
-        badge: <HiBadgeCheck />,
-    },
-    {
-        name: 'William Kojo Amoabeng',
-        role: "Founder and President of RFI",
-        role2: "Board Member",
-        image: William,
-        badge: <HiBadgeCheck />,
-    },
-    {
-        name: 'Doris Esinam Amoabeng',
-        role: "CEO of Ambassadors Academy",
-        role2: "Board Member",
-        image: Doris,
-        badge: <HiBadgeCheck />,
-    },
-    {
-        name: 'Mrs. Sitsofe Kumoji',
-        role: "Lecturer at Taviefe S.H.S",
-        role2: "Board Member",
-        image: Sitsofe,
-        badge: <HiBadgeCheck />,
-    },
-    {
-        name: 'Mrs. Martha Gato-Lagle',
-        role: "Enterpreneur and Political Activist",
-        role2: "Board Member",
-        image: Martha,
-        badge: <HiBadgeCheck />,
-    },
-    {
-        name: 'Mr. Mawuli Katahene',
-        role: "Cheer Leader for MTN Ghana",
-        role2: "Board Member",
-        image: Katahene,
         badge: <HiBadgeCheck />,
     },
     {
@@ -110,12 +111,17 @@ const teamData = [
 
 const Team = () => {
 
-    const initialDisplayCount = 4;
-    const [displayCount, setDisplayCount] = React.useState(initialDisplayCount);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
 
-    const handleViewMore = () => {
-        setDisplayCount(displayCount + initialDisplayCount);
-    };
+    // const initialDisplayCount = 4;
+    // const [displayCount, setDisplayCount] = React.useState(initialDisplayCount);
+
+    // const handleViewMore = () => {
+    //     setDisplayCount(displayCount + initialDisplayCount);
+    // };
 
     return (
         <div className='justify-center align-center mt-8 pb-16'>
@@ -130,13 +136,16 @@ const Team = () => {
                 </div>
             </div>
             <div className="flex justify-center p-2 mt-8 relative">
-                <div className="grid md:grid-cols-4 grid-cols-1 gap-4">
-                    {teamData.slice(0, displayCount).map((team, index) => (
-                        <div key={index} className="m-4 rounded-md relative pb-16">
-                            <img src={team.image} alt={`Team-${index + 1}`} className="w-full h-full object-cover object-center" />
-                            <div className="w-[70%] h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white border-green border-b-4 rounded-md text-center">
+                <div
+                    ref={ref}
+                    className={`grid md:grid-cols-4 grid-cols-1 gap-4 `}>
+                    {teamData.map((team, index) => (
+                        <div key={index}
+                            className={`m-4 rounded-md relative pb-16 ${inView ? "zoom-in zoom-in-animation-active" : ""} `}  >
+                            <img src={team.image} alt={`Team-${index + 1}`} className="w-full h-full object-cover object-center rounded-md" />
+                            <div className="w-[70%] shadow-lg h-32 absolute bottom-0 left-1/2 pb-8 transform -translate-x-1/2 bg-white border-green border-b-4 rounded-md text-center">
                                 <h2 className=' font-quicksand mt-4 text-sm font-bold'>{team.name}</h2>
-                                <div className='flex items-center justify-center mt-3'>
+                                <div className='flex items-center justify-center mt-3 '>
                                     <p className='font-quicksand font-medium text-sm text-gray-600'>{team.role2}</p>
                                     <p className='ml-4 items-center text-green'>{team.badge}</p>
                                 </div>
@@ -147,7 +156,9 @@ const Team = () => {
                 </div>
             </div>
 
-            {displayCount < teamData.length && (
+            {/* After Team Data */}
+            {/* .slice(0, displayCount) */}
+            {/* {displayCount < teamData.length && (
                 <div className='flex justify-center mt-4'>
                     <button
                         className='px-4 py-2 bg-green hover:bg-primary text-white rounded-sm font-quicksand'
@@ -156,7 +167,7 @@ const Team = () => {
                         View More
                     </button>
                 </div>
-            )}
+            )} */}
         </div>
     );
 };
