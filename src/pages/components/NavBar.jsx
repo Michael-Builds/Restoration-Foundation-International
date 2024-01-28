@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BiSolidDollarCircle, BiPlus } from 'react-icons/bi';
+import { BiSolidDollarCircle } from 'react-icons/bi';
 import Logo from '../../assets/logo.png';
 import {
     Navbar,
@@ -10,6 +10,8 @@ import {
 } from "@material-tailwind/react";
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { AiOutlinePlus } from "react-icons/ai";
+import { HiMiniMinus } from "react-icons/hi2";
 
 
 const Navigation = () => {
@@ -77,14 +79,16 @@ const Navigation = () => {
                 >
                     <div className="flex items-center md:text-lg hover:text-green justify-between font-medium text-md cursor-pointer">
                         About
-                        {openNav ? (
-                            <span
-                                className="ml-3 text-green-600 cursor-pointer"
-                                onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
-                            >
-                                <BiPlus className='text-green' />
-                            </span>
-                        ) : null}
+                        <span
+                            className="ml-3 text-green-600 cursor-pointer"
+                            onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+                        >
+                            {aboutDropdownOpen ? (
+                                <HiMiniMinus className="text-green" />
+                            ) : (
+                                <AiOutlinePlus className="text-green" />
+                            )}
+                        </span>
                     </div>
                     {aboutDropdownOpen && (
                         <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-green p-4 w-[10rem] md:border-b-4  rounded-md`}>
@@ -129,26 +133,27 @@ const Navigation = () => {
                     as="div"
                     variant="small"
                     color="blue-gray"
-                    className={`p-1 font-normal font-quicksand ${eventDropdownOpen ? "text-gray-500" : "text-gray-500"
-                        }`}
+                    className={`p-1 font-normal font-quicksand ${eventDropdownOpen ? 'text-gray-500' : 'text-gray-500'}`}
                 >
                     <div className="flex items-center justify-between hover:text-green font-medium md:text-lg text-md cursor-pointer">
                         Events
-                        {openNav ? ( // Conditionally render the plus icon
-                            <span
-                                className="ml-3 text-green-600 cursor-pointer"
-                                onClick={() => setEventDropdownOpen(!eventDropdownOpen)}
-                            >
-                                <BiPlus className='text-green' />
-                            </span>
-                        ) : null}
+                        <span
+                            className="ml-3 text-green-600 cursor-pointer"
+                            onClick={() => setEventDropdownOpen(!eventDropdownOpen)}
+                        >
+                            {eventDropdownOpen ? (
+                                <HiMiniMinus className="text-green" />
+                            ) : (
+                                <AiOutlinePlus className="text-green" />
+                            )}
+                        </span>
                     </div>
                     {eventDropdownOpen && (
-                        <ul className={`absolute top-8 left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-green p-4 w-[10rem] md:border-b-4 rounded-md`}>
+                        <ul className={`absolute top-full left-0 z-10 bg-white justify-center items-center text-gray-600 md:border-green p-4 w-[10rem] md:border-b-4 rounded-md mt-2`}>
                             <li>
                                 <NavLink
                                     to="/recent"
-                                    className={`block p-2 hover:bg-white  rounded-md border-purple font-medium text-md mt-4 hover:text-green`}
+                                    className={`block p-2 hover:bg-white rounded-md border-purple font-medium text-md mt-4 hover:text-green`}
                                 >
                                     Recent
                                 </NavLink>
@@ -156,7 +161,7 @@ const Navigation = () => {
                             <li>
                                 <NavLink
                                     to="/upcoming"
-                                    className={`block p-2 hover:bg-white  rounded-md border-purple font-medium text-md mt-4 hover:text-green`}
+                                    className={`block p-2 hover:bg-white rounded-md border-purple font-medium text-md mt-4 hover:text-green`}
                                 >
                                     Upcoming
                                 </NavLink>
@@ -201,8 +206,6 @@ const Navigation = () => {
     );
     return (
         <div>
-
-            {/* NavBar Component */}
             <Navbar className="mx-auto max-w-screen py-2 px-4 lg:px-8 lg:py-4 shadow-sm rounded-xs shadow-gray-200">
                 <div className=" -mb-14 container mx-auto flex items-center justify-between text-blue-gray-900">
                     <NavLink to="/" className='-ml-2'>
