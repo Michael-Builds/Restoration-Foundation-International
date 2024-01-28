@@ -6,7 +6,7 @@ import Blog from './pages/blog/Blog';
 import Causes from "./pages/causes/Causes";
 import Upcoming from './pages/upcoming/Upcoming';
 import Recent from './pages/events/Events';
-import Gallery from './pages/gallery/Gallery'
+import Gallery from './pages/gallery/Gallery';
 import Contact from './pages/contact/Contact';
 import Donate from './pages/donate/Donate';
 import Blog1 from './pages/blog/blogs/blog1/Blog1';
@@ -27,12 +27,12 @@ const App = () => {
         <Route path="/recent" element={<Recent />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
         <Route path="/inauguration" element={<Recent1 />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
 
     </Router>

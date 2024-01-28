@@ -171,7 +171,7 @@ const Navigation = () => {
                 color="blue-gray"
                 className="p-1 font-normal"
             >
-                <NavLink to="gallery" className="flex text-16 items-center font-medium md:text-lg text-md text-gray-500 lg:hover:text-green lg:hover:border-b-2 lg:hover:border-green font-quicksand">
+                <NavLink to="/gallery" className="flex text-16 items-center font-medium md:text-lg text-md text-gray-500 lg:hover:text-green lg:hover:border-b-2 lg:hover:border-green font-quicksand">
 
                     Gallery
                 </NavLink>
