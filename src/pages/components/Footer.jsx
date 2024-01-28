@@ -133,8 +133,10 @@ const Footer = () => {
                         </div>
                         <div >
                             <p className=" font-quicksand md:text-md text-sm pb-4 p-2 text-white">
-                                Restoration Foundation International is a Christian non-profit, charitable and humanitarian
-                                organization incorporated in Ghana in 2006 with representatives in USA, Canada, UK and Germany
+                                {/* Restoration Foundation International is a Christian non-profit, charitable and humanitarian
+                                organization incorporated in Ghana in 2006 with representatives in USA, Canada, UK and Germany */}
+                                Welcome to Restoration Foundation Internationl. Our mandate is to train, educate, entertain, develop and nurture (TEEN) the youth in the areas of Health,
+                                Environment, Education, Construction, Water and Sanitation to make them conscious and responsible leaders in their respective communities.
                             </p>
                         </div>
                     </div>
