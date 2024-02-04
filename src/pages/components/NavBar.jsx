@@ -10,9 +10,9 @@ import {
 } from "@material-tailwind/react";
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { AiOutlinePlus } from "react-icons/ai";
-import { HiMiniMinus } from "react-icons/hi2";
-
+// import { AiOutlinePlus } from "react-icons/ai";
+// import { HiMiniMinus } from "react-icons/hi2";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navigation = () => {
 
@@ -84,9 +84,11 @@ const Navigation = () => {
                             onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
                         >
                             {aboutDropdownOpen ? (
-                                <HiMiniMinus className="text-green" />
+                                <IoIosArrowDown className="hover:text-green" />
+
                             ) : (
-                                <AiOutlinePlus className="text-green" />
+                                <IoIosArrowDown className="hover:text-green" />
+
                             )}
                         </span>
                     </div>
@@ -142,9 +144,11 @@ const Navigation = () => {
                             onClick={() => setEventDropdownOpen(!eventDropdownOpen)}
                         >
                             {eventDropdownOpen ? (
-                                <HiMiniMinus className="text-green" />
+                                <IoIosArrowDown className="hover:text-green" />
+
                             ) : (
-                                <AiOutlinePlus className="text-green" />
+                                <IoIosArrowDown className="hover:text-green" />
+
                             )}
                         </span>
                     </div>
@@ -215,9 +219,8 @@ const Navigation = () => {
                             className=" mt-16 mb-16 main-logo md:ml-6 ml-2"
                         />
                     </NavLink>
-                    <div className="hidden lg:block font-quicksand -mr-[31%]">{navList}</div>
+                    <div className="hidden lg:block font-quicksand md:-mr-[26%] -mr-[31%]">{navList}</div>
                     {showDonateButton && (
-                        //Conditionally render the donate button, when the screen is greater than 960 pixels, then the button is displayed else it is hidden
                         <Link to='/donate'>
                             <Button variant="gradient" size="sm" className="mb-2 mt-2 mr-12 flex items-center text-gray-600 bg-green text-white rounded-sm hover:bg-primary ">
                                 <BiSolidDollarCircle className="mr-2" />
